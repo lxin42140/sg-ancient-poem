@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c8baf9b-0bc0-4a65-a106-c5e2e9bfe336" name="Default Changelist" comment="" />
+    <list default="true" id="2c8baf9b-0bc0-4a65-a106-c5e2e9bfe336" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/05-Comming-soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/05-Comming-soon.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11416">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="171">
+              <caret line="30" column="105" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
               <folding>
                 <marker date="1561821549590" expanded="true" signature="10164:10267" ph="..." />
               </folding>
@@ -28,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03-About-me.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2689">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="299">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -43,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05-Comming-soon.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="830">
+              <caret line="152" column="25" lean-forward="true" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -110,14 +112,17 @@
       <replace>#29333C</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/01-homepage/css/styles.css" />
         <option value="$PROJECT_DIR$/05-Comming-soon/css/responsive.css" />
         <option value="$PROJECT_DIR$/05-Comming-soon/css/styles.css" />
-        <option value="$PROJECT_DIR$/05-Comming-soon.html" />
         <option value="$PROJECT_DIR$/01-homepage.html" />
+        <option value="$PROJECT_DIR$/05-Comming-soon.html" />
       </list>
     </option>
   </component>
@@ -134,8 +139,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="sg-poem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sg-poem" type="462c0819:PsiDirectoryNode" />
+              <item name="sg-poem-github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sg-poem-github" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sg-poem-github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sg-poem-github" type="462c0819:PsiDirectoryNode" />
+              <item name="01-homepage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -174,17 +184,18 @@
       <updated>1561783093407</updated>
       <workItem from="1561783095113" duration="11166000" />
       <workItem from="1561799290121" duration="6325000" />
+      <workItem from="1561824768511" duration="251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17491000" />
+    <option name="totallyTimeSpent" value="17742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34108528" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21071176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -221,8 +232,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/logo.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/images/logo.png" />
+    <entry file="file://$PROJECT_DIR$/01-homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="30" column="105" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
+          <folding>
+            <marker date="1561821549590" expanded="true" signature="10164:10267" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-About-me.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/05-Comming-soon/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -247,25 +273,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05-Comming-soon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-About-me.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2689">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11416">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <marker date="1561821549590" expanded="true" signature="10164:10267" ph="..." />
-          </folding>
+        <state relative-caret-position="830">
+          <caret line="152" column="25" lean-forward="true" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
         </state>
       </provider>
     </entry>
