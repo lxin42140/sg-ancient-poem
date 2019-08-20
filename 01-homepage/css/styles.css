@@ -293,7 +293,15 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 	border: 1px solid #29333C; background: #fff; color: #29333C; }
 
 .single-post .read-more-btn:hover{ box-shadow: 1px 3px 15px rgba(0,0,0, .15); background: #29333C; color: #fff; }
-	
+
+/* VIDEO STYLING */
+
+.single-post .embed-video{ background-image: url(../../images/blog-0.jpg)!important; }
+
+.single-post .embed-video a{ margin: -35px 0 0 -35px; height: 70px!important; width: 70px!important; }
+
+.single-post .embed-video a:hover{ transform: scale(1.2); }
+
 	
 /* POST STYLE TWO */
 
@@ -307,6 +315,24 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 /* LOAD MORE BUTTON */
 
 .blog-posts .load-more-btn{ clear: both; margin: 70px 0 30px; }
+
+
+/* RECOMEND AREA */
+
+.recomend-area{ overflow: hidden; margin: 30px 0; }
+
+.recomend-area > .title{ margin-bottom: 30px; }
+
+.recomend-area .recomend{ overflow: hidden; margin-bottom: 30px; }
+
+
+.recomend .post-image{ width: 150px; float: left; }
+
+.recomend .category-btn{ padding: 7px 15px; margin-bottom: 5px; }
+
+.recomend .post-info{ margin-left: 170px; }
+
+.recomend .post-info .date{ margin: 0px 0 15px; color: #777; }
 
 
 /* ---------------------------------

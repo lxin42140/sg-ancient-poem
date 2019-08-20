@@ -292,7 +292,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 
 /* VIDEO STYLING */
 
-.single-post .embed-video{ background-image: url(../../images/blog-11-1000x600.jpg)!important; }
+.single-post .embed-video{ background-image: url(../../images/aboutus-videocover-1.jpg)!important; }
 
 .single-post .embed-video a{ margin: -35px 0 0 -35px; height: 70px!important; width: 70px!important; }
 

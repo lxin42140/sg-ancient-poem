@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8baf9b-0bc0-4a65-a106-c5e2e9bfe336" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/05-Comming-soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/05-Comming-soon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/01-homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-homepage/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/01-homepage/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-homepage/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/01-homepage/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-chunlian.html" beforeDir="false" afterPath="$PROJECT_DIR$/02-zhuanti-chunlian.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-dzwxjhanshizu.html" beforeDir="false" afterPath="$PROJECT_DIR$/02-zhuanti-dzwxjhanshizu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-nusstudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/02-zhuanti-nusstudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-sgyinglian.html" beforeDir="false" afterPath="$PROJECT_DIR$/02-zhuanti-sgyinglian.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-shuanglin.html" beforeDir="false" afterPath="$PROJECT_DIR$/02-zhuanti-shuanglin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-xinzhouyayuan.html" beforeDir="false" afterPath="$PROJECT_DIR$/02-zhuanti-xinzhouyayuan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-About-me.html" beforeDir="false" afterPath="$PROJECT_DIR$/11-about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-About-me/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/03-About-me/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-mingshengguji.html" beforeDir="false" afterPath="$PROJECT_DIR$/03-mingshengguji.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-nanyangfengsu.html" beforeDir="false" afterPath="$PROJECT_DIR$/04-nanyangfengsu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-difangyuyan.html" beforeDir="false" afterPath="$PROJECT_DIR$/05-difangyuyan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-nanyangwuchan.html" beforeDir="false" afterPath="$PROJECT_DIR$/06-nanyangwuchan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-xinzhoufengyue.html" beforeDir="false" afterPath="$PROJECT_DIR$/07-xinzhoufengyue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/08-foyuchanxin.html" beforeDir="false" afterPath="$PROJECT_DIR$/08-foyuchanxin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/09-lunxianshiqi.html" beforeDir="false" afterPath="$PROJECT_DIR$/09-lunxianshiqi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-quanqiuhanshizonghui.html" beforeDir="false" afterPath="$PROJECT_DIR$/10-quanqiuhanshizonghui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-shichengyinshe.html" beforeDir="false" afterPath="$PROJECT_DIR$/10-shichengyinshe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-tanshe.html" beforeDir="false" afterPath="$PROJECT_DIR$/10-tanshe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-xinshengshishe.html" beforeDir="false" afterPath="$PROJECT_DIR$/10-xinshengshishe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11-shirenfangtan.html" beforeDir="false" afterPath="$PROJECT_DIR$/11-shirenfangtan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11-shitanjinkuang.html" beforeDir="false" afterPath="$PROJECT_DIR$/11-shitanjinkuang.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,59 +39,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/01-homepage.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10-shichengyinshe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2461">
-              <caret line="107" column="35" lean-forward="true" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+            <state relative-caret-position="-714">
+              <caret line="55" column="99" selection-start-line="55" selection-start-column="99" selection-end-line="55" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10-tanshe.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="708">
+              <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10-xinshengshishe.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="708">
+              <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/11-about-us.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1338">
+              <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/11-shirenfangtan.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
               <folding>
-                <marker date="1561821549590" expanded="true" signature="10164:10267" ph="..." />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03-About-me.html">
+        <entry file="file://$PROJECT_DIR$/11-shirenshengping.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="255">
+              <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05-Comming-soon/css/styles.css">
+        <entry file="file://$PROJECT_DIR$/11-shirenyinchang.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7314">
-              <caret line="318" selection-start-line="318" selection-end-line="318" />
+            <state relative-caret-position="485">
+              <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05-Comming-soon.html">
+        <entry file="file://$PROJECT_DIR$/11-shitanjinkuang.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="111" column="28" lean-forward="true" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+            <state relative-caret-position="469">
+              <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/11-yanjiulunwen.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05-Comming-soon/css/responsive.css">
+        <entry file="file://$PROJECT_DIR$/11-shiji.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3036">
-              <caret line="132" selection-start-line="132" selection-end-line="132" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-homepage/css/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3197">
-              <caret line="139" selection-end-line="433" selection-end-column="52" />
+            <state relative-caret-position="494">
+              <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -76,28 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>categor</find>
-      <find>category</find>
-      <find>#FFAD4D</find>
-      <find>rgb(26, 41, 103)</find>
-      <find>詩人</find>
-      <find>middle-me</find>
-      <find>bottom-area</find>
-      <find>menu-nav-icon</find>
-      <find>main-menu</find>
-      <find>logo</find>
-      <find>header.logo</find>
-      <find>hover</find>
-      <find>#</find>
-      <find>#29333C</find>
-      <find>專題</find>
-      <find>人生</find>
-      <find>foot</find>
-      <find>footer</find>
-      <find>background</find>
-      <find>MAIN-SLIDER</find>
-      <find>星洲</find>
-      <find>slider</find>
       <find>ls-slide</find>
       <find>drop-down</find>
       <find>header</find>
@@ -106,10 +145,35 @@
       <find>alt=&quot;</find>
       <find>自立</find>
       <find>潘受</find>
+      <find>read more</find>
+      <find>slider</find>
+      <find>.png</find>
+      <find>logo</find>
+      <find>檀社</find>
+      <find>新聲詩社</find>
+      <find>獅城吟社</find>
+      <find>左</find>
+      <find>tags</find>
+      <find>embed-video</find>
+      <find>circliful</find>
+      <find>recomend-area</find>
+      <find>RECOM</find>
+      <find>recommen</find>
+      <find>embed</find>
+      <find>single</find>
+      <find>recommend</find>
+      <find>@media only screen and (max-width: 767px) {</find>
+      <find>text-cen</find>
+      <find>video</find>
+      <find>single post</find>
+      <find>shitanjink</find>
     </findStrings>
     <replaceStrings>
       <replace>rgb(26, 41, 103)</replace>
       <replace>#29333C</replace>
+      <replace>新聲詩社</replace>
+      <replace>獅城吟社</replace>
+      <replace>全球漢詩總會</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -118,17 +182,51 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01-homepage/css/styles.css" />
         <option value="$PROJECT_DIR$/05-Comming-soon/css/responsive.css" />
         <option value="$PROJECT_DIR$/05-Comming-soon/css/styles.css" />
-        <option value="$PROJECT_DIR$/01-homepage.html" />
         <option value="$PROJECT_DIR$/05-Comming-soon.html" />
+        <option value="$PROJECT_DIR$/10-xinshengshishe2.html" />
+        <option value="$PROJECT_DIR$/test" />
+        <option value="$PROJECT_DIR$/11-About-us.html" />
+        <option value="$PROJECT_DIR$/03-About-me/css/styles.css" />
+        <option value="$PROJECT_DIR$/01-homepage/css/responsive.css" />
+        <option value="$PROJECT_DIR$/01-homepage/css/styles.css" />
+        <option value="$PROJECT_DIR$/01-homepage.html" />
+        <option value="$PROJECT_DIR$/02-zhuanti-chunlian.html" />
+        <option value="$PROJECT_DIR$/02-zhuanti-dzwxjhanshizu.html" />
+        <option value="$PROJECT_DIR$/02-zhuanti-nusstudent.html" />
+        <option value="$PROJECT_DIR$/02-zhuanti-sgyinglian.html" />
+        <option value="$PROJECT_DIR$/02-zhuanti-shuanglin.html" />
+        <option value="$PROJECT_DIR$/02-zhuanti-xinzhouyayuan.html" />
+        <option value="$PROJECT_DIR$/03-mingshengguji.html" />
+        <option value="$PROJECT_DIR$/04-nanyangfengsu.html" />
+        <option value="$PROJECT_DIR$/05-difangyuyan.html" />
+        <option value="$PROJECT_DIR$/06-nanyangwuchan.html" />
+        <option value="$PROJECT_DIR$/07-xinzhoufengyue.html" />
+        <option value="$PROJECT_DIR$/08-foyuchanxin.html" />
+        <option value="$PROJECT_DIR$/09-lunxianshiqi.html" />
+        <option value="$PROJECT_DIR$/10-quanqiuhanshizonghui.html" />
+        <option value="$PROJECT_DIR$/10-shichengyinshe.html" />
+        <option value="$PROJECT_DIR$/10-tanshe.html" />
+        <option value="$PROJECT_DIR$/10-xinshengshishe.html" />
+        <option value="$PROJECT_DIR$/11-about-us.html" />
+        <option value="$PROJECT_DIR$/11-shiji.html" />
+        <option value="$PROJECT_DIR$/11-shirenfangtan.html" />
+        <option value="$PROJECT_DIR$/11-shirenshengping.html" />
+        <option value="$PROJECT_DIR$/11-shirenyinchang.html" />
+        <option value="$PROJECT_DIR$/11-shitanjinkuang.html" />
+        <option value="$PROJECT_DIR$/11-yanjiulunwen.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="103" />
+    <option name="y" value="28" />
+    <option name="width" value="1181" />
+    <option name="height" value="827" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -139,13 +237,35 @@
         <subPane>
           <expand>
             <path>
-              <item name="sg-poem-github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sg-poem-github" type="462c0819:PsiDirectoryNode" />
+              <item name="poem-w1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poem-w1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sg-poem-github" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sg-poem-github" type="462c0819:PsiDirectoryNode" />
+              <item name="poem-w1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poem-w1" type="462c0819:PsiDirectoryNode" />
               <item name="01-homepage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poem-w1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poem-w1" type="462c0819:PsiDirectoryNode" />
+              <item name="01-homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poem-w1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poem-w1" type="462c0819:PsiDirectoryNode" />
+              <item name="03-About-me" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poem-w1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poem-w1" type="462c0819:PsiDirectoryNode" />
+              <item name="03-About-me" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poem-w1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poem-w1" type="462c0819:PsiDirectoryNode" />
+              <item name="04-Contact" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -159,6 +279,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -185,21 +310,23 @@
       <workItem from="1561783095113" duration="11166000" />
       <workItem from="1561799290121" duration="6325000" />
       <workItem from="1561824768511" duration="1053000" />
+      <workItem from="1566203814557" duration="17500000" />
+      <workItem from="1566276365243" duration="6645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18544000" />
+    <option name="totallyTimeSpent" value="42689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21071176" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26779422" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.04172462" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -218,28 +345,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/02-Single-post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2775">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-homepage/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/logo.png" />
-    <entry file="file://$PROJECT_DIR$/03-About-me.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05-Comming-soon/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7314">
@@ -254,27 +360,241 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-homepage/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/02-Single-post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3197">
-          <caret line="139" selection-end-line="433" selection-end-column="52" />
+        <state relative-caret-position="23">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05-Comming-soon.html">
+    <entry file="file://$PROJECT_DIR$/04-Contact.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="111" column="28" lean-forward="true" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+        <state relative-caret-position="460">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-About-me/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="294" column="25" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-About-me/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1104">
+          <caret line="122" column="23" selection-start-line="122" selection-start-column="23" selection-end-line="122" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-homepage/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="188" column="45" selection-start-line="188" selection-start-column="45" selection-end-line="188" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-homepage/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="309" column="52" lean-forward="true" selection-start-line="309" selection-start-column="52" selection-end-line="309" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2461">
-          <caret line="107" column="35" lean-forward="true" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+        <state relative-caret-position="417">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="82" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-zhuanti-chunlian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-zhuanti-dzwxjhanshizu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-zhuanti-nusstudent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-zhuanti-sgyinglian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-zhuanti-shuanglin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-zhuanti-xinzhouyayuan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-About-me.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="187" column="24" lean-forward="true" selection-start-line="187" selection-start-column="24" selection-end-line="187" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-mingshengguji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04-nanyangfengsu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05-difangyuyan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-nanyangwuchan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-xinzhoufengyue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
           <folding>
-            <marker date="1561821549590" expanded="true" signature="10164:10267" ph="..." />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08-foyuchanxin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09-lunxianshiqi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-quanqiuhanshizonghui.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="55" column="99" selection-start-line="55" selection-start-column="99" selection-end-line="55" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-shichengyinshe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="55" column="99" selection-start-line="55" selection-start-column="99" selection-end-line="55" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-tanshe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-xinshengshishe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-about-us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1338">
+          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-shiji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-shirenfangtan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-shirenshengping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-shirenyinchang.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-shitanjinkuang.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11-yanjiulunwen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
         </state>
       </provider>
     </entry>
