@@ -22,26 +22,27 @@
 			<div class="col-sm-0 col-md-1 col-lg-2"></div>
 
 			<div class="col-sm-12 col-md-10 col-lg-8">
-				<div class="about-author center-text">
-					<!--<div class="author-image"><img src="images/author-1-200x200.jpg" alt="Autohr Image"></div>-->
-					<br/>
-					<br/>
+				{% for poem in poems %}
+					<div class="about-author center-text">
+						<!--<div class="author-image"><img src="images/author-1-200x200.jpg" alt="Autohr Image"></div>-->
+						<br/>
+						<br/>
 
-					<h4 class="author-name"><b class="light-color">
-						横批</b></h4>
-					<br/>
+						<h4 class="author-name">
+							<b class="light-color">{{ poem.title }}</b>
+						</h4>
+						<br/>
 
-					<p>上联</p>
-					<p>下联</p>
-					<br/>
+						{{poem.body}}
+						<br/>
 
-					<h6 class="author-name"><b class="light-color">
-						作者 01</b></h6>
-					<br/>
+						<h6 class="author-name"><b class="light-color">{{poem.author}}</b></h6>
+						<br/>
 
-					<!--<div class="signature-image"><img src="images/signature-image.png" alt="Signature Image"></div>-->
-					<!--<a class="read-more-link" href="#"><b>READ MORE</b></a>-->
-				</div>
+						<!--<div class="signature-image"><img src="images/signature-image.png" alt="Signature Image"></div>-->
+						<!--<a class="read-more-link" href="#"><b>READ MORE</b></a>-->
+					</div>
+				{% endfor %}
 
 			</div><!-- col-sm-12 -->
 		</div><!-- row -->

@@ -1,7 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>{{title}}</title>
+	{% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>新加坡舊體詩庫</title>
+    {% endif %}
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
@@ -46,7 +50,7 @@
 						<li><a href="02-zhuanti-sgyinglian.html">新加坡楹聯</a></li>
 					</ul>
 				</li>
-				<li><a href="03-mingshengguji.html">名勝古跡</a></li>
+				<li><a href="{{ url_for('mingsheng') }}">名勝古跡</a></li>
 				<li><a href="04-nanyangfengsu.html">南洋風俗</a></li>
 				<!--<li class="drop-down"><a href="#!"><i class="ion-ios-arrow-down">南洋風俗</i></a>-->
 					<!--<ul class="drop-down-menu">-->
@@ -88,29 +92,19 @@
 
 	<div class="main-slider">
 		<div id="slider">
+			{% for slider in sliders %}
+				<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
+					<!--<img src="images/slider-1-1600x800.jpg" class="ls-bg" alt="" />-->
+					<img src={{ slider.path }} class="ls-bg" alt="" />
 
-			<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
-				<!--<img src="images/slider-1-1600x800.jpg" class="ls-bg" alt="" />-->
-				<img src="../static/images/slider-1.jpg" class="ls-bg" alt="" />
+						<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+							<a class="btn" href="#">{{ slider.comments[0] }}</a>
+							<h3 class="title"><b>{{ slider.comments[1] }}</b></h3>
+							<h6>{{ slider.comments[2] }}</h6>
+						</div>
 
-					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
-						<a class="btn" href="#">星洲四大才子</a>
-						<h3 class="title"><b>葉季允, 釋瑞于, 邱菽園, 李俊承</b></h3>
-						<h6>1859 - 1966</h6>
-					</div>
-
-			</div><!-- ls-slide -->
-
-			<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
-				<!--<img src="images/slider-2-1600x800.jpg" class="ls-bg" alt="" />-->
-				<img src="../static/images/slider-2.jpg" class="ls-bg" alt="" />
-
-					<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
-						<a class="btn" href="#">烏敏島油畫</a>
-						<h3 class="title"><b>何自力 (新加坡國立大學中文系講師) 作</b></h3>
-					</div>
-
-			</div><!-- ls-slide -->
+				</div><!-- ls-slide -->
+			{% endfor %}
 		</div><!-- slider -->
 	</div><!-- main-slider -->
 

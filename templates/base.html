@@ -1,7 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>{{title}}</title>
+	{% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>新加坡舊體詩庫</title>
+    {% endif %}
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
@@ -24,8 +28,6 @@
 
 			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 
-
-
 			<ul class="main-menu visible-on-click" id="main-menu">
 				<li><a href="{{ url_for('home') }}">首頁</a></li>
 				<li class="drop-down"><a href="#!">專題<i class="ion-ios-arrow-down"></i></a>
@@ -38,7 +40,7 @@
 						<li><a href="02-zhuanti-sgyinglian.html">新加坡楹聯</a></li>
 					</ul>
 				</li>
-				<li><a href="03-mingshengguji.html">名勝古跡</a></li>
+				<li><a href="{{ url_for('mingsheng') }}">名勝古跡</a></li>
 				<li><a href="04-nanyangfengsu.html">南洋風俗</a></li>
 				<!--<li class="drop-down"><a href="#!"><i class="ion-ios-arrow-down">南洋風俗</i></a>-->
 				<!--<ul class="drop-down-menu">-->
