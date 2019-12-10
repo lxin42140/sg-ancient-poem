@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>{{title}}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link href="../static/common-css/bootstrap.css" rel="stylesheet">
+	<link href="../static/common-css/ionicons.css" rel="stylesheet">
+	<link href="../static/05-Comming-soon/css/styles.css" rel="stylesheet">
+	<link href="../static/05-Comming-soon/css/responsive.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="middle-menu center-text"><a href="#" class="logo"><img src={{ logo_path }} alt="Logo Image"></a></div>
+
+		<div class="bottom-area">
+
+			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
+
+
+
+			<ul class="main-menu visible-on-click" id="main-menu">
+				<li><a href="{{ url_for('home') }}">首頁</a></li>
+				<li class="drop-down"><a href="#!">專題<i class="ion-ios-arrow-down"></i></a>
+					<ul class="drop-down-menu">
+						<li><a href="02-zhuanti-shuanglin.html">雙林寺詩詞</a></li>
+						<li><a href="02-zhuanti-xinzhouyayuan.html">新洲雅苑懷舊集</a></li>
+						<li><a href="02-zhuanti-dzwxjhanshizu.html">新加坡大專文學獎--漢詩組得獎作品</a></li>
+						<li><a href="02-zhuanti-nusstudent.html">國立大學學生作品</a></li>
+						<li><a href="02-zhuanti-chunlian.html">春聯比賽得獎作品</a></li>
+						<li><a href="02-zhuanti-sgyinglian.html">新加坡楹聯</a></li>
+					</ul>
+				</li>
+				<li><a href="03-mingshengguji.html">名勝古跡</a></li>
+				<li><a href="04-nanyangfengsu.html">南洋風俗</a></li>
+				<!--<li class="drop-down"><a href="#!"><i class="ion-ios-arrow-down">南洋風俗</i></a>-->
+				<!--<ul class="drop-down-menu">-->
+				<!--<li><a href="#">氣候</a></li>-->
+				<!--<li><a href="#">飲食</a></li>-->
+				<!--<li><a href="#">衣著</a></li>-->
+				<!--</ul>-->
+				<!--</li>-->
+				<li><a href="05-difangyuyan.html">地方語言</a></li>
+				<li><a href="06-nanyangwuchan.html">南洋物產</a></li>
+				<li><a href="07-xinzhoufengyue.html">星洲風月</a></li>
+				<li><a href="08-foyuchanxin.html">佛語禪心</a></li>
+				<li><a href="09-lunxianshiqi.html">淪陷時期</a></li>
+				<li class="drop-down"><a href="#!">詩社<i class="ion-ios-arrow-down"></i></a>
+					<ul class="drop-down-menu">
+						<li><a href="10-tanshe.html">檀社</a></li>
+						<li><a href="10-xinshengshishe.html">新聲詩社</a></li>
+						<li><a href="10-shichengyinshe.html">獅城吟社</a></li>
+						<li><a href="10-quanqiuhanshizonghui.html">全球漢詩總會</a></li>
+					</ul>
+				</li>
+				<li class="drop-down"><a href="#!">更多<i class="ion-ios-arrow-down"></i></a>
+					<ul class="drop-down-menu">
+						<!--<li><a href="11-shitanjinkuang.html">詩壇近況</a></li>-->
+						<li><a href="11-shirenfangtan.html">詩人訪談</a></li>
+						<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>
+						<li><a href="11-shiji.html">詩集</a></li>
+						<li><a href="11-shirenshengping.html">詩人生平</a></li>
+						<li><a href="11-yanjiulunwen.html">研究論文</a></li>
+						<li><a href="11-about-us.html">關於我們</a></li>
+					</ul>
+
+				</li>
+			</ul><!-- main-menu -->
+		</div><!-- conatiner -->
+	</header>
+    {% block content %}{% endblock %}
+
+<!--	<div class="container">-->
+<!--		<br/>-->
+<!--		<br/>-->
+<!--		<br/>-->
+<!--		<br/>-->
+<!--		<br/>-->
+<!--		<br/>-->
+<!--		<br/>-->
+<!--		<br/>-->
+<!--		<br/>-->
+<!--		<br/>-->
+<!--		<img src="../static/images/slider-chunlian.jpeg" class="ls-bg" alt="" />-->
+<!--		<img src="../static/images/slider-dazhuan.png" class="ls-bg" alt="" />-->
+<!--		<img src="../static/images/slider-nus.png" class="ls-bg" alt="" />-->
+<!--		<img src="../static/images/slider-sgyinglian.png" class="ls-bg" alt="" />-->
+<!--		<img src="../static/images/slider-shuanglin.jpg" class="ls-bg" alt="" />-->
+<!--		<img src="../static/images/slider-xinzhou.png" class="ls-bg" alt="" />-->
+
+<!--		<div class="row">-->
+<!--			<div class="col-sm-0 col-md-1 col-lg-2"></div>-->
+
+<!--			<div class="col-sm-12 col-md-10 col-lg-8">-->
+<!--				<div class="about-author center-text">-->
+<!--					&lt;!&ndash;<div class="author-image"><img src="images/author-1-200x200.jpg" alt="Autohr Image"></div>&ndash;&gt;-->
+<!--					<br/>-->
+<!--					<br/>-->
+
+<!--					<h4 class="author-name"><b class="light-color">-->
+<!--						横批</b></h4>-->
+<!--					<br/>-->
+
+<!--					<p>上联</p>-->
+<!--					<p>下联</p>-->
+<!--					<br/>-->
+
+<!--					<h6 class="author-name"><b class="light-color">-->
+<!--						作者 01</b></h6>-->
+<!--					<br/>-->
+
+<!--					&lt;!&ndash;<div class="signature-image"><img src="images/signature-image.png" alt="Signature Image"></div>&ndash;&gt;-->
+<!--					&lt;!&ndash;<a class="read-more-link" href="#"><b>READ MORE</b></a>&ndash;&gt;-->
+<!--				</div>-->
+
+<!--			</div>&lt;!&ndash; col-sm-12 &ndash;&gt;-->
+<!--		</div>&lt;!&ndash; row &ndash;&gt;-->
+<!--	</div>&lt;!&ndash; container &ndash;&gt;-->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="footer-section">
+						<p class="copyright text-center">
+							NUS Faculty of Arts and Social Science - Chinese Studies &copy; 2019 All rights reserved.
+						</p>
+					</div><!-- footer-section -->
+				</div><!-- col-lg-4 col-md-6 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</footer>
+
+
+	<!-- SCIPTS -->
+
+	<script src="../static/common-js/jquery-3.1.1.min.js"></script>
+
+	<script src="../static/common-js/tether.min.js"></script>
+
+	<script src="../static/common-js/bootstrap.js"></script>
+
+	<script src="../static/common-js/jquery.countdown.min.js"></script>
+
+	<script src="../static/common-js/scripts.js"></script>
+
+
+</body>
+</html>
