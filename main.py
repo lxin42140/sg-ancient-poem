@@ -18,7 +18,7 @@ def home():
             'comments': ['烏敏島油畫', '何自力  作', '新加坡國立大學中文系講師']
         }
     ]
-    return render_template('01-homepage.html',
+    return render_template('homepage.html',
                            title = title,
                            logo_path = logo_path,
                            sliders = sliders)
@@ -28,7 +28,7 @@ def topic():
     logo_path = IMG_PATH + 'logo-chunlian.png'
     title = '新加坡舊體詩庫-大專文學獎漢詩組'
     poems = []
-    return render_template('02-zhuanti.html',
+    return render_template('zhuanti.html',
                            title = title,
                            logo_path = logo_path,
                            poems = poems)
@@ -47,7 +47,7 @@ def mingsheng():
             'comments': ['184 Jalan Toa Payoh', '雙林寺', 'Singapore 319944']
         }
     ]
-    return render_template('03-mingshengguji.html',
+    return render_template('slider-poem-list.html',
                            title = title,
                            logo_path = logo_path,
                            sliders = sliders)
