@@ -1,6 +1,7 @@
 import pymysql
 import pandas as pd
 import json
+import re
 
 class DBHelper:
 
@@ -36,16 +37,17 @@ class DBHelper:
         self.cur.execute(sql)
         self.__disconnect__()
 
-    def get_db_prep_value(value):
+    def get_db_prep_value(self, value):
         try:
-            return json.dumps(value)
+            string = json.dumps(value)
+            return re.escape(string)
         except TypeError:
             BAD_DATA.error(
                 "cannot serialize %s to store in a JsonField", str(value)
             )
             return ""
 
-    def get_data_from_db_json_value(value):
+    def get_data_from_db_json_value(self, value):
         if value == "":
             return None
         try:
@@ -63,6 +65,7 @@ class DBHelper:
             ans_list.append(answer['author_name'])
         return ans_list
 
+    # category in chinese
     def get_all_poems_by_poet_in_category(self, poet_name, category):
         sql_query = "SELECT DISTINCT title FROM Poem WHERE category = '" + category + "' AND author_name = '" + poet_name + "'"
         print(sql_query)
@@ -73,11 +76,54 @@ class DBHelper:
         return ans_list
 
     def get_poem_content(self, poem_name):
-        content_dict = {}
-        sql_query = "SELECT DISTINCT content FROM Poem WHERE title = '" + poem_name + "'"
-        print(sql_query)
-        answer_list = self.fetch(sql_query)
-        ans_list = []
-        for answer in answer_list:
-            ans_list.append(answer['content'])
-        return ans_list
+        sql_query = "SELECT title, year, author_name, introduction, content, published_info, comments FROM Poem WHERE title = '" + poem_name + "'"
+        content_dict = self.fetch(sql_query)[0]
+        return content_dict
+
+    def get_logo_for_category(self, category):
+        sql_query = "SELECT logo_url FROM Topic WHERE name = '" + category + "'"
+        logo_url = self.fetch(sql_query)[0]['logo_url']
+        return logo_url
+
+    def get_chn_name_for_category(self, category):
+        sql_query = "SELECT chn_name FROM Topic WHERE name = '" + category + "'"
+        chn_name = self.fetch(sql_query)[0]['chn_name']
+        return chn_name
+
+    # Return format:
+    # sliders = [
+    #     {
+    #         'path': IMG_PATH + 'slider-1.jpg',
+    #         'comments': ['星洲四大才子', '葉季允, 釋瑞于, 邱菽園, 李俊承', '1859 - 1966']
+    #     },
+    #     {
+    #         'path': IMG_PATH + 'slider-2.jpg',
+    #         'comments': ['烏敏島油畫', '何自力  作', '新加坡國立大學中文系講師']
+    #     }
+    # ]
+    def get_slider_info_for_category(self, category):
+        sql_query = "SELECT slider FROM Topic WHERE chn_name = '" + category + "'"
+        db_json = self.fetch(sql_query)[0]['slider']
+        slider_dict = self.get_data_from_db_json_value(db_json)['urls_dict']
+        slider_list = []
+        for key, value in slider_dict.items():
+            ans_dict = {}
+            ans_dict['path'] = key
+            ans_dict['comments'] = value
+            slider_list.append(ans_dict)
+        return slider_list
+
+    def save_sliders_to_db(self, slider_list):
+        try:
+            count = 1
+            print(slider_list)
+            for json_item in slider_list:
+                this_item = self.get_db_prep_value(json_item)
+                sqlQuery = "UPDATE Topic SET slider = '{}' WHERE id = {}".format(this_item, count)
+                self.execute(sqlQuery)
+                count += 1
+            return True
+        except Exception as e:
+            print("Exeception occured:{}".format(e))
+            return False
+

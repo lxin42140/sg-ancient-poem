@@ -1,7 +1,9 @@
 from flask import Flask, render_template
+from DBHelper import DBHelper
 app = Flask(__name__)
 
 IMG_PATH = '../static/images/'
+title_prefix = '新加坡舊體詩庫-'
 
 @app.route('/')
 @app.route('/home')
@@ -23,34 +25,61 @@ def home():
                            logo_path = logo_path,
                            sliders = sliders)
 
-@app.route('/zhuanti')
-def topic():
-    logo_path = IMG_PATH + 'logo-chunlian.png'
-    title = '新加坡舊體詩庫-大專文學獎漢詩組'
-    poems = []
-    return render_template('zhuanti.html',
-                           title = title,
-                           logo_path = logo_path,
-                           poems = poems)
+# poet_poem_list
+def get_parameters_for_main_category(category):
+    db = DBHelper()
+    para_dict = {}
 
-@app.route('/mingshengguji')
-def mingsheng():
-    logo_path = "xx"
-    title = '新加坡舊體詩庫-名勝古跡'
-    sliders = [  # fake array of posts
-        {
-            'path': IMG_PATH + 'slider-mingshengguji-1.jpg',
-            'comments': ['濱海灣', '魚尾獅', '1965-2019']
-        },
-        {
-            'path': IMG_PATH + 'slider-shuanglin.jpg',
-            'comments': ['184 Jalan Toa Payoh', '雙林寺', 'Singapore 319944']
-        }
-    ]
+    logo_path = db.get_logo_for_category(category)
+    para_dict['logo_path'] = logo_path
+
+    chn_category = db.get_chn_name_for_category(category)
+    title = title_prefix + chn_category
+    para_dict['title'] = title
+
+    para_dict['sliders'] = db.get_slider_info_for_category(category) # slider_list
+
+    poet_poem_dict = {}
+    poet_names = db.get_all_poet_names_for_a_category(chn_category)
+    for poet_name in poet_names:
+        poet_poem_dict[poet_name] = db.get_all_poems_by_poet_in_category(poet_name, chn_category)
+
+    para_dict['main_content'] = poet_poem_dict
+    return para_dict
+
+# poem_content_page
+def get_parameters_for_poem_content_page(category, poem_name):
+    db = DBHelper()
+    para_dict = {}
+
+    logo_path = db.get_logo_for_category(category)
+    para_dict['logo_path'] = logo_path
+
+    title = title_prefix + poem_name
+    para_dict['title'] = title
+
+    para_dict['main_content'] = db.get_poem_content(poem_name)
+    return para_dict
+
+@app.route('/<category>')
+def topic(category):
+    para_dict = get_parameters_for_main_category(category)
     return render_template('slider-poem-list.html',
-                           title = title,
-                           logo_path = logo_path,
-                           sliders = sliders)
+       title = para_dict['title'],
+       logo_path = para_dict['logo_path'],
+       sliders = para_dict['sliders'],
+       main_content = para_dict['main_content']
+    )
+
+@app.route('/<category>/<poem_name>')
+def poem_content_page(category, poem_name):
+    para_dict = get_parameters_for_poem_content_page(category, poem_name)
+    return render_template('poem-content.html',
+       title = para_dict['title'],
+       logo_path = para_dict['logo_path'],
+       main_content = para_dict['main_content']
+    )
+
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=False)
