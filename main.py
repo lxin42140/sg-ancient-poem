@@ -37,7 +37,7 @@ def get_parameters_for_main_category(category):
     title = title_prefix + chn_category
     para_dict['title'] = title
 
-    para_dict['sliders'] = db.get_slider_info_for_category(category) # slider_list
+    para_dict['sliders'] = db.get_slider_info_for_category(chn_category) # slider_list
 
     poet_poem_dict = {}
     poet_names = db.get_all_poet_names_for_a_category(chn_category)
@@ -61,7 +61,7 @@ def get_parameters_for_poem_content_page(category, poem_name):
     para_dict['main_content'] = db.get_poem_content(poem_name)
     return para_dict
 
-@app.route('/<category>')
+@app.route('/<category>', methods=['GET'])
 def topic(category):
     para_dict = get_parameters_for_main_category(category)
     return render_template('slider-poem-list.html',
@@ -71,7 +71,7 @@ def topic(category):
        main_content = para_dict['main_content']
     )
 
-@app.route('/<category>/<poem_name>')
+@app.route('/<category>/<poem_name>', methods=['GET'])
 def poem_content_page(category, poem_name):
     para_dict = get_parameters_for_poem_content_page(category, poem_name)
     return render_template('poem-content.html',
@@ -79,6 +79,11 @@ def poem_content_page(category, poem_name):
        logo_path = para_dict['logo_path'],
        main_content = para_dict['main_content']
     )
+
+# @app.errorhandler(404)
+# def notfound():
+#     """Serve 404 template."""
+#     return make_response(render_template("404.html"), 404)
 
 
 if __name__ == '__main__':
