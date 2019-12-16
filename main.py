@@ -31,13 +31,17 @@ def get_parameters_for_main_category(category):
     para_dict = {}
 
     logo_path = db.get_logo_for_category(category)
-    para_dict['logo_path'] = logo_path
+    para_dict['logo_path'] = IMG_PATH + logo_path
 
     chn_category = db.get_chn_name_for_category(category)
     title = title_prefix + chn_category
     para_dict['title'] = title
 
     para_dict['sliders'] = db.get_slider_info_for_category(chn_category) # slider_list
+
+    # update slider path
+    for slider_dict in para_dict['sliders']:
+        slider_dict['path'] = IMG_PATH + slider_dict['path']
 
     poet_poem_dict = {}
     poet_names = db.get_all_poet_names_for_a_category(chn_category)
@@ -53,7 +57,7 @@ def get_parameters_for_poem_content_page(category, poem_name):
     para_dict = {}
 
     logo_path = db.get_logo_for_category(category)
-    para_dict['logo_path'] = logo_path
+    para_dict['logo_path'] = IMG_PATH + logo_path
 
     title = title_prefix + poem_name
     para_dict['title'] = title
@@ -64,6 +68,7 @@ def get_parameters_for_poem_content_page(category, poem_name):
 @app.route('/<category>', methods=['GET'])
 def topic(category):
     para_dict = get_parameters_for_main_category(category)
+
     return render_template('slider-poem-list.html',
        title = para_dict['title'],
        logo_path = para_dict['logo_path'],
@@ -79,6 +84,10 @@ def poem_content_page(category, poem_name):
        logo_path = para_dict['logo_path'],
        main_content = para_dict['main_content']
     )
+
+@app.route('/favicon.ico', methods=['GET'])
+def favicon():
+    return ""
 
 # @app.errorhandler(404)
 # def notfound():

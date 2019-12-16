@@ -42,16 +42,16 @@
 				<li><a href="{{ url_for('home') }}">首頁</a></li>
 				<li class="drop-down"><a href="#!">專題<i class="ion-ios-arrow-down"></i></a>
 					<ul class="drop-down-menu">
-						<li><a href="{{ url_for('zhuanti-shuanglin') }}">雙林寺詩詞</a></li>
-						<li><a href="{{ url_for('zhuanti-xinzhouyayuan') }}">新洲雅苑懷舊集</a></li>
-						<li><a href="{{ url_for('zhuanti-dazhuan') }}">新加坡大專文學獎--漢詩組得獎作品</a></li>
-						<li><a href="{{ url_for('zhuanti-nus') }}">國立大學學生作品</a></li>
-						<li><a href="{{ url_for('zhuanti-chunlian') }}">春聯比賽得獎作品</a></li>
-						<li><a href="{{ url_for('zhuanti-sgyinglian') }}">新加坡楹聯</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-shuanglin') }}">雙林寺詩詞</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-xinzhouyayuan') }}">新洲雅苑懷舊集</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-dazhuan') }}">新加坡大專文學獎--漢詩組得獎作品</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-nus') }}">國立大學學生作品</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-chunlian') }}">春聯比賽得獎作品</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-sgyinglian') }}">新加坡楹聯</a></li>
 					</ul>
 				</li>
-				<li><a href="{{ url_for('mingshengguji') }}">名勝古跡</a></li>
-				<li><a href="{{ url_for('nanyangfengsu') }}">南洋風俗</a></li>
+				<li><a href="{{ url_for('topic', category='mingshengguji') }}">名勝古跡</a></li>
+				<li><a href="{{ url_for('topic', category='nanyangfengsu') }}">南洋風俗</a></li>
 				<!--<li class="drop-down"><a href="#!"><i class="ion-ios-arrow-down">南洋風俗</i></a>-->
 				<!--<ul class="drop-down-menu">-->
 				<!--<li><a href="#">氣候</a></li>-->
@@ -59,31 +59,30 @@
 				<!--<li><a href="#">衣著</a></li>-->
 				<!--</ul>-->
 				<!--</li>-->
-				<li><a href="{{ url_for('difangyuyan') }}">地方語言</a></li>
-				<li><a href="{{ url_for('nanyangwuchan') }}">南洋物產</a></li>
-				<li><a href="{{ url_for('xingzhoufengyue') }}">星洲風月</a></li>
-				<li><a href="{{ url_for('foyuchanxin') }}">佛語禪心</a></li>
-				<li><a href="{{ url_for('lunxianshiqi') }}">淪陷時期</a></li>
-				<li class="drop-down"><a href="#!">詩社<i class="ion-ios-arrow-down"></i></a>
-					<ul class="drop-down-menu">
-						<li><a href="10-tanshe.html">檀社</a></li>
-						<li><a href="10-xinshengshishe.html">新聲詩社</a></li>
-						<li><a href="10-shichengyinshe.html">獅城吟社</a></li>
-						<li><a href="10-quanqiuhanshizonghui.html">全球漢詩總會</a></li>
-					</ul>
-				</li>
-				<li class="drop-down"><a href="#!">更多<i class="ion-ios-arrow-down"></i></a>
-					<ul class="drop-down-menu">
-						<!--<li><a href="11-shitanjinkuang.html">詩壇近況</a></li>-->
-						<li><a href="11-shirenfangtan.html">詩人訪談</a></li>
-						<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>
-						<li><a href="11-shiji.html">詩集</a></li>
-						<li><a href="11-shirenshengping.html">詩人生平</a></li>
-						<li><a href="11-yanjiulunwen.html">研究論文</a></li>
-						<li><a href="11-about-us.html">關於我們</a></li>
-					</ul>
-
-				</li>
+				<li><a href="{{ url_for('topic', category='difangyuyan') }}">地方語言</a></li>
+				<li><a href="{{ url_for('topic', category='nanyangwuchan') }}">南洋物產</a></li>
+				<li><a href="{{ url_for('topic', category='xingzhoufengyue') }}">星洲風月</a></li>
+				<li><a href="{{ url_for('topic', category='foyuchanxin') }}">佛語禪心</a></li>
+				<li><a href="{{ url_for('topic', category='lunxianshiqi') }}">淪陷時期</a></li>
+				<!--<li class="drop-down"><a href="#!">詩社<i class="ion-ios-arrow-down"></i></a>-->
+					<!--<ul class="drop-down-menu">-->
+						<!--<li><a href="10-tanshe.html">檀社</a></li>-->
+						<!--<li><a href="10-xinshengshishe.html">新聲詩社</a></li>-->
+						<!--<li><a href="10-shichengyinshe.html">獅城吟社</a></li>-->
+						<!--<li><a href="10-quanqiuhanshizonghui.html">全球漢詩總會</a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+				<!--<li class="drop-down"><a href="#!">更多<i class="ion-ios-arrow-down"></i></a>-->
+					<!--<ul class="drop-down-menu">-->
+						<!--&lt;!&ndash;<li><a href="11-shitanjinkuang.html">詩壇近況</a></li>&ndash;&gt;-->
+						<!--<li><a href="11-shirenfangtan.html">詩人訪談</a></li>-->
+						<!--<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>-->
+						<!--<li><a href="11-shiji.html">詩集</a></li>-->
+						<!--<li><a href="11-shirenshengping.html">詩人生平</a></li>-->
+						<!--<li><a href="11-yanjiulunwen.html">研究論文</a></li>-->
+						<!--<li><a href="11-about-us.html">關於我們</a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
 			</ul><!-- main-menu -->
 		</div><!-- conatiner -->
 	</header>
@@ -92,17 +91,24 @@
 	<div class="main-slider">
 		<div id="slider">
 			{% for slider in sliders %}
-				<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
-					<!--<img src="images/slider-1-1600x800.jpg" class="ls-bg" alt="" />-->
-					<img src={{ slider.path }} class="ls-bg" alt="" />
+				{% if slider.path %}
+					<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
+						<!--<img src="images/slider-1-1600x800.jpg" class="ls-bg" alt="" />-->
+						<img src={{ slider.path }} class="ls-bg" alt="" />
+							<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+								{% if slider.comments[0] %}
+									<a class="btn" href="#">{{ slider.comments[0] }}</a>
+								{% endif %}
+								{% if slider.comments[1] %}
+									<h3 class="title"><b>{{ slider.comments[1] }}</b></h3>
+								{% endif %}
+								{% if slider.comments[2] %}
+									<h6>{{ slider.comments[2] }}</h6>
+								{% endif %}
+							</div>
 
-						<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
-							<a class="btn" href="#">{{ slider.comments[0] }}</a>
-							<h3 class="title"><b>{{ slider.comments[1] }}</b></h3>
-							<h6>{{ slider.comments[2] }}</h6>
-						</div>
-
-				</div><!-- ls-slide -->
+					</div><!-- ls-slide -->
+				{% endif %}
 			{% endfor %}
 		</div><!-- slider -->
 	</div><!-- main-slider -->

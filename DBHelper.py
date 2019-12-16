@@ -58,7 +58,6 @@ class DBHelper:
 
     def get_all_poet_names_for_a_category(self, category):
         sql_query = "SELECT DISTINCT author_name FROM Poem WHERE category = '" + category + "'"
-        print(sql_query)
         answer_list = self.fetch(sql_query)
         ans_list = []
         for answer in answer_list:
@@ -68,7 +67,6 @@ class DBHelper:
     # category in chinese
     def get_all_poems_by_poet_in_category(self, poet_name, category):
         sql_query = "SELECT DISTINCT title FROM Poem WHERE category = '" + category + "' AND author_name = '" + poet_name + "'"
-        print(sql_query)
         answer_list = self.fetch(sql_query)
         ans_list = []
         for answer in answer_list:
@@ -82,8 +80,14 @@ class DBHelper:
 
     def get_logo_for_category(self, category):
         sql_query = "SELECT logo_url FROM Topic WHERE name = '" + category + "'"
-        logo_url = self.fetch(sql_query)[0]['logo_url']
-        return logo_url
+        try:
+            fetch_result = self.fetch(sql_query)
+            logo_url = fetch_result[0]['logo_url']
+            return logo_url
+        except Exception as e:
+            print("Exeception occured:{}".format(e))
+            print("Category name:{}".format(category))
+
 
     def get_chn_name_for_category(self, category):
         sql_query = "SELECT chn_name FROM Topic WHERE name = '" + category + "'"
@@ -104,14 +108,28 @@ class DBHelper:
     def get_slider_info_for_category(self, category):
         sql_query = "SELECT slider FROM Topic WHERE chn_name = '" + category + "'"
         db_json = self.fetch(sql_query)[0]['slider']
-        slider_dict = self.get_data_from_db_json_value(db_json)['urls_dict']
+        raw_data = self.get_data_from_db_json_value(db_json)
+        type = raw_data['slider_type']
+
         slider_list = []
-        for key, value in slider_dict.items():
+        if type == 1:
+            slider_dict = raw_data['urls_dict']
+
+            for key, value in slider_dict.items():
+                ans_dict = {}
+                ans_dict['path'] = key
+                ans_dict['comments'] = value
+                slider_list.append(ans_dict)
+
+        # wip: need to modify the structure in the db
+        elif type == 0:
+            # zhuanti
             ans_dict = {}
-            ans_dict['path'] = key
-            ans_dict['comments'] = value
+            ans_dict['path'] = raw_data['urls'][0]
+            ans_dict['comments'] = ''
             slider_list.append(ans_dict)
         return slider_list
+
 
     def save_sliders_to_db(self, slider_list):
         try:

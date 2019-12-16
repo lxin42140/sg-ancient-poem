@@ -20,17 +20,35 @@
 						<br/>
 						<br/>
 
-						<h4 class="author-name"><b class="light-color">
-							苦熱 （1964）</b></h4>
-						<h6 class="author-name"><b class="light-color">
-							黃火若</b></h6>
+						<h4 class="author-name">
+							<b class="light-color">
+								{{ content_dict['title'] }}
+								{% if content_dict['year'] %}
+									（ {{ content_dict['year'] }} ）
+								{% endif %}
+							</b>
+						</h4>
+						<h6 class="author-name">
+							<b class="light-color">
+								{{ content_dict['author_name'] }}
+							</b>
+						</h6>
 
 						<br/>
-						<p>大地如焚天似醉，逢人盡道熱難看。</p>
-						<p>何當乞取連延雨，好逐炎魔入碧潭。</p>
+						{% if content_dict['introduction'] %}
+							<p>{{ content_dict['introduction'] }}</p>
+						{% endif %}
+
+						<p>{{ content_dict['content'] }}</p>
+						<!--<p>大地如焚天似醉，逢人盡道熱難看。</p>-->
+						<!--<p>何當乞取連延雨，好逐炎魔入碧潭。</p>-->
 
 						<br/>
-						<p>黃火若《今是堂剩稿》</p>
+
+						{% if content_dict['published_info'] %}
+							<p>{{ content_dict['published_info'] }}</p>
+						{% endif %}
+						<!--<p>黃火若《今是堂剩稿》</p>-->
 						<br/>
 
 					</div>
