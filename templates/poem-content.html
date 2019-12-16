@@ -43,7 +43,11 @@
 
                         <br/>
                         {% for poem_sentence in poem_content_list %}
-						    <p>{{ poem_sentence }}</p>
+                            {% if poem_sentence == '\n' %}
+                                <br/>
+                            {% else %}
+						        <p>{{ poem_sentence }}</p>
+                            {% endif %}
                         {% endfor %}
 
 						<br/>

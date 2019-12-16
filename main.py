@@ -67,26 +67,45 @@ def get_parameters_for_poem_content_page(category, poem_name):
     para_dict['main_content'] = db.get_poem_content(poem_name)
     return para_dict
 
-
-# Encountered punctuation create a new line
-# Returns a list of poem sentences with punctuation.
-def format_poem_content(full_poem):
-    processed_list = re.split('(。|？|，|, |\?)', full_poem)
-    poem_content_list = []
-
-    for i in range(int(len(processed_list) / 2)):
-        if processed_list[2 * i + 1]:
-            this_str = processed_list[2 * i] + processed_list[2 * i + 1]
-            poem_content_list.append(this_str)
-    return poem_content_list
-
 # Processes text
 def process_text(raw_text):
     if not raw_text:
         return ""
     whitespace_removed_text = raw_text.replace(" ", "")
-    line_breaker_removed_text = whitespace_removed_text.replace("\n", "")
-    return line_breaker_removed_text
+    return whitespace_removed_text
+
+# Encountered punctuation create a new line
+# Returns a list of poem sentences with punctuation.
+def format_poem_content(full_poem):
+    print("full_poem")
+    print(full_poem)
+    full_poem = process_text(full_poem)
+    processed_list = re.split('(。|？|，|, |\?|!|！|\n|;|；)', full_poem)
+    poem_content_list = []
+    punctuation_list = ['，', '。', '！','？',',','!','?','；',';']
+    print(processed_list)
+
+    for i in range(int(len(processed_list) / 2)):
+        punctuation_field = processed_list[2 * i + 1]
+        if not punctuation_field:
+            poem_content_list.append(processed_list[2 * i])
+            break
+
+        if punctuation_field == '\n':
+            poem_content_list.append(processed_list[2 * i])
+            poem_content_list.append(processed_list[2 * i + 1])
+            continue
+
+        if punctuation_field in punctuation_list:
+            this_str = processed_list[2 * i] + processed_list[2 * i + 1]
+            poem_content_list.append(this_str)
+        else:
+            print("error: wrong format!")
+
+    print(poem_content_list)
+    return poem_content_list
+
+
 
 
 @app.route('/category/<category>', methods=['GET'])
