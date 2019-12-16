@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 from DBHelper import DBHelper
+import re
+
 app = Flask(__name__)
 
 IMG_PATH = '../static/images/'
@@ -21,9 +23,9 @@ def home():
         }
     ]
     return render_template('homepage.html',
-                           title = title,
-                           logo_path = logo_path,
-                           sliders = sliders)
+       title = title,
+       logo_path = logo_path,
+       sliders = sliders)
 
 # poet_poem_list
 def get_parameters_for_main_category(category):
@@ -65,6 +67,28 @@ def get_parameters_for_poem_content_page(category, poem_name):
     para_dict['main_content'] = db.get_poem_content(poem_name)
     return para_dict
 
+
+# Encountered punctuation create a new line
+# Returns a list of poem sentences with punctuation.
+def format_poem_content(full_poem):
+    processed_list = re.split('(。|？|，|, |\?)', full_poem)
+    poem_content_list = []
+
+    for i in range(int(len(processed_list) / 2)):
+        if processed_list[2 * i + 1]:
+            this_str = processed_list[2 * i] + processed_list[2 * i + 1]
+            poem_content_list.append(this_str)
+    return poem_content_list
+
+# Processes text
+def process_text(raw_text):
+    if not raw_text:
+        return ""
+    whitespace_removed_text = raw_text.replace(" ", "")
+    line_breaker_removed_text = whitespace_removed_text.replace("\n", "")
+    return line_breaker_removed_text
+
+
 @app.route('/category/<category>', methods=['GET'])
 def topic(category):
     para_dict = get_parameters_for_main_category(category)
@@ -74,16 +98,22 @@ def topic(category):
        title = para_dict['title'],
        logo_path = para_dict['logo_path'],
        sliders = para_dict['sliders'],
-       main_content = para_dict['main_content']
+       main_content = para_dict['main_content'],
     )
 
 @app.route('/<category>/<poem_name>', methods=['GET'])
 def poem_content_page(category, poem_name):
     para_dict = get_parameters_for_poem_content_page(category, poem_name)
+    full_poem = para_dict['main_content']['content']
+    introduction = process_text(para_dict['main_content']['introduction'])
+    poem_content_list = format_poem_content(full_poem)
+
     return render_template('poem-content.html',
        title = para_dict['title'],
        logo_path = para_dict['logo_path'],
-       main_content = para_dict['main_content']
+       main_content = para_dict['main_content'],
+       introduction = introduction,
+       poem_content_list = poem_content_list,
     )
 
 @app.route('/favicon.ico', methods=['GET'])

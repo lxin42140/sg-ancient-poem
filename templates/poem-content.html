@@ -34,23 +34,26 @@
 							</b>
 						</h6>
 
-						<br/>
-						{% if main_content['introduction'] %}
-							<p>{{ main_content['introduction'] }}</p>
+
+						{% if introduction %}
+                        <br/>
+							<p>{{ introduction }}</p>
+                        <br/>
 						{% endif %}
 
-						<p>{{ main_content['content'] }}</p>
-						<!--<p>大地如焚天似醉，逢人盡道熱難看。</p>-->
-						<!--<p>何當乞取連延雨，好逐炎魔入碧潭。</p>-->
+                        <br/>
+                        {% for poem_sentence in poem_content_list %}
+						    <p>{{ poem_sentence }}</p>
+                        {% endfor %}
 
+						<br/>
 						<br/>
 
 						{% if main_content['published_info'] %}
 							<p>{{ main_content['published_info'] }}</p>
+                            <br/>
+                            <br/>
 						{% endif %}
-						<!--<p>黃火若《今是堂剩稿》</p>-->
-						<br/>
-
 					</div>
 					<br />
 					<br />
