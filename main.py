@@ -27,6 +27,26 @@ def home():
        logo_path = logo_path,
        sliders = sliders)
 
+@app.route('/about-us')
+def about_us():
+    return render_template('about-us.html')
+
+@app.route('/shirenfangtan')
+def shirenfangtan():
+    return render_template('shirenfangtan.html')
+
+@app.route('/shiji')
+def shiji():
+    return render_template('shiji.html')
+
+@app.route('/shitanjinkuang')
+def shitanjinkuang():
+    return render_template('shitanjinkuang.html')
+
+@app.route('/yanjiulunwen')
+def paper():
+    return render_template('yanjiulunwen.html')
+
 
 @app.route('/category/<category>', methods=['GET'])
 def topic(category):

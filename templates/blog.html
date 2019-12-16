@@ -27,6 +27,27 @@
 <body>
 
 	<header>
+        <div class="top-menu">
+
+			<ul class="left-area welcome-area">
+				<li class="hello-blog">歡迎訪問！</li>
+				<li><a href="mailto:chsll@nus.edu.sg">chsll@nus.edu.sg</a></li>
+			</ul><!-- left-area -->
+
+
+			<div class="right-area">
+
+				<ul class="social-icons">
+					<li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+				</ul><!-- right-area -->
+
+			</div><!-- right-area -->
+
+		</div><!-- top-menu -->
 		<div class="middle-menu center-text"><a href="#" class="logo"><img src={{ logo_path }} alt="Logo Image"></a></div>
 
 		<div class="bottom-area">
@@ -67,17 +88,17 @@
 						<li><a href="{{ url_for('shishe', name='quanqiuhanshizonghui') }}">全球漢詩總會</a></li>
 					</ul>
 				</li>
-				<!--<li class="drop-down"><a href="#!">更多<i class="ion-ios-arrow-down"></i></a>-->
-					<!--<ul class="drop-down-menu">-->
-						<!--&lt;!&ndash;<li><a href="11-shitanjinkuang.html">詩壇近況</a></li>&ndash;&gt;-->
-						<!--<li><a href="11-shirenfangtan.html">詩人訪談</a></li>-->
+				<li class="drop-down"><a href="#!">更多<i class="ion-ios-arrow-down"></i></a>
+					<ul class="drop-down-menu">
+						<li><a href="{{ url_for('shitanjinkuang') }}">詩壇近況</a></li>
+						<li><a href="{{ url_for('shirenfangtan') }}">詩人訪談</a></li>
 						<!--<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>-->
-						<!--<li><a href="11-shiji.html">詩集</a></li>-->
+						<li><a href="{{ url_for('shiji') }}">詩集</a></li>
 						<!--<li><a href="11-shirenshengping.html">詩人生平</a></li>-->
-						<!--<li><a href="11-yanjiulunwen.html">研究論文</a></li>-->
-						<!--<li><a href="11-about-us.html">關於我們</a></li>-->
-					<!--</ul>-->
-				<!--</li>-->
+						<li><a href="{{ url_for('paper') }}">研究論文</a></li>
+						<li><a href="{{ url_for('about_us') }}">關於我們</a></li>
+					</ul>
+				</li>
 			</ul><!-- main-menu -->
 		</div><!-- conatiner -->
 	</header>

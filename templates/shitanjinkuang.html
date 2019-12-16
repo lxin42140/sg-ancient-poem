@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>新加坡舊體詩庫-研究論文</title>
+	<title>新加坡舊體詩庫-詩壇近況</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
@@ -28,28 +28,26 @@
 <body>
 
 	<header>
-		<div class="middle-menu center-text"><a href="#" class="logo"><img src="../static/images/logo-shirenshengping.png" alt="Logo Image"></a></div>
+		<div class="middle-menu center-text"><a href="#" class="logo"><img src="../static/images/logo-shitanjinkuang.png" alt="Logo Image"></a></div>
 
 		<div class="bottom-area">
 
 			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 
-
-
 			<ul class="main-menu visible-on-click" id="main-menu">
-				<li><a href="homepage.html">首頁</a></li>
+				<li><a href="{{ url_for('home') }}">首頁</a></li>
 				<li class="drop-down"><a href="#!">專題<i class="ion-ios-arrow-down"></i></a>
 					<ul class="drop-down-menu">
-						<li><a href="02-zhuanti-shuanglin.html">雙林寺詩詞</a></li>
-						<li><a href="02-zhuanti-xinzhouyayuan.html">新洲雅苑懷舊集</a></li>
-						<li><a href="02-zhuanti-dzwxjhanshizu.html">新加坡大專文學獎--漢詩組得獎作品</a></li>
-						<li><a href="02-zhuanti-nusstudent.html">國立大學學生作品</a></li>
-						<li><a href="02-zhuanti-chunlian.html">春聯比賽得獎作品</a></li>
-						<li><a href="02-zhuanti-sgyinglian.html">新加坡楹聯</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-shuanglin') }}">雙林寺詩詞</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-xinzhouyayuan') }}">新洲雅苑懷舊集</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-dazhuan') }}">新加坡大專文學獎--漢詩組得獎作品</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-nus') }}">國立大學學生作品</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-chunlian') }}">春聯比賽得獎作品</a></li>
+						<li><a href="{{ url_for('topic', category='zhuanti-sgyinglian') }}">新加坡楹聯</a></li>
 					</ul>
 				</li>
-				<li><a href="slider-poem-list.html">名勝古跡</a></li>
-				<li><a href="poem-content.html">南洋風俗</a></li>
+				<li><a href="{{ url_for('topic', category='mingshengguji') }}">名勝古跡</a></li>
+				<li><a href="{{ url_for('topic', category='nanyangfengsu') }}">南洋風俗</a></li>
 				<!--<li class="drop-down"><a href="#!"><i class="ion-ios-arrow-down">南洋風俗</i></a>-->
 				<!--<ul class="drop-down-menu">-->
 				<!--<li><a href="#">氣候</a></li>-->
@@ -57,33 +55,31 @@
 				<!--<li><a href="#">衣著</a></li>-->
 				<!--</ul>-->
 				<!--</li>-->
-				<li><a href="05-difangyuyan.html">地方語言</a></li>
-				<li><a href="06-nanyangwuchan.html">南洋物產</a></li>
-				<li><a href="07-xinzhoufengyue.html">星洲風月</a></li>
-				<li><a href="08-foyuchanxin.html">佛語禪心</a></li>
-				<li><a href="09-lunxianshiqi.html">淪陷時期</a></li>
+				<li><a href="{{ url_for('topic', category='difangyuyan') }}">地方語言</a></li>
+				<li><a href="{{ url_for('topic', category='nanyangwuchan') }}">南洋物產</a></li>
+				<li><a href="{{ url_for('topic', category='xingzhoufengyue') }}">星洲風月</a></li>
+				<li><a href="{{ url_for('topic', category='foyuchanxin') }}">佛語禪心</a></li>
+				<li><a href="{{ url_for('topic', category='lunxianshiqi') }}">淪陷時期</a></li>
 				<li class="drop-down"><a href="#!">詩社<i class="ion-ios-arrow-down"></i></a>
 					<ul class="drop-down-menu">
-						<li><a href="10-tanshe.html">檀社</a></li>
-						<li><a href="10-xinshengshishe.html">新聲詩社</a></li>
-						<li><a href="10-shichengyinshe.html">獅城吟社</a></li>
-						<li><a href="10-quanqiuhanshizonghui.html">全球漢詩總會</a></li>
+						<li><a href="{{ url_for('shishe', name='tanshe') }}">檀社</a></li>
+						<li><a href="{{ url_for('shishe', name='xinshengshishe') }}">新聲詩社</a></li>
+						<li><a href="{{ url_for('shishe', name='shichengyinshe') }}">獅城吟社</a></li>
+						<li><a href="{{ url_for('shishe', name='quanqiuhanshizonghui') }}">全球漢詩總會</a></li>
 					</ul>
 				</li>
 				<li class="drop-down"><a href="#!">更多<i class="ion-ios-arrow-down"></i></a>
 					<ul class="drop-down-menu">
-						<!--<li><a href="11-shitanjinkuang.html">詩壇近況</a></li>-->
-						<li><a href="11-shirenfangtan.html">詩人訪談</a></li>
-						<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>
-						<li><a href="11-shiji.html">詩集</a></li>
-						<li><a href="11-shirenshengping.html">詩人生平</a></li>
-						<li><a href="11-yanjiulunwen.html">研究論文</a></li>
-						<li><a href="11-about-us.html">關於我們</a></li>
+						<li><a href="{{ url_for('shitanjinkuang') }}">詩壇近況</a></li>
+						<li><a href="{{ url_for('shirenfangtan') }}">詩人訪談</a></li>
+						<!--<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>-->
+						<li><a href="{{ url_for('shiji') }}">詩集</a></li>
+						<!--<li><a href="11-shirenshengping.html">詩人生平</a></li>-->
+						<li><a href="{{ url_for('paper') }}">研究論文</a></li>
+						<li><a href="{{ url_for('about_us') }}">關於我們</a></li>
 					</ul>
-
 				</li>
 			</ul><!-- main-menu -->
-
 		</div><!-- conatiner -->
 	</header>
 
