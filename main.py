@@ -65,11 +65,12 @@ def get_parameters_for_poem_content_page(category, poem_name):
     para_dict['main_content'] = db.get_poem_content(poem_name)
     return para_dict
 
-@app.route('/<category>', methods=['GET'])
+@app.route('/category/<category>', methods=['GET'])
 def topic(category):
     para_dict = get_parameters_for_main_category(category)
 
     return render_template('slider-poem-list.html',
+       category = category,
        title = para_dict['title'],
        logo_path = para_dict['logo_path'],
        sliders = para_dict['sliders'],
@@ -88,6 +89,10 @@ def poem_content_page(category, poem_name):
 @app.route('/favicon.ico', methods=['GET'])
 def favicon():
     return ""
+
+@app.route("/<any>", methods=['GET', 'POST'])
+def any_to_404(any):
+    return render_template('base.html'), 404
 
 # @app.errorhandler(404)
 # def notfound():

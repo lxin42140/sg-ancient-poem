@@ -22,31 +22,31 @@
 
 						<h4 class="author-name">
 							<b class="light-color">
-								{{ content_dict['title'] }}
-								{% if content_dict['year'] %}
-									（ {{ content_dict['year'] }} ）
+								{{ main_content['title'] }}
+								{% if main_content['year'] %}
+									（ {{ main_content['year'] }} ）
 								{% endif %}
 							</b>
 						</h4>
 						<h6 class="author-name">
 							<b class="light-color">
-								{{ content_dict['author_name'] }}
+								{{ main_content['author_name'] }}
 							</b>
 						</h6>
 
 						<br/>
-						{% if content_dict['introduction'] %}
-							<p>{{ content_dict['introduction'] }}</p>
+						{% if main_content['introduction'] %}
+							<p>{{ main_content['introduction'] }}</p>
 						{% endif %}
 
-						<p>{{ content_dict['content'] }}</p>
+						<p>{{ main_content['content'] }}</p>
 						<!--<p>大地如焚天似醉，逢人盡道熱難看。</p>-->
 						<!--<p>何當乞取連延雨，好逐炎魔入碧潭。</p>-->
 
 						<br/>
 
-						{% if content_dict['published_info'] %}
-							<p>{{ content_dict['published_info'] }}</p>
+						{% if main_content['published_info'] %}
+							<p>{{ main_content['published_info'] }}</p>
 						{% endif %}
 						<!--<p>黃火若《今是堂剩稿》</p>-->
 						<br/>
