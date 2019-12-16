@@ -85,6 +85,7 @@ class DBHelper:
             logo_url = fetch_result[0]['logo_url']
             return logo_url
         except Exception as e:
+            print("Getting logo for category....")
             print("Exeception occured:{}".format(e))
             print("Category name:{}".format(category))
 
@@ -129,6 +130,15 @@ class DBHelper:
             ans_dict['comments'] = ''
             slider_list.append(ans_dict)
         return slider_list
+
+    # return a blog dictionary
+    def get_blog_dict_of_shishe(self, shishe_name):
+        sql_query = "SELECT blog_title, blog_content, blog_img, blog_link FROM Topic WHERE name = '" + shishe_name + "'"
+        blog_dict = self.fetch(sql_query)[0]
+        return blog_dict
+
+
+        return blog_dict
 
 
     def save_sliders_to_db(self, slider_list):

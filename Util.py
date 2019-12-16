@@ -7,7 +7,7 @@ class Util:
         self.title_prefix = title_prefix
 
     # poet_poem_list
-    def get_parameters_for_main_category(self, category):
+    def get_parameters_for_topic_from_db(self, category):
         db = DBHelper()
         para_dict = {}
 
@@ -30,6 +30,25 @@ class Util:
             poet_poem_dict[poet_name] = db.get_all_poems_by_poet_in_category(poet_name, chn_category)
 
         para_dict['main_content'] = poet_poem_dict
+        return para_dict
+
+        # poet_poem_list
+
+    def get_parameters_for_shishe_from_db(self, category):
+        db = DBHelper()
+        para_dict = {}
+        logo_path = db.get_logo_for_category(category)
+
+        para_dict['logo_path'] = self.img_path + logo_path
+
+        chn_category = db.get_chn_name_for_category(category)
+        title = self.title_prefix + chn_category
+        para_dict['title'] = title
+
+        blog_dict = db.get_blog_dict_of_shishe(category)
+        blog_dict['blog_img'] = self.img_path + blog_dict['blog_img']
+
+        para_dict['blog_dict'] = blog_dict
         return para_dict
 
     # poem_content_page

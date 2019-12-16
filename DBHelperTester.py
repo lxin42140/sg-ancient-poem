@@ -1,6 +1,14 @@
 from DBHelper import DBHelper
 
 db = DBHelper()
+
+sql_query = "UPDATE `Topic` SET `blog_content` = '' WHERE `id` = 16;"
+db.execute(sql_query)
+
+# sql_query = "ALTER TABLE Topic ADD blog_content TEXT"
+# db.execute(sql_query)
+
+
 # sql_query = "show tables"
 # [{'Tables_in_poemDB': 'Poem'}, {'Tables_in_poemDB': 'Poet'}, {'Tables_in_poemDB': 'Topic'}]
 # sql_query = "describe Topic"
@@ -55,9 +63,8 @@ db = DBHelper()
 # print(db.get_chn_name_for_category(category))
 
 
-category = "大專文學獎漢詩組"
-print(db.get_slider_info_for_category(category))
-
+# category = "大專文學獎漢詩組"
+# print(db.get_slider_info_for_category(category))
 
 
 # category "名勝古跡"

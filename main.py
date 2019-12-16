@@ -30,7 +30,7 @@ def home():
 
 @app.route('/category/<category>', methods=['GET'])
 def topic(category):
-    para_dict = util.get_parameters_for_main_category(category)
+    para_dict = util.get_parameters_for_topic_from_db(category)
 
     return render_template('slider-poem-list.html',
        category = category,
@@ -38,6 +38,21 @@ def topic(category):
        logo_path = para_dict['logo_path'],
        sliders = para_dict['sliders'],
        main_content = para_dict['main_content'],
+    )
+
+@app.route('/shishe/<name>', methods=['GET'])
+def shishe(name):
+    para_dict = util.get_parameters_for_shishe_from_db(name)
+    # if not para_dict:
+    #     return "{} gots nothing".format(name)
+    blog_dict = para_dict['blog_dict']
+    return render_template('blog.html',
+       logo_path=para_dict['logo_path'],
+       title=para_dict['title'],
+       blog_title = blog_dict['blog_title'],
+       blog_content = blog_dict['blog_content'],
+       blog_img = blog_dict['blog_img'],
+       blog_link = blog_dict['blog_link'],
     )
 
 @app.route('/<category>/<poem_name>', methods=['GET'])
