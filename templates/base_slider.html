@@ -87,31 +87,46 @@
 		</div><!-- conatiner -->
 	</header>
 
-
+    {% if sliders|length > 1 %}
 	<div class="main-slider">
 		<div id="slider">
-			{% for slider in sliders %}
-				{% if slider.path %}
-					<div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
-						<!--<img src="images/slider-1-1600x800.jpg" class="ls-bg" alt="" />-->
-						<img src={{ slider.path }} class="ls-bg" alt="" />
-							<div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
-								{% if slider.comments[0] %}
-									<a class="btn" href="#">{{ slider.comments[0] }}</a>
-								{% endif %}
-								{% if slider.comments[1] %}
-									<h3 class="title"><b>{{ slider.comments[1] }}</b></h3>
-								{% endif %}
-								{% if slider.comments[2] %}
-									<h6>{{ slider.comments[2] }}</h6>
-								{% endif %}
-							</div>
+            {% for slider in sliders %}
+                {% if slider.path %}
+                    <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
+                        <!--<img src="images/slider-1-1600x800.jpg" class="ls-bg" alt="" />-->
+                        <img src={{ slider.path }} class="ls-bg" alt="" />
+                            <div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+                                {% if slider.comments[0] %}
+                                    <a class="btn" href="#">{{ slider.comments[0] }}</a>
+                                {% endif %}
+                                {% if slider.comments[1] %}
+                                    <h3 class="title"><b>{{ slider.comments[1] }}</b></h3>
+                                {% endif %}
+                                {% if slider.comments[2] %}
+                                    <h6>{{ slider.comments[2] }}</h6>
+                                {% endif %}
+                            </div>
 
-					</div><!-- ls-slide -->
-				{% endif %}
-			{% endfor %}
+                    </div><!-- ls-slide -->
+                {% endif %}
+            {% endfor %}
 		</div><!-- slider -->
 	</div><!-- main-slider -->
+    {% else %}
+    <div class="container">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <img src={{ sliders[0].path }} class="ls-bg" alt="" />
+    </div>
+    {% endif %}
 
 
 	{% block content %}{% endblock %}
