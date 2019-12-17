@@ -2,7 +2,7 @@ from DBHelper import DBHelper
 
 db = DBHelper()
 
-# sql_query = "INSERT INTO Topic (id, name, chn_name, logo_url) VALUES (9, 'zhuanti-nanyangdaxue', '南洋大學師生作品', 'logo-nanyangdaxue.png');"
+# sql_query = "INSERT INTO Topic (id, name, chn_name, logo_url) VALUES (10, 'lishishijian', '歷史事件', 'logo-lishishijian.png');"
 # # sql_query = "UPDATE `Topic` SET `blog_title` = '新嘉坡風土記(1936)' WHERE `id` = 11;"
 # db.execute(sql_query)
 

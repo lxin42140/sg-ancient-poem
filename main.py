@@ -14,6 +14,11 @@ def home():
     title = '新加坡舊體詩庫'
     sliders = [  # fake array of posts
         {
+            'path': IMG_PATH + 'slider-3.jpg',
+            'comments': ['Singapore Chinese Cultural Centre', '新加坡華族文化中心', '贊助'],
+            'link': 'https://www.singaporeccc.org.sg/zh/'
+        },
+        {
             'path': IMG_PATH + 'slider-1.jpg',
             'comments': ['星洲四大才子', '葉季允, 釋瑞于, 邱菽園, 李俊承', '1859 - 1966']
         },
