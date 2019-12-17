@@ -51,16 +51,7 @@
 					</ul>
 				</li>
 				<li><a href="{{ url_for('topic', category='mingshengguji') }}">名勝古跡</a></li>
-				<li><a href="{{ url_for('topic', category='nanyangfengsu') }}">南洋風俗</a></li>
-				<!--<li class="drop-down"><a href="#!"><i class="ion-ios-arrow-down">南洋風俗</i></a>-->
-				<!--<ul class="drop-down-menu">-->
-				<!--<li><a href="#">氣候</a></li>-->
-				<!--<li><a href="#">飲食</a></li>-->
-				<!--<li><a href="#">衣著</a></li>-->
-				<!--</ul>-->
-				<!--</li>-->
-				<li><a href="{{ url_for('topic', category='difangyuyan') }}">地方語言</a></li>
-				<li><a href="{{ url_for('topic', category='nanyangwuchan') }}">南洋物產</a></li>
+				<li><a href="{{ url_for('topic', category='nanyangfengtu') }}">南洋風土</a></li>
 				<li><a href="{{ url_for('topic', category='xingzhoufengyue') }}">星洲風月</a></li>
 				<li><a href="{{ url_for('topic', category='foyuchanxin') }}">佛語禪心</a></li>
 				<li><a href="{{ url_for('topic', category='lunxianshiqi') }}">淪陷時期</a></li>
@@ -73,17 +64,18 @@
 						<li><a href="{{ url_for('shishe', name='quanqiuhanshizonghui') }}">全球漢詩總會</a></li>
 					</ul>
 				</li>
-				<li class="drop-down"><a href="#!">更多<i class="ion-ios-arrow-down"></i></a>
-					<ul class="drop-down-menu">
-						<li><a href="{{ url_for('shitanjinkuang') }}">詩壇近況</a></li>
-						<li><a href="{{ url_for('shirenfangtan') }}">詩人訪談</a></li>
-						<!--<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>-->
-						<li><a href="{{ url_for('shiji') }}">詩集</a></li>
-						<!--<li><a href="11-shirenshengping.html">詩人生平</a></li>-->
-						<li><a href="{{ url_for('paper') }}">研究論文</a></li>
-						<li><a href="{{ url_for('about_us') }}">關於我們</a></li>
-					</ul>
-				</li>
+				<li><a href="{{ url_for('about_us') }}">關於我們</a></li>
+				<!--<li class="drop-down"><a href="#!">更多<i class="ion-ios-arrow-down"></i></a>-->
+					<!--<ul class="drop-down-menu">-->
+						<!--<li><a href="{{ url_for('shitanjinkuang') }}">詩壇近況</a></li>-->
+						<!--<li><a href="{{ url_for('shirenfangtan') }}">詩人訪談</a></li>-->
+						<!--&lt;!&ndash;<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>&ndash;&gt;-->
+						<!--<li><a href="{{ url_for('shiji') }}">詩集</a></li>-->
+						<!--&lt;!&ndash;<li><a href="11-shirenshengping.html">詩人生平</a></li>&ndash;&gt;-->
+						<!--<li><a href="{{ url_for('paper') }}">研究論文</a></li>-->
+						<!--<li><a href="{{ url_for('about_us') }}">關於我們</a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
 			</ul><!-- main-menu -->
 		</div><!-- conatiner -->
 	</header>
