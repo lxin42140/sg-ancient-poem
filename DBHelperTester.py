@@ -2,12 +2,12 @@ from DBHelper import DBHelper
 
 db = DBHelper()
 
-# sql_query = "UPDATE `Topic` SET `blog_content` = '' WHERE `id` = 16;"
+# sql_query = "INSERT INTO Topic (id, name, chn_name, logo_url) VALUES (9, 'zhuanti-nanyangdaxue', '南洋大學師生作品', 'logo-nanyangdaxue.png');"
+# # sql_query = "UPDATE `Topic` SET `blog_title` = '新嘉坡風土記(1936)' WHERE `id` = 11;"
 # db.execute(sql_query)
 
 # sql_query = "ALTER TABLE Topic ADD blog_content TEXT"
 # db.execute(sql_query)
-
 
 # sql_query = "show tables"
 # [{'Tables_in_poemDB': 'Poem'}, {'Tables_in_poemDB': 'Poet'}, {'Tables_in_poemDB': 'Topic'}]
@@ -49,8 +49,8 @@ db = DBHelper()
 #  {'name': 'shitanjinkuang'},
 #  {'name': 'yanjiulunwen'}]
 
-sql_query = "UPDATE Poem SET category = replace(category, '南洋物產', '南洋風土')"
-db.execute(sql_query)
+# sql_query = "UPDATE Poem SET category = replace(category, '南洋物產', '南洋風土')"
+# db.execute(sql_query)
 # sql_query = "SELECT * FROM Poem WHERE category = '南洋風土'"
 # print(db.fetch(sql_query))
 
