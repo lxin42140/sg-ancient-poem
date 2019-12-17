@@ -2,8 +2,8 @@ from DBHelper import DBHelper
 
 db = DBHelper()
 
-sql_query = "UPDATE `Topic` SET `blog_content` = '' WHERE `id` = 16;"
-db.execute(sql_query)
+# sql_query = "UPDATE `Topic` SET `blog_content` = '' WHERE `id` = 16;"
+# db.execute(sql_query)
 
 # sql_query = "ALTER TABLE Topic ADD blog_content TEXT"
 # db.execute(sql_query)
@@ -12,6 +12,11 @@ db.execute(sql_query)
 # sql_query = "show tables"
 # [{'Tables_in_poemDB': 'Poem'}, {'Tables_in_poemDB': 'Poet'}, {'Tables_in_poemDB': 'Topic'}]
 # sql_query = "describe Topic"
+# sql_query = "SELECT id, name, chn_name, logo_url, slider from Topic WHERE id = 8;"
+# sql_query = "SELECT * FROM Topic;"
+# sql_query = "INSERT INTO Topic (id, name, chn_name, logo_url) VALUES (24, 'wenyihuodong', '文藝活動', 'logo-wenyihuodong.png');"
+# sql_query = "UPDATE Poem SET category = replace(category, '文化藝術活動', '文藝活動')"
+# db.execute(sql_query)
 # [{'Field': 'id', 'Type': 'int(11)', 'Null': 'NO', 'Key': 'PRI', 'Default': None, 'Extra': ''},
 #  {'Field': 'name', 'Type': 'varchar(32)', 'Null': 'YES', 'Key': '', 'Default': None, 'Extra': ''},
 #  {'Field': 'chn_name', 'Type': 'varchar(32)', 'Null': 'YES', 'Key': '', 'Default': None, 'Extra': ''},
@@ -44,8 +49,9 @@ db.execute(sql_query)
 #  {'name': 'shitanjinkuang'},
 #  {'name': 'yanjiulunwen'}]
 
-
-# print(db.fetch(sql_query))
+# sql_query = "UPDATE Poem SET category = replace(category, '文化藝術活動', '文藝活動')"
+sql_query = "SELECT * FROM Poem WHERE category = '文藝活動'"
+print(db.fetch(sql_query))
 
 # category = "名勝古跡"
 # poet_name = "黃火若"

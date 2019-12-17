@@ -109,6 +109,9 @@ class DBHelper:
     def get_slider_info_for_category(self, category):
         sql_query = "SELECT slider FROM Topic WHERE chn_name = '" + category + "'"
         db_json = self.fetch(sql_query)[0]['slider']
+        if not db_json:
+            return ""
+
         raw_data = self.get_data_from_db_json_value(db_json)
         type = raw_data['slider_type']
 

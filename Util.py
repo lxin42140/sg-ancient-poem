@@ -18,7 +18,11 @@ class Util:
         title = self.title_prefix + chn_category
         para_dict['title'] = title
 
-        para_dict['sliders'] = db.get_slider_info_for_category(chn_category) # slider_list
+        slider_info = db.get_slider_info_for_category(chn_category) # slider_list
+        if slider_info:
+            para_dict['sliders'] = slider_info
+        else:
+            para_dict['sliders'] = ""
 
         # update slider path
         for slider_dict in para_dict['sliders']:
