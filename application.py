@@ -1,14 +1,14 @@
 from flask import Flask, render_template
 from Util import Util
 
-app = Flask(__name__)
+application = Flask(__name__)
 IMG_PATH = '../static/images/'
 title_prefix = '新加坡舊體詩庫-'
 util = Util(IMG_PATH, title_prefix)
 
 
-@app.route('/')
-@app.route('/home')
+@application.route('/')
+@application.route('/home')
 def home():
     logo_path = IMG_PATH + 'logo.png'
     title = '新加坡舊體詩庫'
@@ -32,28 +32,28 @@ def home():
        logo_path = logo_path,
        sliders = sliders)
 
-@app.route('/about-us')
+@application.route('/about-us')
 def about_us():
     return render_template('about-us.html')
 
-@app.route('/shirenfangtan')
+@application.route('/shirenfangtan')
 def shirenfangtan():
     return render_template('shirenfangtan.html')
 
-@app.route('/shiji')
+@application.route('/shiji')
 def shiji():
     return render_template('shiji.html')
 
-@app.route('/shitanjinkuang')
+@application.route('/shitanjinkuang')
 def shitanjinkuang():
     return render_template('shitanjinkuang.html')
 
-@app.route('/yanjiulunwen')
+@application.route('/yanjiulunwen')
 def paper():
     return render_template('yanjiulunwen.html')
 
 
-@app.route('/category/<category>', methods=['GET'])
+@application.route('/category/<category>', methods=['GET'])
 def topic(category):
     para_dict = util.get_parameters_for_topic_from_db(category)
 
@@ -65,7 +65,7 @@ def topic(category):
        main_content = para_dict['main_content'],
     )
 
-@app.route('/shishe/<name>', methods=['GET'])
+@application.route('/shishe/<name>', methods=['GET'])
 def shishe(name):
     para_dict = util.get_parameters_for_shishe_from_db(name)
     # if not para_dict:
@@ -80,7 +80,7 @@ def shishe(name):
        blog_link = blog_dict['blog_link'],
     )
 
-@app.route('/<category>/<poem_name>', methods=['GET'])
+@application.route('/<category>/<poem_name>', methods=['GET'])
 def poem_content_page(category, poem_name):
     para_dict = util.get_parameters_for_poem_content_page(category, poem_name)
     full_poem = para_dict['main_content']['content']
@@ -95,19 +95,19 @@ def poem_content_page(category, poem_name):
        poem_content_list = poem_content_list,
     )
 
-@app.route('/favicon.ico', methods=['GET'])
+@application.route('/favicon.ico', methods=['GET'])
 def favicon():
     return ""
 
-@app.route("/<any>", methods=['GET', 'POST'])
+@application.route("/<any>", methods=['GET', 'POST'])
 def any_to_404(any):
     return render_template('base.html'), 404
 
-# @app.errorhandler(404)
+# @application.errorhandler(404)
 # def notfound():
 #     """Serve 404 template."""
 #     return make_response(render_template("404.html"), 404)
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    application.run(host="0.0.0.0", port=5000, debug=False)

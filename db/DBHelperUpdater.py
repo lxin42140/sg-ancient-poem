@@ -1,4 +1,4 @@
-from DBHelper import DBHelper
+from db.DBHelper import DBHelper
 
 db = DBHelper()
 
