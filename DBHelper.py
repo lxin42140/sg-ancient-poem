@@ -56,6 +56,21 @@ class DBHelper:
             BAD_DATA.error("cannot load dictionary field -- type error")
             return None
 
+    # category in chinese
+    def get_poet_poem_list_for_a_category(self, category):
+        sql_query = "SELECT title, author_name FROM Poem WHERE category = '" + category + "'"
+        answer_list = self.fetch(sql_query)
+        ans_dict = {}
+        for answer in answer_list:
+            title = answer['title']
+            author_name = answer['author_name']
+            if author_name in ans_dict:
+                ans_dict[author_name].append(title)
+            else:
+                ans_dict[author_name] = [title]
+        return ans_dict
+
+    # not using
     def get_all_poet_names_for_a_category(self, category):
         sql_query = "SELECT DISTINCT author_name FROM Poem WHERE category = '" + category + "'"
         answer_list = self.fetch(sql_query)
@@ -64,6 +79,7 @@ class DBHelper:
             ans_list.append(answer['author_name'])
         return ans_list
 
+    # not using
     # category in chinese
     def get_all_poems_by_poet_in_category(self, poet_name, category):
         sql_query = "SELECT DISTINCT title FROM Poem WHERE category = '" + category + "' AND author_name = '" + poet_name + "'"

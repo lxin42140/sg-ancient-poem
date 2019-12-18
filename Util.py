@@ -28,10 +28,7 @@ class Util:
         for slider_dict in para_dict['sliders']:
             slider_dict['path'] = self.img_path + slider_dict['path']
 
-        poet_poem_dict = {}
-        poet_names = db.get_all_poet_names_for_a_category(chn_category)
-        for poet_name in poet_names:
-            poet_poem_dict[poet_name] = db.get_all_poems_by_poet_in_category(poet_name, chn_category)
+        poet_poem_dict = db.get_poet_poem_list_for_a_category(chn_category)
 
         para_dict['main_content'] = poet_poem_dict
         return para_dict

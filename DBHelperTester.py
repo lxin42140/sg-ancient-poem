@@ -65,6 +65,10 @@ db = DBHelper()
 
 # category = "名勝古跡"
 # print(db.get_logo_for_category(category))
+
+category = "名勝古跡"
+print(db.get_poet_poem_list_for_a_category(category))
+
 #
 # category = "zhuanti-dazhuan"
 # print(db.get_chn_name_for_category(category))
