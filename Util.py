@@ -74,28 +74,41 @@ class Util:
         return whitespace_removed_text
 
     # Encountered punctuation create a new line
+    # original version
     # Returns a list of poem sentences with punctuation.
+    # def format_poem_content(self, full_poem):
+    #     full_poem = self.process_text(full_poem)
+    #     processed_list = re.split('(。|？|，|, |\?|!|！|\n|;|；)', full_poem)
+    #     poem_content_list = []
+    #     punctuation_list = ['，', '。', '！','？',',','!','?','；',';']
+    #
+    #     for i in range(int(len(processed_list) / 2)):
+    #         punctuation_field = processed_list[2 * i + 1]
+    #         if not punctuation_field:
+    #             poem_content_list.append(processed_list[2 * i])
+    #             break
+    #
+    #         if punctuation_field == '\n':
+    #             poem_content_list.append(processed_list[2 * i])
+    #             poem_content_list.append(processed_list[2 * i + 1])
+    #             continue
+    #
+    #         if punctuation_field in punctuation_list:
+    #             this_str = processed_list[2 * i] + processed_list[2 * i + 1]
+    #             poem_content_list.append(this_str)
+    #         else:
+    #             print("error: wrong format!")
+    #
+    #     return poem_content_list
+
+    # 改成无标点,无换行
+    # def format_poem_content(self, full_poem):
+    #     full_poem = self.process_text(full_poem)
+    #     processed_list = re.split('。|？|，|, |\?|!|！|\n|;|；', full_poem)
+    #     return processed_list
+
+    # 换行符换行
     def format_poem_content(self, full_poem):
         full_poem = self.process_text(full_poem)
-        processed_list = re.split('(。|？|，|, |\?|!|！|\n|;|；)', full_poem)
-        poem_content_list = []
-        punctuation_list = ['，', '。', '！','？',',','!','?','；',';']
-
-        for i in range(int(len(processed_list) / 2)):
-            punctuation_field = processed_list[2 * i + 1]
-            if not punctuation_field:
-                poem_content_list.append(processed_list[2 * i])
-                break
-
-            if punctuation_field == '\n':
-                poem_content_list.append(processed_list[2 * i])
-                poem_content_list.append(processed_list[2 * i + 1])
-                continue
-
-            if punctuation_field in punctuation_list:
-                this_str = processed_list[2 * i] + processed_list[2 * i + 1]
-                poem_content_list.append(this_str)
-            else:
-                print("error: wrong format!")
-
-        return poem_content_list
+        processed_list = re.split('\n', full_poem)
+        return processed_list
