@@ -52,32 +52,23 @@ def shitanjinkuang():
 def paper():
     return render_template('yanjiulunwen.html')
 
+@application.route('/category/<name>', methods=['GET'])
+def topic(name):
+    para_dict = util.get_parameters_for_blog_from_db(name)
+    poem_dict = util.get_parameters_for_topic_from_db(name)
 
-@application.route('/category/<category>', methods=['GET'])
-def topic(category):
-    para_dict = util.get_parameters_for_topic_from_db(category)
+    blog_dict = para_dict['blog_dict']
 
     return render_template('slider-poem-list.html',
-       category = category,
-       title = para_dict['title'],
-       logo_path = para_dict['logo_path'],
-       sliders = para_dict['sliders'],
-       main_content = para_dict['main_content'],
-    )
-
-@application.route('/shishe/<name>', methods=['GET'])
-def shishe(name):
-    para_dict = util.get_parameters_for_shishe_from_db(name)
-    # if not para_dict:
-    #     return "{} gots nothing".format(name)
-    blog_dict = para_dict['blog_dict']
-    return render_template('blog.html',
+       category=name,
        logo_path=para_dict['logo_path'],
        title=para_dict['title'],
        blog_title = blog_dict['blog_title'],
        blog_content = blog_dict['blog_content'],
        blog_img = blog_dict['blog_img'],
        blog_link = blog_dict['blog_link'],
+       sliders=poem_dict['sliders'],
+       main_content=poem_dict['main_content'],
     )
 
 @application.route('/<category>/<poem_name>', methods=['GET'])

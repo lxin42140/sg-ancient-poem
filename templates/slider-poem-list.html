@@ -2,10 +2,53 @@
 {% block content %}
 
 	<section class="section blog-area">
+        {% if blog_content %}
+			<section class="blog-area">
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-12"></div>
+                        <div class="col-lg-8 col-md-12">
+                            <div class="blog-posts">
+                                <div class="single-post">
+                                    <!--<div class="image-wrapper"><img src="images/blog-1-1000x600.jpg" alt="Blog Image"></div>-->
+                                    {% if blog_img %}
+                                        <div class="image-wrapper"><img src={{ blog_img }} alt="Blog Image"></div>
+                                    {% endif %}
+
+                                    <br />
+                                    <h3 class="title">
+                                        <a href="#"><b class="light-color">
+                                            {% if blog_title %}
+                                                {{ blog_title }}
+                                            {% endif %}
+                                    </b></a></h3>
+
+
+                                    <p>
+                                        {% if blog_content %}
+                                            {{ blog_content }}
+                                        {% endif %}
+
+                                    </p>
+                                    <br />
+                                    {% if blog_link %}
+                                        <a class="btn read-more-btn" target="_blank" href="{{ blog_link }}"><b>瀏覽更多</b></a>
+                                    {% endif %}
+                                </div><!-- single-post -->
+
+                            </div><!-- blog-posts -->
+                        </div><!-- col-lg-4 -->
+                        <br/>
+                        <br/>
+                        <br/>
+                    </div><!-- row -->
+                </div><!-- container -->
+		    </section><!-- section -->
+        {% endif %}
+
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-0 col-md-1 col-lg-2"></div>
-
 				<div class="col-sm-12 col-md-10 col-lg-8">
 					{% if main_content.items() %}
 						{% for poet_name, poet_poems in main_content.items() %}

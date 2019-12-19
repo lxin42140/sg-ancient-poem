@@ -35,7 +35,7 @@ class Util:
 
         # poet_poem_list
 
-    def get_parameters_for_shishe_from_db(self, category):
+    def get_parameters_for_blog_from_db(self, category):
         db = DBHelper()
         para_dict = {}
         logo_path = db.get_logo_for_category(category)
@@ -47,7 +47,8 @@ class Util:
         para_dict['title'] = title
 
         blog_dict = db.get_blog_dict_of_shishe(category)
-        blog_dict['blog_img'] = self.img_path + blog_dict['blog_img']
+        if blog_dict['blog_img']:
+            blog_dict['blog_img'] = self.img_path + blog_dict['blog_img']
 
         para_dict['blog_dict'] = blog_dict
         return para_dict
@@ -111,4 +112,5 @@ class Util:
     def format_poem_content(self, full_poem):
         full_poem = self.process_text(full_poem)
         processed_list = re.split('\n', full_poem)
+        print(processed_list)
         return processed_list
