@@ -71,9 +71,9 @@ def topic(name):
        main_content=poem_dict['main_content'],
     )
 
-@application.route('/<category>/<poem_name>', methods=['GET'])
-def poem_content_page(category, poem_name):
-    para_dict = util.get_parameters_for_poem_content_page(category, poem_name)
+@application.route('/<category>/<author_name>/<poem_name>', methods=['GET'])
+def poem_content_page(category, poem_name, author_name):
+    para_dict = util.get_parameters_for_poem_content_page(category, poem_name, author_name)
     full_poem = para_dict['main_content']['content']
     introduction = util.process_text(para_dict['main_content']['introduction'])
     poem_content_list = util.format_poem_content(full_poem)

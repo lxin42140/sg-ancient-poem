@@ -54,7 +54,7 @@ class Util:
         return para_dict
 
     # poem_content_page
-    def get_parameters_for_poem_content_page(self, category, poem_name):
+    def get_parameters_for_poem_content_page(self, category, poem_name, author_name):
         db = DBHelper()
         para_dict = {}
 
@@ -64,7 +64,7 @@ class Util:
         title = self.title_prefix + poem_name
         para_dict['title'] = title
 
-        para_dict['main_content'] = db.get_poem_content(poem_name)
+        para_dict['main_content'] = db.get_poem_content(poem_name, author_name)
         return para_dict
 
     # Processes text

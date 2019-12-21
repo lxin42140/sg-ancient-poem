@@ -89,8 +89,9 @@ class DBHelper:
             ans_list.append(answer['title'])
         return ans_list
 
-    def get_poem_content(self, poem_name):
-        sql_query = "SELECT title, year, author_name, introduction, content, published_info, comments FROM Poem WHERE title = '" + poem_name + "'"
+    def get_poem_content(self, poem_name, author_name):
+        sql_query = "SELECT title, year, author_name, introduction, content, published_info, comments FROM " \
+                    "Poem WHERE title = '" + poem_name + "' AND author_name = '" + author_name + "'"
         content_dict = self.fetch(sql_query)[0]
         return content_dict
 
