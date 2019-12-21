@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from Util import Util
 
 application = Flask(__name__)
-IMG_PATH = '../static/images/'
+IMG_PATH = '/static/images/'
 title_prefix = '新加坡舊體詩庫-'
 util = Util(IMG_PATH, title_prefix)
 
