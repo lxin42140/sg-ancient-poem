@@ -112,5 +112,5 @@ class Util:
     def format_poem_content(self, full_poem):
         full_poem = self.process_text(full_poem)
         processed_list = re.split('\n', full_poem)
-        print(processed_list)
+        # print(processed_list)
         return processed_list
