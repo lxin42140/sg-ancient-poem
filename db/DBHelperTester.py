@@ -2,6 +2,9 @@ from db.DBHelper import DBHelper
 
 db = DBHelper()
 
+# sql_query = "ALTER TABLE Poet ADD COLUMN fullName VARCHAR(255) AFTER firstName;"
+# db.execute(sql_query)
+
 # sql_query = "INSERT INTO Topic (id, name, chn_name, logo_url) VALUES (10, 'lishishijian', '歷史事件', 'logo-lishishijian.png');"
 # # sql_query = "UPDATE `Topic` SET `blog_title` = '新嘉坡風土記(1936)' WHERE `id` = 11;"
 # db.execute(sql_query)
@@ -66,8 +69,8 @@ db = DBHelper()
 # category = "名勝古跡"
 # print(db.get_logo_for_category(category))
 
-category = "名勝古跡"
-print(db.get_poet_poem_list_for_a_category(category))
+# category = "名勝古跡"
+# print(db.get_poet_poem_list_for_a_category(category))
 
 #
 # category = "zhuanti-dazhuan"
