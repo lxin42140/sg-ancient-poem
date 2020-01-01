@@ -1,8 +1,14 @@
-'/venv/'
-'venv/'
-'venv'
-
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# Virtual Environment
+venv/*
+
+# IntelliJ files
+.idea/*
+
+# Python Cache
+__pycache__/*
+db/__pycache__/*
