@@ -2,8 +2,229 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8baf9b-0bc0-4a65-a106-c5e2e9bfe336" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Util.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/application.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db/DBHelper.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db/DBHelperTester.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db/DBHelperUpdater.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db/trydb.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/common-js/scripts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/aboutus-videocover-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog-tanshe.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog-xinshengshishe.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog-xinshengshishe.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/blog-zonghui.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/logo-lishishijian.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/logo-nanyangdaxue.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/logo-nanyangfengtu.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/logo-wenyihuodong.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/《蘭花集》鄭光漢、劉海粟所畫《墨蘭》.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/劉海粟所繪《師漢齋圖》- 乙巳年(1965)中秋 - 《蘭花集》.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/圖一-戰後初期的《南洋商報》編輯部領導層.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/圖三-謝松山在《南洋雜誌》發表的〈昭南紀事詩〉.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/圖二-謝松山在《南洋商報》發表之〈昭南竹枝詞〉.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/圖四-《血海》初版的書影.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/新聲詩社 1957-1985 年“詩人節雅集”及作品資料表-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/新聲詩社 1957-1985 年“詩人節雅集”及作品資料表-2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/李西浪在《蘭花集》第七次唱和中的作品.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/others/潘受在《蘭花集》的題詩.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/poet-xiesongshan.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/poet-yangyijian.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/poet-zengmengbi.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/slider-3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/images/slider-3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/base_slider.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/homepage.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/poem-content.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/slider-poem-list.html" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/juli.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/01-homepage.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/01-homepage/css/responsive.css" afterPath="$PROJECT_DIR$/static/01-homepage/css/responsive.css" />
+      <change beforePath="$PROJECT_DIR$/01-homepage/css/styles.css" afterPath="$PROJECT_DIR$/static/01-homepage/css/styles.css" />
+      <change beforePath="$PROJECT_DIR$/02-Single-post.html" afterPath="$PROJECT_DIR$/templates/unused/02-Single-post.html" />
+      <change beforePath="$PROJECT_DIR$/02-Single-post/css/responsive.css" afterPath="$PROJECT_DIR$/static/02-Single-post/css/responsive.css" />
+      <change beforePath="$PROJECT_DIR$/02-Single-post/css/styles.css" afterPath="$PROJECT_DIR$/static/02-Single-post/css/styles.css" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-chunlian.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-dzwxjhanshizu.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-nusstudent.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-sgyinglian.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-shuanglin.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/02-zhuanti-xinzhouyayuan.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/03-About-me.html" afterPath="$PROJECT_DIR$/templates/unused/03-About-me.html" />
+      <change beforePath="$PROJECT_DIR$/03-About-me/css/responsive.css" afterPath="$PROJECT_DIR$/static/03-About-me/css/responsive.css" />
+      <change beforePath="$PROJECT_DIR$/03-About-me/css/styles.css" afterPath="$PROJECT_DIR$/static/03-About-me/css/styles.css" />
+      <change beforePath="$PROJECT_DIR$/03-mingshengguji.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/04-Contact.html" afterPath="$PROJECT_DIR$/templates/unused/04-Contact.html" />
+      <change beforePath="$PROJECT_DIR$/04-Contact/css/responsive.css" afterPath="$PROJECT_DIR$/static/04-Contact/css/responsive.css" />
+      <change beforePath="$PROJECT_DIR$/04-Contact/css/styles.css" afterPath="$PROJECT_DIR$/static/04-Contact/css/styles.css" />
+      <change beforePath="$PROJECT_DIR$/04-nanyangfengsu.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/05-Comming-soon/css/responsive.css" afterPath="$PROJECT_DIR$/static/05-Comming-soon/css/responsive.css" />
+      <change beforePath="$PROJECT_DIR$/05-Comming-soon/css/styles.css" afterPath="$PROJECT_DIR$/static/05-Comming-soon/css/styles.css" />
+      <change beforePath="$PROJECT_DIR$/05-difangyuyan.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/06-nanyangwuchan.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/07-xinzhoufengyue.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/08-foyuchanxin.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/09-lunxianshiqi.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10-quanqiuhanshizonghui.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10-shichengyinshe.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10-tanshe.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10-xinshengshishe.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/11-about-us.html" afterPath="$PROJECT_DIR$/templates/about-us.html" />
+      <change beforePath="$PROJECT_DIR$/11-shiji.html" afterPath="$PROJECT_DIR$/templates/unused/shiji.html" />
+      <change beforePath="$PROJECT_DIR$/11-shirenfangtan.html" afterPath="$PROJECT_DIR$/templates/unused/shirenfangtan.html" />
+      <change beforePath="$PROJECT_DIR$/11-shirenshengping.html" afterPath="$PROJECT_DIR$/templates/unused/11-shirenshengping.html" />
+      <change beforePath="$PROJECT_DIR$/11-shirenyinchang.html" afterPath="$PROJECT_DIR$/templates/unused/11-shirenyinchang.html" />
+      <change beforePath="$PROJECT_DIR$/11-shitanjinkuang.html" afterPath="$PROJECT_DIR$/templates/unused/shitanjinkuang.html" />
+      <change beforePath="$PROJECT_DIR$/11-yanjiulunwen.html" afterPath="$PROJECT_DIR$/templates/unused/yanjiulunwen.html" />
+      <change beforePath="$PROJECT_DIR$/common-css/bootstrap.css" afterPath="$PROJECT_DIR$/static/common-css/bootstrap.css" />
+      <change beforePath="$PROJECT_DIR$/common-css/ionicons.css" afterPath="$PROJECT_DIR$/static/common-css/ionicons.css" />
+      <change beforePath="$PROJECT_DIR$/common-css/layerslider.css" afterPath="$PROJECT_DIR$/static/common-css/layerslider.css" />
+      <change beforePath="$PROJECT_DIR$/common-css/swiper.css" afterPath="$PROJECT_DIR$/static/common-css/swiper.css" />
+      <change beforePath="$PROJECT_DIR$/common-js/bootstrap.js" afterPath="$PROJECT_DIR$/static/common-js/bootstrap.js" />
+      <change beforePath="$PROJECT_DIR$/common-js/embed.videos.min.js" afterPath="$PROJECT_DIR$/static/common-js/embed.videos.min.js" />
+      <change beforePath="$PROJECT_DIR$/common-js/jquery-3.1.1.min.js" afterPath="$PROJECT_DIR$/static/common-js/jquery-3.1.1.min.js" />
+      <change beforePath="$PROJECT_DIR$/common-js/jquery.circliful.min.js" afterPath="$PROJECT_DIR$/static/common-js/jquery.circliful.min.js" />
+      <change beforePath="$PROJECT_DIR$/common-js/jquery.countdown.min.js" afterPath="$PROJECT_DIR$/static/common-js/jquery.countdown.min.js" />
+      <change beforePath="$PROJECT_DIR$/common-js/layerslider.js" afterPath="$PROJECT_DIR$/static/common-js/layerslider.js" />
+      <change beforePath="$PROJECT_DIR$/common-js/scripts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/common-js/swiper.js" afterPath="$PROJECT_DIR$/static/common-js/swiper.js" />
+      <change beforePath="$PROJECT_DIR$/common-js/tether.min.js" afterPath="$PROJECT_DIR$/static/common-js/tether.min.js" />
+      <change beforePath="$PROJECT_DIR$/fonts/ionicons.eot" afterPath="$PROJECT_DIR$/static/fonts/ionicons.eot" />
+      <change beforePath="$PROJECT_DIR$/fonts/ionicons.svg" afterPath="$PROJECT_DIR$/static/fonts/ionicons.svg" />
+      <change beforePath="$PROJECT_DIR$/fonts/ionicons.ttf" afterPath="$PROJECT_DIR$/static/fonts/ionicons.ttf" />
+      <change beforePath="$PROJECT_DIR$/fonts/ionicons.woff" afterPath="$PROJECT_DIR$/static/fonts/ionicons.woff" />
+      <change beforePath="$PROJECT_DIR$/images/2_chinatown_street_market-5c459281c9e77c00018d54a2.jpg" afterPath="$PROJECT_DIR$/static/images/2_chinatown_street_market-5c459281c9e77c00018d54a2.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/aboutme-bookcover-1.jpg" afterPath="$PROJECT_DIR$/static/images/aboutme-bookcover-1.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/aboutus-videocover-1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/advertise-1-400x500.jpg" afterPath="$PROJECT_DIR$/static/images/advertise-1-400x500.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/author-1-200x200.jpg" afterPath="$PROJECT_DIR$/static/images/author-1-200x200.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/author-1.png" afterPath="$PROJECT_DIR$/static/images/author-1.png" />
+      <change beforePath="$PROJECT_DIR$/images/author-2-150x150.jpg" afterPath="$PROJECT_DIR$/static/images/author-2-150x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/author-2.jpg" afterPath="$PROJECT_DIR$/static/images/author-2.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/author-3-150x150.jpg" afterPath="$PROJECT_DIR$/static/images/author-3-150x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/author-3.jpg" afterPath="$PROJECT_DIR$/static/images/author-3.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/author-4.jpg" afterPath="$PROJECT_DIR$/static/images/author-4.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/author-zuo.jpg" afterPath="$PROJECT_DIR$/static/images/author-zuo.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-0.jpg" afterPath="$PROJECT_DIR$/static/images/blog-0.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-1-1000x600.jpg" afterPath="$PROJECT_DIR$/static/images/blog-1-1000x600.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-1.jpg" afterPath="$PROJECT_DIR$/static/images/blog-1.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-10-600x600.jpg" afterPath="$PROJECT_DIR$/static/images/blog-10-600x600.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-11-1000x600.jpg" afterPath="$PROJECT_DIR$/static/images/blog-11-1000x600.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-2-1000x600.jpg" afterPath="$PROJECT_DIR$/static/images/blog-2-1000x600.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-2.jpg" afterPath="$PROJECT_DIR$/static/images/blog-2.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-3-500x400.jpg" afterPath="$PROJECT_DIR$/static/images/blog-3-500x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-4-500x400.jpg" afterPath="$PROJECT_DIR$/static/images/blog-4-500x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-5-500x400.jpg" afterPath="$PROJECT_DIR$/static/images/blog-5-500x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-6-500x400.jpg" afterPath="$PROJECT_DIR$/static/images/blog-6-500x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-7-500x400.jpg" afterPath="$PROJECT_DIR$/static/images/blog-7-500x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-8-1000x600.jpg" afterPath="$PROJECT_DIR$/static/images/blog-8-1000x600.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-9-600x600.jpg" afterPath="$PROJECT_DIR$/static/images/blog-9-600x600.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-aboutus1.jpg" afterPath="$PROJECT_DIR$/static/images/blog-aboutus1.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-aboutus1.png" afterPath="$PROJECT_DIR$/static/images/blog-aboutus1.png" />
+      <change beforePath="$PROJECT_DIR$/images/blog-aboutus2.jpg" afterPath="$PROJECT_DIR$/static/images/blog-aboutus2.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/blog-tanshe.jpg" afterPath="$PROJECT_DIR$/static/images/blog-shichengyinshe.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/category-1-400x150.jpg" afterPath="$PROJECT_DIR$/static/images/category-1-400x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/category-1.jpg" afterPath="$PROJECT_DIR$/static/images/category-1.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/category-2-400x150.jpg" afterPath="$PROJECT_DIR$/static/images/category-2-400x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/category-2.jpg" afterPath="$PROJECT_DIR$/static/images/category-2.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/category-3-400x150.jpg" afterPath="$PROJECT_DIR$/static/images/category-3-400x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/category-3.jpg" afterPath="$PROJECT_DIR$/static/images/category-3.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/category-4-400x150.jpg" afterPath="$PROJECT_DIR$/static/images/category-4-400x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/category-4.jpg" afterPath="$PROJECT_DIR$/static/images/category-4.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/img-jiehui.jpg" afterPath="$PROJECT_DIR$/static/images/img-jiehui.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/img-lanhua.jpg" afterPath="$PROJECT_DIR$/static/images/img-lanhua.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/img-nanfengciji.jpg" afterPath="$PROJECT_DIR$/static/images/img-nanfengciji.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/img-prof.jpg" afterPath="$PROJECT_DIR$/static/images/img-prof.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/img-qinmiantang.jpg" afterPath="$PROJECT_DIR$/static/images/img-qinmiantang.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-1-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-1-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-2-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-2-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-3-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-3-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-4-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-4-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-5-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-5-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-6-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-6-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-7-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-7-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-side-1-150x150.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-side-1-150x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-side-2-150x150.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-side-2-150x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-side-3-150x150.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-side-3-150x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-side-4-150x150.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-side-4-150x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-side-5-150x150.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-side-5-150x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/instragram-side-6-150x150.jpg" afterPath="$PROJECT_DIR$/static/images/instragram-side-6-150x150.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/logo-aboutus.png" afterPath="$PROJECT_DIR$/static/images/logo-aboutus.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-chunlian.png" afterPath="$PROJECT_DIR$/static/images/logo-chunlian.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-dazhuan.png" afterPath="$PROJECT_DIR$/static/images/logo-dazhuan.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-difangyuyan.png" afterPath="$PROJECT_DIR$/static/images/logo-difangyuyan.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-foyuchanxin.png" afterPath="$PROJECT_DIR$/static/images/logo-foyuchanxin.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-lunxianshiqi.png" afterPath="$PROJECT_DIR$/static/images/logo-lunxianshiqi.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-mingshengguji.png" afterPath="$PROJECT_DIR$/static/images/logo-mingshengguji.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-nanyangfengsu.png" afterPath="$PROJECT_DIR$/static/images/logo-nanyangfengsu.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-nanyangwuchan.png" afterPath="$PROJECT_DIR$/static/images/logo-nanyangwuchan.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-nus.png" afterPath="$PROJECT_DIR$/static/images/logo-nus.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-quanqiuhanshizonghui.png" afterPath="$PROJECT_DIR$/static/images/logo-quanqiuhanshizonghui.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-sgyinglian.png" afterPath="$PROJECT_DIR$/static/images/logo-sgyinglian.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-shichengyinshe.png" afterPath="$PROJECT_DIR$/static/images/logo-shichengyinshe.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-shiji.png" afterPath="$PROJECT_DIR$/static/images/logo-shiji.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-shirenfangtan.png" afterPath="$PROJECT_DIR$/static/images/logo-shirenfangtan.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-shirenshengping.png" afterPath="$PROJECT_DIR$/static/images/logo-shirenshengping.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-shirenyinchang.png" afterPath="$PROJECT_DIR$/static/images/logo-shirenyinchang.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-shitanjinkuang.png" afterPath="$PROJECT_DIR$/static/images/logo-shitanjinkuang.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-shuanglin.png" afterPath="$PROJECT_DIR$/static/images/logo-shuanglin.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-tanshe.png" afterPath="$PROJECT_DIR$/static/images/logo-tanshe.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-xingzhoufengyue.png" afterPath="$PROJECT_DIR$/static/images/logo-xingzhoufengyue.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-xinshengshishe.png" afterPath="$PROJECT_DIR$/static/images/logo-xinshengshishe.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-xinzhou.png" afterPath="$PROJECT_DIR$/static/images/logo-xinzhou.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo-yanjiulunwen.png" afterPath="$PROJECT_DIR$/static/images/logo-yanjiulunwen.png" />
+      <change beforePath="$PROJECT_DIR$/images/logo.png" afterPath="$PROJECT_DIR$/static/images/logo.png" />
+      <change beforePath="$PROJECT_DIR$/images/recent-post-1-150x200.jpg" afterPath="$PROJECT_DIR$/static/images/recent-post-1-150x200.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/recent-post-2-150x200.jpg" afterPath="$PROJECT_DIR$/static/images/recent-post-2-150x200.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/recent-post-3-150x200.jpg" afterPath="$PROJECT_DIR$/static/images/recent-post-3-150x200.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/recent-post-4-150x200.jpg" afterPath="$PROJECT_DIR$/static/images/recent-post-4-150x200.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/recomended-1-200x200.jpg" afterPath="$PROJECT_DIR$/static/images/recomended-1-200x200.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/recomended-2-200x200.jpg" afterPath="$PROJECT_DIR$/static/images/recomended-2-200x200.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/shuanglin-logo.jpg" afterPath="$PROJECT_DIR$/static/images/shuanglin-logo.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/signature-image.png" afterPath="$PROJECT_DIR$/static/images/signature-image.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-1-1600x800.jpg" afterPath="$PROJECT_DIR$/static/images/slider-1-1600x800.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-1.jpg" afterPath="$PROJECT_DIR$/static/images/slider-1.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-2-1600x800.jpg" afterPath="$PROJECT_DIR$/static/images/slider-2-1600x800.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-2.jpg" afterPath="$PROJECT_DIR$/static/images/slider-2.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-3-1600x800.jpg" afterPath="$PROJECT_DIR$/static/images/slider-3-1600x800.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-binlang.jpeg" afterPath="$PROJECT_DIR$/static/images/slider-binlang.jpeg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-chunlian.jpeg" afterPath="$PROJECT_DIR$/static/images/slider-chunlian.jpeg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-dazhuan.png" afterPath="$PROJECT_DIR$/static/images/slider-dazhuan.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-durian.jpg" afterPath="$PROJECT_DIR$/static/images/slider-durian.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-fengyue.png" afterPath="$PROJECT_DIR$/static/images/slider-fengyue.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-fengyue2.jpg" afterPath="$PROJECT_DIR$/static/images/slider-fengyue2.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-fengyue2.png" afterPath="$PROJECT_DIR$/static/images/slider-fengyue2.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-fengyue3.png" afterPath="$PROJECT_DIR$/static/images/slider-fengyue3.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-foyuchanxin1.jpg" afterPath="$PROJECT_DIR$/static/images/slider-foyuchanxin1.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-foyuchanxin2.png" afterPath="$PROJECT_DIR$/static/images/slider-foyuchanxin2.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-lunxianshiqi1.jpeg" afterPath="$PROJECT_DIR$/static/images/slider-lunxianshiqi1.jpeg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-lunxianshiqi2.png" afterPath="$PROJECT_DIR$/static/images/slider-lunxianshiqi2.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-mingshengguji-1.jpg" afterPath="$PROJECT_DIR$/static/images/slider-mingshengguji-1.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-minnan.png" afterPath="$PROJECT_DIR$/static/images/slider-minnan.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-nanyang.jpg" afterPath="$PROJECT_DIR$/static/images/slider-nanyang.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-nus.png" afterPath="$PROJECT_DIR$/static/images/slider-nus.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-sgyinglian.png" afterPath="$PROJECT_DIR$/static/images/slider-sgyinglian.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-shiren1.jpg" afterPath="$PROJECT_DIR$/static/images/slider-shiren1.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-shiren2.jpg" afterPath="$PROJECT_DIR$/static/images/slider-shiren2.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-shitan1.pdf" afterPath="$PROJECT_DIR$/static/images/slider-shitan1.pdf" />
+      <change beforePath="$PROJECT_DIR$/images/slider-shuanglin.jpg" afterPath="$PROJECT_DIR$/static/images/slider-shuanglin.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/slider-xinzhou.png" afterPath="$PROJECT_DIR$/static/images/slider-xinzhou.png" />
+      <change beforePath="$PROJECT_DIR$/images/slider-yusheng.jpeg" afterPath="$PROJECT_DIR$/static/images/slider-yusheng.jpeg" />
+      <change beforePath="$PROJECT_DIR$/images/writing-1-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/writing-1-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/writing-2-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/writing-2-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/writing-3-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/writing-3-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/writing-4-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/writing-4-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/writing-5-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/writing-5-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/writing-6-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/writing-6-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/writing-7-300x400.jpg" afterPath="$PROJECT_DIR$/static/images/writing-7-300x400.jpg" />
+      <change beforePath="$PROJECT_DIR$/images/writing-panshou-lanhua.jpg" afterPath="$PROJECT_DIR$/static/images/writing-panshou-lanhua.jpg" />
+      <change beforePath="$PROJECT_DIR$/test" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +241,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -136,7 +357,7 @@
     <option name="width" value="1181" />
     <option name="height" value="827" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
@@ -192,6 +413,95 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="juli" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="juli" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="juli" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="juli" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="juli" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="juli" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -229,16 +539,28 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5923836" sideWeight="0.8505007" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34132582" sideWeight="0.8505007" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3977747" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23700121" sideWeight="0.29399142" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41889986" sideWeight="0.7060086" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5923836" sideWeight="0.8505007" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31160715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.4828326" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3977747" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,8 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding />
         </state>
       </provider>

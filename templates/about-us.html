@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>新加坡舊體詩庫-關於我們</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+
+	<!-- Font -->
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+
+	<link href="../static/common-css/bootstrap.css" rel="stylesheet">
+
+	<link href="../static/common-css/ionicons.css" rel="stylesheet">
+
+
+	<link href="../static/03-About-me/css/styles.css" rel="stylesheet">
+
+	<link href="../static/03-About-me/css/responsive.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<header>
+
+		<div class="top-menu">
+
+			<ul class="left-area welcome-area">
+				<li class="hello-blog">歡迎訪問！</li>
+				<!--<li><a href="mailto:chsll@nus.edu.sg">chsll@nus.edu.sg</a></li>-->
+			</ul><!-- left-area -->
+
+
+			<div class="right-area">
+
+				<ul class="social-icons">
+					<li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+				</ul><!-- right-area -->
+
+			</div><!-- right-area -->
+
+		</div><!-- top-menu -->
+
+		<div class="middle-menu center-text"><a href="#" class="logo"><img src="../static/images/logo-aboutus.png" alt="Logo Image"></a></div>
+
+		<div class="bottom-area">
+
+			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
+
+			<ul class="main-menu visible-on-click" id="main-menu">
+				<li><a href="{{ url_for('home') }}">首頁</a></li>
+				<li class="drop-down"><a href="#!">專題<i class="ion-ios-arrow-down"></i></a>
+					<ul class="drop-down-menu">
+						<li><a href="{{ url_for('topic', name='zhuanti-shuanglin') }}">雙林寺詩詞</a></li>
+						<li><a href="{{ url_for('topic', name='zhuanti-xinzhouyayuan') }}">新洲雅苑懷舊集</a></li>
+						<li><a href="{{ url_for('topic', name='zhuanti-dazhuan') }}">新加坡大專文學獎--漢詩組得獎作品</a></li>
+						<li><a href="{{ url_for('topic', name='zhuanti-nus') }}">國立大學學生作品</a></li>
+                        <li><a href="{{ url_for('topic', name='zhuanti-nanyangdaxue') }}">南洋大學師生作品</a></li>
+						<li><a href="{{ url_for('topic', name='zhuanti-chunlian') }}">春聯比賽得獎作品</a></li>
+						<li><a href="{{ url_for('topic', name='zhuanti-sgyinglian') }}">新加坡楹聯</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ url_for('topic', name='mingshengguji') }}">名勝古跡</a></li>
+				<li><a href="{{ url_for('topic', name='nanyangfengtu') }}">南洋風土</a></li>
+				<li><a href="{{ url_for('topic', name='xingzhoufengyue') }}">星洲風月</a></li>
+				<li><a href="{{ url_for('topic', name='foyuchanxin') }}">佛語禪心</a></li>
+				<li><a href="{{ url_for('topic', name='lunxianshiqi') }}">淪陷時期</a></li>
+				<li><a href="{{ url_for('topic', name='lishishijian') }}">歷史事件</a></li>
+				<li><a href="{{ url_for('topic', name='wenyihuodong') }}">文藝活動</a></li>
+				<li class="drop-down"><a href="#!">詩社<i class="ion-ios-arrow-down"></i></a>
+					<ul class="drop-down-menu">
+						<li><a href="{{ url_for('topic', name='tanshe') }}">檀社</a></li>
+						<li><a href="{{ url_for('topic', name='xinshengshishe') }}">新聲詩社</a></li>
+						<li><a href="{{ url_for('topic', name='shichengyinshe') }}">獅城吟社</a></li>
+						<li><a href="{{ url_for('topic', name='quanqiuhanshizonghui') }}">全球漢詩總會</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ url_for('about_us') }}">關於我們</a></li>
+				<!--<li class="drop-down"><a href="#!">更多<i class="ion-ios-arrow-down"></i></a>-->
+					<!--<ul class="drop-down-menu">-->
+						<!--<li><a href="{{ url_for('shitanjinkuang') }}">詩壇近況</a></li>-->
+						<!--<li><a href="{{ url_for('shirenfangtan') }}">詩人訪談</a></li>-->
+						<!--&lt;!&ndash;<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>&ndash;&gt;-->
+						<!--<li><a href="{{ url_for('shiji') }}">詩集</a></li>-->
+						<!--&lt;!&ndash;<li><a href="11-shirenshengping.html">詩人生平</a></li>&ndash;&gt;-->
+						<!--<li><a href="{{ url_for('paper') }}">研究論文</a></li>-->
+						<!--<li><a href="{{ url_for('about_us') }}">關於我們</a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+			</ul><!-- main-menu -->
+		</div><!-- conatiner -->
+	</header>
+
+	<section class="blog-area">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-8 col-md-12">
+					<div class="blog-posts">
+
+						<div class="single-post">
+
+							<!--<div class="row">-->
+								<!--<div class="col-sm-6">-->
+									<!--<div class="image-wrapper"><img src="../static/images/blog-aboutus1.jpg" alt="Blog Image"></div>-->
+								<!--</div>&lt;!&ndash; col-sm-6 &ndash;&gt;-->
+								<!--<div class="col-sm-6">-->
+									<!--<div class="image-wrapper"><img src="../static/images/blog-aboutus2.jpg" alt="Blog Image"></div>-->
+								<!--</div>&lt;!&ndash; col-sm-6 &ndash;&gt;-->
+							<!--</div>&lt;!&ndash; row &ndash;&gt;-->
+							<div class="circular-pregress center-text">
+								<div class="row">
+
+									<div class="col-sm-4">
+										<div class="circliful" data-animation="1" data-animationStep="5" data-percent="50" data-foregroundBorderWidth="3"
+											data-backgroundBorderWidth="3" data-foregroundColor="#FFAD4D" data-backgroundColor="#ddd"
+											data-fontColor="#222"></div>
+										<h4><b class="light-color">網站進度</b></h4>
+										<h6 class="pre-writing">始於2019年3月</h6>
+									</div><!-- col-sm-4 -->
+
+									<div class="col-sm-4">
+										<div class="circliful" data-animation="1" data-animationStep="5" data-percent="50" data-foregroundBorderWidth="3"
+											data-backgroundBorderWidth="3" data-foregroundColor="#FFAD4D" data-backgroundColor="#ddd"
+											data-fontColor="#222"></div>
+										<h4><b class="light-color">資料收集進度</b></h4>
+										<h6 class="pre-writing">南洋舊體詩</h6>
+									</div><!-- col-sm-4 -->
+
+									<div class="col-sm-4">
+										<div class="circliful" data-animation="1" data-animationStep="5" data-percent="97" data-foregroundBorderWidth="3"
+											data-backgroundBorderWidth="3" data-foregroundColor="#FFAD4D" data-backgroundColor="#ddd"
+											data-fontColor="#222"></div>
+										<h4><b class="light-color">網站關注度</b></h4>
+										<h6 class="pre-writing">社會影響力</h6>
+									</div><!-- col-sm-4 -->
+
+								</div><!-- row -->
+							</div><!-- circular-pregress -->
+
+							<div class="sidebar-section about-author center-text">
+								<br/>
+								<br/>
+								<h4 class="author-name"><b class="light-color">網站建設團隊</b></h4>
+								<p class="desc"><b>網站主編</b>: 林立</p>
+								<p class="desc"><b>網站內容編輯</b>: 潘曉君，魏梓昂，鄭文鎬，林恩齊</p>
+								<!--<p class="desc"><b>網站版面設計及開發</b>: R4bb1t</p>-->
+
+							</div>
+							<br/>
+							<br/>
+
+							<p class="desc">此網站建立於2020年，由新加坡華族文化中心贊助，旨在弘揚南洋舊體詩文化，促進文化交流。</p>
+							<p class="desc">以下是 新加坡華族文化中心宣傳片</p>
+							<br/>
+
+							<div class="embed-video" data-source="youtube"
+								 data-video-url="https://www.youtube.com/watch?v=Kl2t-6Zv6yI">
+							</div>
+							<br/>
+
+						</div><!-- single-post -->
+
+
+					</div><!-- blog-posts -->
+				</div><!-- col-lg-4 -->
+
+				<div class="col-lg-4 col-md-12">
+					<div class="sidebar-area">
+
+						<div class="sidebar-section about-author center-text">
+							<div class="author-image"><img src="../static/images/img-prof.jpg" alt="Autohr Image"></div>
+
+							<ul class="social-icons">
+								<li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
+								<li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
+								<li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+								<li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
+								<li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+							</ul><!-- right-area -->
+
+							<h4 class="author-name"><b class="light-color">Lam Lap(林立)</b></h4>
+							<p>新加坡國立大學副教授。新加坡舊體詩庫網站創辦人。</p>
+							<br/>
+							<p>出版著作：</p>
+							<p>1.  《滄海遺音：民國時期清遺民詞研究》，香港：香港中文大學出版社。</p>
+							<p>2.  《二十世紀十大家詞選》(合著)，臺北：臺灣學生書局，2008年。</p>
+							<p>3.  《清十大家詞選》(合著)，臺北：稻鄉出版社，2003年。</p>
+							<p>4. 《獅城心影錄：中大人在新加坡》(主編)，香港：天地圖書，2013年。</p>
+							<br/>
+
+							<div class="signature-image"><img src="../static/images/signature-image.png" alt="Signature Image"></div>
+							<a class="read-more-link" href="#"><b>READ MORE</b></a>
+
+						</div><!-- sidebar-section about-author -->
+
+						<div class="sidebar-section latest-post-area">
+							<h4 class="title"><b class="light-color">出版著作</b></h4>
+
+							<div class="latest-post" href="#">
+								<div class="l-post-image"><img src="../static/images/aboutme-bookcover-1.jpg" alt="Category Image"></div>
+								<div class="post-info">
+									<a class="btn category-btn" href="#">香港中文大學出版社</a>
+									<h5><a href="#"><b class="light-color">滄海遺音：民國時期清遺民詞研究</b></a></h5>
+									<h6 class="date"><em>?</em></h6>
+								</div>
+							</div>
+							<br/>
+
+							<div class="latest-post" href="#">
+								<div class="l-post-image"><img src="../static/images/aboutme-bookcover-1.jpg" alt="Category Image"></div>
+								<div class="post-info">
+									<a class="btn category-btn" href="#">臺北：臺灣學生書局</a>
+									<h5><a href="#"><b class="light-color">二十世紀十大家詞選</b></a></h5>
+									<h6 class="date"><em>2008</em></h6>
+								</div>
+							</div>
+							<br/>
+							<div class="latest-post" href="#">
+								<div class="l-post-image"><img src="../static/images/aboutme-bookcover-1.jpg" alt="Category Image"></div>
+								<div class="post-info">
+									<a class="btn category-btn" href="#">臺北：稻鄉出版社</a>
+									<h5><a href="#"><b class="light-color">清十大家詞選</b></a></h5>
+									<h6 class="date"><em>2003</em></h6>
+								</div>
+							</div>
+							<br/>
+
+							<div class="latest-post" href="#">
+								<div class="l-post-image"><img src="../static/images/aboutme-bookcover-1.jpg" alt="Category Image"></div>
+								<div class="post-info">
+									<a class="btn category-btn" href="#">香港：天地圖書</a>
+									<h5><a href="#"><b class="light-color">獅城心影錄：中大人在新加坡</b></a></h5>
+									<h6 class="date"><em>2013</em></h6>
+								</div>
+							</div>
+
+					</div><!-- about-author -->
+				</div><!-- col-lg-4 -->
+
+			</div><!-- row -->
+		</div><!-- container -->
+		</div>
+	</section><!-- section -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="footer-section">
+						<p class="copyright text-center">
+							新加坡舊體詩庫 - 由新加坡華族文化中心贊助 - Singapore Chinese Culture Centre - ❤ &copy; 2019 All rights reserved.
+						</p>
+					</div><!-- footer-section -->
+				</div><!-- col-lg-4 col-md-6 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</footer>
+
+
+	<!-- SCIPTS -->
+
+	<script src="../static/common-js/jquery-3.1.1.min.js"></script>
+
+	<script src="../static/common-js/tether.min.js"></script>
+
+	<script src="../static/common-js/bootstrap.js"></script>
+
+	<script src="common-js/grasp_mobile_progress_circle-1.0.0.js"></script>
+
+	<script src="../static/common-js/embed.videos.min.js"></script>
+
+	<script src="../static/common-js/jquery.circliful.minnamename.js"></script>
+
+    <script src="../static/common-js/scripts.js?version=20191219"></script>
+
+</body>
+</html>
