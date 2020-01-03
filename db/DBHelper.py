@@ -12,7 +12,7 @@ class DBHelper:
         self.port = 3306
         self.charSet = "utf8"
         self.db = "poemDB"
-
+        self.img_path = "/static/images/"
     def __connect__(self):
         try:
             self.con = pymysql.connect(host=self.host, user=self.user, port=self.port, charset=self.charSet,
@@ -56,18 +56,38 @@ class DBHelper:
             BAD_DATA.error("cannot load dictionary field -- type error")
             return None
 
+    def get_author_info_dict_from_db(self, author_name):
+        # add poet info
+        sql_query = "SELECT yearOfBirth, yearOfDeath, description, link, photo_link, photo_desc" \
+                    " FROM Poet WHERE fullName = '" + author_name + "'"
+        answer_list = self.fetch(sql_query)
+        if len(answer_list) > 0:
+            answer_dict = answer_list[0]
+            if answer_dict["photo_link"]:
+                answer_dict["photo_link"] = self.img_path + answer_dict["photo_link"]
+            return answer_dict
+        else:
+            return {}
+
     # category in chinese
-    def get_poet_poem_list_for_a_category(self, category):
+    # ans_dict: key - author_name; value - a dict of poet contains yearOfBirth, yearOfDeath,
+    # description, link, photo_link, photo_desc and titles
+    def get_poet_info_list_for_a_category(self, category):
+
         sql_query = "SELECT title, author_name FROM Poem WHERE category = '" + category + "'"
         answer_list = self.fetch(sql_query)
         ans_dict = {}
         for answer in answer_list:
             title = answer['title']
             author_name = answer['author_name']
+
             if author_name in ans_dict:
-                ans_dict[author_name].append(title)
+                ans_dict[author_name]["titles"].append(title)
             else:
-                ans_dict[author_name] = [title]
+                new_author_dict = self.get_author_info_dict_from_db(author_name)
+                new_author_dict["titles"] = [title]
+                ans_dict[author_name] = new_author_dict
+
         return ans_dict
 
     # not using

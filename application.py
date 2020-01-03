@@ -55,7 +55,7 @@ def paper():
 @application.route('/category/<name>', methods=['GET'])
 def topic(name):
     para_dict = util.get_parameters_for_blog_from_db(name)
-    poem_dict = util.get_parameters_for_topic_from_db(name)
+    topic_dict = util.get_parameters_for_topic_from_db(name)
 
     blog_dict = para_dict['blog_dict']
 
@@ -67,8 +67,8 @@ def topic(name):
        blog_content = blog_dict['blog_content'],
        blog_img = blog_dict['blog_img'],
        blog_link = blog_dict['blog_link'],
-       sliders=poem_dict['sliders'],
-       main_content=poem_dict['main_content'],
+       sliders=topic_dict['sliders'],
+       main_content=topic_dict['main_content'],
     )
 
 @application.route('/<category>/<author_name>/<poem_name>', methods=['GET'])
