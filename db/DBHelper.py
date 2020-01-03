@@ -2,7 +2,6 @@ import pymysql
 import pandas as pd
 import json
 import re
-import time
 
 class DBHelper:
 
@@ -78,7 +77,7 @@ class DBHelper:
         sql_query = "SELECT title, author_name FROM Poem WHERE category = '" + category + "'"
         answer_list = self.fetch(sql_query)
         ans_dict = {}
-        time1 = time.perf_counter()
+
         for answer in answer_list:
             title = answer['title']
             author_name = answer['author_name']
@@ -86,15 +85,11 @@ class DBHelper:
                 ans_dict[author_name].append(title)
             else:
                 ans_dict[author_name] = [title]
-        time2 = time.perf_counter()
-        print(time2 - time1)
 
         for author_name, titles in ans_dict.items():
             new_author_dict = self.get_author_info_dict_from_db(author_name)
             new_author_dict["titles"] = titles
             ans_dict[author_name] = new_author_dict
-        time3 = time.perf_counter()
-        print(time3 - time2)
 
         return ans_dict
 
