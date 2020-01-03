@@ -18,7 +18,7 @@ db = DBHelper()
 # sql_query = "SELECT id, name, chn_name, logo_url, slider from Topic WHERE id = 8;"
 # sql_query = "SELECT * FROM Topic;"
 # sql_query = "INSERT INTO Topic (id, name, chn_name, logo_url) VALUES (24, 'wenyihuodong', '文藝活動', 'logo-wenyihuodong.png');"
-# sql_query = "UPDATE Poem SET category = replace(category, '文化藝術活動', '文藝活動')"
+# sql_query = "UPDATE Poem SET category = replace(category, '詩作品選', '潘受作品選')"
 # db.execute(sql_query)
 # [{'Field': 'id', 'Type': 'int(11)', 'Null': 'NO', 'Key': 'PRI', 'Default': None, 'Extra': ''},
 #  {'Field': 'name', 'Type': 'varchar(32)', 'Null': 'YES', 'Key': '', 'Default': None, 'Extra': ''},

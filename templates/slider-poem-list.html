@@ -80,7 +80,11 @@
                                             {% if poet_info_dict['photo_link'] %}
                                                 <!--<div class="author-image"><img src="images/author-1-200x200.jpg" alt="Autohr Image"></div>-->
                                                 <div class="author-image"><img src="{{ poet_info_dict['photo_link'] }}" alt="Autohr Image"></div>
-                                                <h5 class="author-name center-text"><b class="light-color">{{ poet_info_dict['photo_desc'] }}</b></h5>
+                                                {% if poet_info_dict['photo_desc'] %}
+                                                    <h5 class="author-name center-text">
+                                                        <b class="light-color">{{ poet_info_dict['photo_desc'] }}</b>
+                                                    </h5>
+                                                {% endif %}
                                                 <!--<h4 class="author-name center-text"><b class="light-color">照片</b></h6>-->
                                                 <br/>
                                             {% else %}
