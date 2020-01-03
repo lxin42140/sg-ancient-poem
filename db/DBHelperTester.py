@@ -2,7 +2,7 @@ from db.DBHelper import DBHelper
 
 db = DBHelper()
 
-# sql_query = "ALTER TABLE Poet ADD COLUMN fullName VARCHAR(255) AFTER firstName;"
+# sql_query = "ALTER TABLE Poet ADD COLUMN source VARCHAR(255) AFTER description;"
 # db.execute(sql_query)
 
 # sql_query = "INSERT INTO Topic (id, name, chn_name, logo_url) VALUES (10, 'lishishijian', '歷史事件', 'logo-lishishijian.png');"

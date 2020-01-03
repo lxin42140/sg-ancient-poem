@@ -75,7 +75,7 @@
                                         {% if poet_info_dict['photo_link'] %}
                                             <br/>
                                         {% endif %}
-                                
+
                                         <div class="sidebar-section about-author">
                                             {% if poet_info_dict['photo_link'] %}
                                                 <!--<div class="author-image"><img src="images/author-1-200x200.jpg" alt="Autohr Image"></div>-->
@@ -92,6 +92,9 @@
                                                 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; {{ poet_info_dict['description'] }}
                                             </p>
                                             <br />
+                                            {% if poet_info_dict['source'] %}
+                                                <p align="right"> ——《{{ poet_info_dict['source'] }}》</p>
+                                            {% endif %}
 
                                             <!--<div class="signature-image"><img src="images/signature-image.png" alt="Signature Image"></div>-->
                                             {% if poet_info_dict['link'] %}

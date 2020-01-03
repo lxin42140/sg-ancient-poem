@@ -58,7 +58,7 @@ class DBHelper:
 
     def get_author_info_dict_from_db(self, author_name):
         # add poet info
-        sql_query = "SELECT yearOfBirth, yearOfDeath, description, link, photo_link, photo_desc" \
+        sql_query = "SELECT yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc" \
                     " FROM Poet WHERE fullName = '" + author_name + "'"
         answer_list = self.fetch(sql_query)
         if len(answer_list) > 0:
