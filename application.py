@@ -77,6 +77,7 @@ def poem_content_page(category, poem_name, author_name):
     full_poem = para_dict['main_content']['content']
     introduction = util.process_text(para_dict['main_content']['introduction'])
     poem_content_list = util.format_poem_content(full_poem)
+    comment_list = util.format_poem_content(para_dict['main_content']['comments'])
 
     return render_template('poem-content.html',
        title = para_dict['title'],
@@ -84,6 +85,7 @@ def poem_content_page(category, poem_name, author_name):
        main_content = para_dict['main_content'],
        introduction = introduction,
        poem_content_list = poem_content_list,
+       comment_list = comment_list,
     )
 
 @application.route('/favicon.ico', methods=['GET'])

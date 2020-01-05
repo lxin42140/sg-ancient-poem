@@ -47,7 +47,15 @@
 						<br/>
 
 						{% if main_content['comments'] %}
-							<p>{{ main_content['comments'] }}</p>
+							{% for comment_sentence in comment_list %}
+                                {% if comment_sentence == '\n' %}
+                                    <br/>
+                                {% elif comment_sentence == '' %}
+                                    <br/>
+                                {% else %}
+                                    <p>{{ comment_sentence }}</p>
+                                {% endif %}
+                            {% endfor %}
                             <br/>
                             <br/>
 						{% endif %}
