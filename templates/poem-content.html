@@ -46,16 +46,18 @@
 						<br/>
 						<br/>
 
-						{% if main_content['published_info'] %}
-							<p>{{ main_content['published_info'] }}</p>
-                            <br/>
-                            <br/>
-						{% endif %}
 						{% if main_content['comments'] %}
 							<p>{{ main_content['comments'] }}</p>
                             <br/>
                             <br/>
 						{% endif %}
+
+						{% if main_content['published_info'] %}
+							<p>{{ main_content['published_info'] }}</p>
+                            <br/>
+                            <br/>
+						{% endif %}
+
 					</div>
 					<br />
 					<br />
