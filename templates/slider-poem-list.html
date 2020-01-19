@@ -77,20 +77,23 @@
                                         {% endif %}
 
                                         <div class="sidebar-section about-author">
-                                            {% if poet_info_dict['photo_link'] %}
-                                                <!--<div class="author-image"><img src="images/author-1-200x200.jpg" alt="Autohr Image"></div>-->
-                                                <div class="author-image"><img src="{{ poet_info_dict['photo_link'] }}" alt="Autohr Image"></div>
-                                                {% if poet_info_dict['photo_desc'] %}
-                                                    <h5 class="author-name center-text">
-                                                        <b class="light-color">{{ poet_info_dict['photo_desc'] }}</b>
-                                                    </h5>
-                                                {% endif %}
-                                                <!--<h4 class="author-name center-text"><b class="light-color">照片</b></h6>-->
-                                                <br/>
-                                            {% else %}
-                                                <br />
-                                                <br />
-                                            {% endif %}
+                                            <!--{% if poet_info_dict['photo_link'] %}-->
+                                                <!--&lt;!&ndash;<div class="author-image"><img src="images/author-1-200x200.jpg" alt="Autohr Image"></div>&ndash;&gt;-->
+                                                <!--<div class="author-image"><img src="{{ poet_info_dict['photo_link'] }}" alt="Autohr Image"></div>-->
+                                                <!--{% if poet_info_dict['photo_desc'] %}-->
+                                                    <!--<h5 class="author-name center-text">-->
+                                                        <!--<b class="light-color">{{ poet_info_dict['photo_desc'] }}</b>-->
+                                                    <!--</h5>-->
+                                                <!--{% endif %}-->
+                                                <!--&lt;!&ndash;<h4 class="author-name center-text"><b class="light-color">照片</b></h6>&ndash;&gt;-->
+                                                <!--<br/>-->
+                                            <!--{% else %}-->
+                                                <!--<br />-->
+                                                <!--<br />-->
+                                            <!--{% endif %}-->
+                                            <br/>
+                                            <br/>
+                                            <br/>
 
                                             <p>
                                                 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; {{ poet_info_dict['description'] }}

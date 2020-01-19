@@ -2,6 +2,9 @@ from db.DBHelper import DBHelper
 
 db = DBHelper()
 
+# sql_query = "ALTER TABLE Poet MODIFY description TEXT;"
+# db.execute(sql_query)
+
 # sql_query = "ALTER TABLE Poet ADD COLUMN source VARCHAR(255) AFTER description;"
 # db.execute(sql_query)
 
