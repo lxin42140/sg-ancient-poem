@@ -1,6 +1,5 @@
 {% extends "base_slider.html" %}
 {% block content %}
-<section class="section blog-area">
     <section class="blog-area">
         <div class="container">
             <div class="row">
@@ -10,13 +9,14 @@
                         <div class="single-post">
 
                             <br />
+                            <br />
                             <h3 class="title">
                                 <a href="#"><b class="light-color">
                                     {% if paper_title %}
                                         {{ paper_title }}
                                     {% endif %}
                             </b></a></h3>
-
+                            <br />
 
                             <p>
                                 {% if author_name %}
@@ -26,8 +26,10 @@
                             </p>
 
                             <br />
+                            <br />
+                            <br />
 
-                            <iframe src="{{ pdf_location }}" width="100%" height="100%">
+                            <iframe src="{{ pdf_location }}" width="100%" height="800px">
                                 This browser does not support PDFs. Please download the PDF to view it:
                                 <a href="{{ pdf_location }}">Download PDF</a>
                             </iframe>
@@ -40,6 +42,10 @@
                             <ul class="tags center-text">
                                 <li><a class="btn" href="javascript:history.go(-1)">返回目錄</a></li>
                             </ul>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
                         </div><!-- single-post -->
 
                     </div><!-- blog-posts -->
@@ -49,5 +55,4 @@
                 <br/>
             </div><!-- row -->
         </div><!-- container -->
-    </section>
 {% endblock %}
