@@ -1,8 +1,8 @@
 from db.DBHelper import DBHelper
 
 db = DBHelper()
-
-# sql_query = "ALTER TABLE Poet MODIFY description TEXT;"
+# sql_query = "CREATE TABLE Paper (id int, title varchar(255), author varchar(255), link varchar(1000));"
+# # sql_query = "ALTER TABLE Poet MODIFY description TEXT;"
 # db.execute(sql_query)
 
 # sql_query = "ALTER TABLE Poet ADD COLUMN source VARCHAR(255) AFTER description;"

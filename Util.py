@@ -2,12 +2,13 @@ from db.DBHelper import DBHelper
 import re
 
 class Util:
-    def __init__(self, img_path, title_prefix):
+    def __init__(self, img_path, pdf_path, title_prefix):
         self.img_path = img_path
+        self.pdf_path = pdf_path
         self.title_prefix = title_prefix
 
     # poet_poem_list
-    def get_parameters_for_topic_from_db(self, category):
+    def get_parameters_for_topic_from_db(self, category, type):
         db = DBHelper()
         para_dict = {}
 
@@ -28,10 +29,16 @@ class Util:
         for slider_dict in para_dict['sliders']:
             slider_dict['path'] = self.img_path + slider_dict['path']
 
-        # get poet_poem_list
-        poet_info_dict = db.get_poet_info_list_for_a_category(chn_category)
-
-        para_dict['main_content'] = poet_info_dict
+        if type == "poem":
+            # get poet_poem_list
+            poet_info_dict = db.get_poet_info_list_for_a_category(chn_category)
+            para_dict['main_content'] = poet_info_dict
+        elif type == "paper":
+            # get author_paper_list
+            author_info_dict = db.get_author_info_list_for_paper()
+            para_dict['main_content'] = author_info_dict
+        else:
+            print("Wrong Type!")
         return para_dict
 
         # poet_poem_list
@@ -66,6 +73,22 @@ class Util:
         para_dict['title'] = title
 
         para_dict['main_content'] = db.get_poem_content(poem_name, author_name)
+        return para_dict
+
+    # paper_content_page
+    def get_parameters_for_paper_content_page(self, paper_title, author_name):
+        db = DBHelper()
+        para_dict = {}
+
+        logo_path = db.get_logo_for_category('yanjiulunwen')
+        para_dict['logo_path'] = self.img_path + logo_path
+
+        title = self.title_prefix + paper_title
+        para_dict['title'] = title
+
+        para_dict['main_content'] = db.get_paper_content(paper_title, author_name)
+        pdf_link = para_dict['main_content']['link']
+        para_dict['main_content']['link'] = self.pdf_path + pdf_link
         return para_dict
 
     # Processes text

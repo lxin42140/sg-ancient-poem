@@ -93,6 +93,30 @@ class DBHelper:
 
         return ans_dict
 
+    # category in chinese
+    # ans_dict: key - author_name; value - a dict of poet contains yearOfBirth, yearOfDeath,
+    # description, link, photo_link, photo_desc and titles
+    def get_author_info_list_for_paper(self):
+        sql_query = "SELECT title, author FROM Paper"
+        answer_list = self.fetch(sql_query)
+        ans_dict = {}
+
+        for answer in answer_list:
+            title = answer['title']
+            author_name = answer['author']
+            if author_name in ans_dict:
+                ans_dict[author_name].append(title)
+            else:
+                ans_dict[author_name] = [title]
+
+        for author_name, titles in ans_dict.items():
+            new_author_dict = self.get_author_info_dict_from_db(author_name)
+            new_author_dict["titles"] = titles
+            ans_dict[author_name] = new_author_dict
+
+        return ans_dict
+
+
     # not using
     def get_all_poet_names_for_a_category(self, category):
         sql_query = "SELECT DISTINCT author_name FROM Poem WHERE category = '" + category + "'"
@@ -115,6 +139,11 @@ class DBHelper:
     def get_poem_content(self, poem_name, author_name):
         sql_query = "SELECT title, year, author_name, introduction, content, published_info, comments FROM " \
                     "Poem WHERE title = '" + poem_name + "' AND author_name = '" + author_name + "'"
+        content_dict = self.fetch(sql_query)[0]
+        return content_dict
+
+    def get_paper_content(self, paper_title, author_name):
+        sql_query = "SELECT title, author, link FROM Paper WHERE title = '" + paper_title + "' AND author = '" + author_name + "'"
         content_dict = self.fetch(sql_query)[0]
         return content_dict
 

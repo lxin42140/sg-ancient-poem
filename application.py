@@ -3,8 +3,9 @@ from Util import Util
 
 application = Flask(__name__, template_folder='templates', static_folder='static')
 IMG_PATH = '/static/images/'
+PDF_PATH = '/static/pdf/'
 title_prefix = '新加坡舊體詩庫-'
-util = Util(IMG_PATH, title_prefix)
+util = Util(IMG_PATH, PDF_PATH, title_prefix)
 
 
 @application.route('/')
@@ -48,14 +49,20 @@ def shiji():
 def shitanjinkuang():
     return render_template('shitanjinkuang.html')
 
-@application.route('/yanjiulunwen')
-def paper():
-    return render_template('yanjiulunwen.html')
+# @application.route('/yanjiulunwen')
+# def paper():
+#     return render_template('yanjiulunwen.html')
 
 @application.route('/category/<name>', methods=['GET'])
 def topic(name):
     para_dict = util.get_parameters_for_blog_from_db(name)
-    topic_dict = util.get_parameters_for_topic_from_db(name)
+    isPaper = False
+
+    if name == "yanjiulunwen":
+        isPaper = True
+        topic_dict = util.get_parameters_for_topic_from_db(name, "paper")
+    else:
+        topic_dict = util.get_parameters_for_topic_from_db(name, "poem")
 
     blog_dict = para_dict['blog_dict']
 
@@ -69,6 +76,7 @@ def topic(name):
        blog_link = blog_dict['blog_link'],
        sliders=topic_dict['sliders'],
        main_content=topic_dict['main_content'],
+       isPaper=isPaper
     )
 
 @application.route('/<category>/<author_name>/<poem_name>', methods=['GET'])
@@ -88,13 +96,26 @@ def poem_content_page(category, poem_name, author_name):
        comment_list = comment_list,
     )
 
+@application.route('/paper/<author_name>/<paper_title>', methods=['GET'])
+def paper_content_page(paper_title, author_name):
+    para_dict = util.get_parameters_for_paper_content_page(paper_title, author_name)
+
+    return render_template('paper-content.html',
+       title = para_dict['title'],
+       logo_path = para_dict['logo_path'],
+       paper_title = paper_title,
+       author_name = author_name,
+       pdf_location = para_dict['main_content']['link']
+    )
+
+
 @application.route('/favicon.ico', methods=['GET'])
 def favicon():
     return ""
 
 @application.route("/<any>", methods=['GET', 'POST'])
 def any_to_404(any):
-    return render_template('base.html'), 404
+    return render_template('base_slider.html'), 404
 
 # @application.errorhandler(404)
 # def notfound():

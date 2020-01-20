@@ -116,21 +116,13 @@
                                         </div>
                                     {% endif %}
 
-                                    <!--poet's poems-->
+                                    <!--poet's papers-->
 									<ul class="tags">
-                                        {% if isPaper %}
-                                            {% for paper_title in poet_info_dict['titles'] %}
-                                                <li><a class="btn" href="{{ url_for('paper_content_page', paper_title=paper_title, author_name=poet_name ) }}">
-                                                    {{ paper_title }}
-                                                </a></li>
-                                            {% endfor %}
-                                        {% else %}
-                                            {% for poem_name in poet_info_dict['titles'] %}
-                                                <li><a class="btn" href="{{ url_for('poem_content_page', category=category, poem_name=poem_name, author_name=poet_name ) }}">
-                                                    {{ poem_name }}
-                                                </a></li>
-                                            {% endfor %}
-                                        {% endif %}
+										{% for paper_name in poet_info_dict['titles'] %}
+											<li><a class="btn" href="{{ url_for('paper_content_page', category=category, paper_name=paper_name, author_name=poet_name ) }}">
+												{{ paper_name }}
+											</a></li>
+										{% endfor %}
 									</ul>
 
                                     <!--if has poet introduction-->
