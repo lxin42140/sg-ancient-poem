@@ -1,85 +1,104 @@
 {% extends "base_slider.html" %}
 {% block content %}
 <section class="section blog-area">
-		<div class="container">
-			<br/>
-			<div class="row">
-				<div class="col-sm-0 col-md-1 col-lg-2"></div>
+    <div class="container">
+        <br/>
+        <div class="row">
+            <div class="col-sm-0 col-md-1 col-lg-2"></div>
 
-				<div class="col-sm-12 col-md-10 col-lg-8">
-					<div class="about-author center-text">
-						<br/>
-						<br/>
+            <div class="col-sm-12 col-md-10 col-lg-8">
+                <div class="about-author center-text">
+                    <br/>
+                    <br/>
 
-						<h4 class="author-name">
-							<b class="light-color">
-								{{ main_content['title'] }}
-								{% if main_content['year'] %}
-									（ {{ main_content['year'] }} ）
-								{% endif %}
-							</b>
-						</h4>
-						<h6 class="author-name">
-							<b class="light-color">
-								{{ main_content['author_name'] }}
-							</b>
-						</h6>
+                    <h4 class="author-name">
+                        <b class="light-color">
+                            {{ main_content['title'] }}
+                            {% if main_content['year'] %}
+                                （ {{ main_content['year'] }} ）
+                            {% endif %}
+                        </b>
+                    </h4>
+                    <h6 class="author-name">
+                        <b class="light-color">
+                            {{ main_content['author_name'] }}
+                        </b>
+                    </h6>
 
 
-						{% if introduction %}
-                        <br/>
-							<p>{{ introduction }}</p>
-                        <br/>
-						{% endif %}
+                    {% if introduction %}
+                    <br/>
+                        <p>{{ introduction }}</p>
+                    <br/>
+                    {% endif %}
 
-                        <br/>
-                        {% for poem_sentence in poem_content_list %}
-                            {% if poem_sentence == '\n' %}
+                    <br/>
+                    {% for poem_sentence in poem_content_list %}
+                        {% if poem_sentence == '\n' %}
+                            <br/>
+                        {% elif poem_sentence == '' %}
+                            <br/>
+                        {% else %}
+                            <p>{{ poem_sentence }}</p>
+                        {% endif %}
+                    {% endfor %}
+
+                    <br/>
+                    <br/>
+
+                    {% if main_content['comments'] %}
+                        {% for comment_sentence in comment_list %}
+                            {% if comment_sentence == '\n' %}
                                 <br/>
-							{% elif poem_sentence == '' %}
-								<br/>
+                            {% elif comment_sentence == '' %}
+                                <br/>
                             {% else %}
-						        <p>{{ poem_sentence }}</p>
+                                <p>{{ comment_sentence }}</p>
                             {% endif %}
                         {% endfor %}
+                        <br/>
+                        <br/>
+                    {% endif %}
 
-						<br/>
-						<br/>
+                    {% if main_content['published_info'] %}
+                        <p>{{ main_content['published_info'] }}</p>
+                        <br/>
+                        <br/>
+                    {% endif %}
 
-						{% if main_content['comments'] %}
-							{% for comment_sentence in comment_list %}
-                                {% if comment_sentence == '\n' %}
-                                    <br/>
-                                {% elif comment_sentence == '' %}
-                                    <br/>
-                                {% else %}
-                                    <p>{{ comment_sentence }}</p>
-                                {% endif %}
-                            {% endfor %}
-                            <br/>
-                            <br/>
-						{% endif %}
+                </div>
+                <br />
+                <br />
+                <br />
+                <ul class="tags center-text">
+                    <!--<li><a class="btn" href="javascript:history.go(-1)">返回目錄</a></li>-->
+                    <li><a class="btn" href="#" onclick="gotoPrePage()">返回目錄</a></li>
+                </ul>
+                <br />
+                <br />
 
-						{% if main_content['published_info'] %}
-							<p>{{ main_content['published_info'] }}</p>
-                            <br/>
-                            <br/>
-						{% endif %}
+            </div><!-- col-sm-12 -->
+        </div><!-- row -->
+        <br />
+        <br />
+    </div><!-- container -->
+</section><!-- section -->
 
-					</div>
-					<br />
-					<br />
-					<br />
-					<ul class="tags center-text">
-						<li><a class="btn" href="javascript:history.go(-1)">返回目錄</a></li>
-					</ul>
-					<br />
-					<br />
+<script>
+    function gotoPrePage() {
+        console.log(history);
+        console.log(history.length);
+        if(history.length > 3){
+            window.history.go(-1);
+        } else {
+            var localURL = window.location.href.split('/');
+            var protocol = localURL[0];
+            var domain = localURL[2];
+            var localPage = localURL[3];
+            var gotoURL = protocol + '//' + domain + '/category/'  + localPage
+            window.location.href=gotoURL
+        }
+    }
+</script>
 
-				</div><!-- col-sm-12 -->
-			</div><!-- row -->
-			<br />
-			<br />
-		</div><!-- container -->
-	</section><!-- section -->
 {% endblock %}
