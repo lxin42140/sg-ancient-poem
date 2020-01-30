@@ -57,8 +57,8 @@ db = DBHelper()
 
 # sql_query = "UPDATE Poem SET category = replace(category, '南洋物產', '南洋風土')"
 # db.execute(sql_query)
-# sql_query = "SELECT * FROM Poem WHERE category = '南洋風土'"
-# print(db.fetch(sql_query))
+sql_query = "SELECT * FROM Poem WHERE category = '南洋風土'"
+print(db.fetch(sql_query))
 
 # category = "名勝古跡"
 # poet_name = "黃火若"

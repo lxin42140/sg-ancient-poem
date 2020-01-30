@@ -21,7 +21,7 @@ def home():
         },
         {
             'path': IMG_PATH + 'slider-1.jpg',
-            'comments': ['星洲四大才子', '葉季允, 釋瑞于, 邱菽園, 李俊承', '1859 - 1966']
+            'comments': ['星洲四大才子', '李俊承, 邱菽園, 釋瑞于, 葉季允', ' ']
         },
         {
             'path': IMG_PATH + 'slider-2.jpg',
