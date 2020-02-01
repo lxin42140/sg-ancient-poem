@@ -213,15 +213,11 @@ class DBHelper:
         return blog_dict
 
 
-    def save_sliders_to_db(self, slider_list):
+    def save_slider_to_db(self, slider_string, topic_id):
         try:
-            count = 1
-            print(slider_list)
-            for json_item in slider_list:
-                this_item = self.get_db_prep_value(json_item)
-                sqlQuery = "UPDATE Topic SET slider = '{}' WHERE id = {}".format(this_item, count)
-                self.execute(sqlQuery)
-                count += 1
+            this_item = self.get_db_prep_value(slider_string)
+            sqlQuery = "UPDATE Topic SET slider = '{}' WHERE id = {}".format(this_item, topic_id)
+            self.execute(sqlQuery)
             return True
         except Exception as e:
             print("Exeception occured:{}".format(e))
