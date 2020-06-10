@@ -173,5 +173,26 @@
 	<script src="/static/common-js/embed.videos.min.js"></script>
 	<script src="/static/common-js/scripts.js?version=20191219"></script>
 
+
+	<script>
+		<!--主页隐藏折叠的功能-->
+		var coll = document.getElementsByClassName("btn read-more-btn");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.previousElementSibling;
+			if (content.style.display === "block") {
+			  content.style.display = "none";
+			  this.innerHTML = "瀏覽更多";
+			} else {
+			  content.style.display = "block";
+			  this.innerHTML = "折疊內容";
+			}
+		  });
+		}
+	</script>
+
 </body>
 </html>

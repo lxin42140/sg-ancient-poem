@@ -120,6 +120,7 @@ b.light-color{ color: #444; }
 
 .icon{ font-size: 2em; }
 
+.content { display: none; }
 
 .left-area{ float: left;  }
 
