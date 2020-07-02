@@ -50,6 +50,8 @@ D. Go to http://localhost:5000
 
 Frontend: HTML 5, CSS, Javascript
 
+Frontend Template: [Colorlib Theme - Juli](https://colorlib.com/wp/template/juli/) < License Purchased >
+
 Backend: Python Flask
 
 Cloud Deploy: AWS Elastic Beanstalk
@@ -99,9 +101,25 @@ MySQL Workbench, Navicat Premium
 
 
 
-
 ## AWS TO-DO
 
 Secure practice: Make it https: Use AWS Cloudfront to make all the traffic https
+
+ - [AWS Cloudfront](https://aws.amazon.com/cloudfront/)
+ 
+
+## Useful Website
+ - [Online Photo Editor](https://pixlr.com/x/)
+ - [毛笔字在线生成](http://www.diyiziti.com/maobizi)
+ - [AWS Route 53](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html)
+ - [AWS Domain Registeration](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html#getting-started-find-domain-name)
+ - [Flask DB guide](https://www.cnblogs.com/ssjz12/p/10181615.html)
+ - [Flask Tutorial](http://www.pythondoc.com/flask-mega-tutorial/)
+ - [AWS RDS NOTES](https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80)
+
+ 
+
+
+
 
 
