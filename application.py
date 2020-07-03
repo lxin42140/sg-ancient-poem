@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+
 from Util import Util
 
 application = Flask(__name__, template_folder='templates', static_folder='static')
@@ -6,7 +7,10 @@ IMG_PATH = '/static/images/'
 PDF_PATH = '/static/pdf/'
 title_prefix = '新加坡舊體詩庫-'
 util = Util(IMG_PATH, PDF_PATH, title_prefix)
-
+topics = (''' zhuanti-shuanglin zhuanti-xinzhouyayuan zhuanti-dazhuan zhuanti-nus zhuanti-nanyangdaxue zhuanti-chunlian zhuanti-sgyinglian 
+          mingshengguji nanyangfengtu xingzhoufengyue foyuchanxin lunxianshiqi lishishijian wenyihuodong 
+          tanshe xinshengshishe shichengyinshe nanjinshishe quanqiuhanshizonghui shishe 
+          yanjiulunwen ''')
 
 @application.route('/')
 @application.route('/home')
@@ -37,26 +41,11 @@ def home():
 def about_us():
     return render_template('about-us.html')
 
-@application.route('/shirenfangtan')
-def shirenfangtan():
-    return render_template('shirenfangtan.html')
-
-@application.route('/shiji')
-def shiji():
-    return render_template('shiji.html')
-
-@application.route('/shitanjinkuang')
-def shitanjinkuang():
-    return render_template('shitanjinkuang.html')
-
-# @application.route('/yanjiulunwen')
-# def paper():
-#     return render_template('yanjiulunwen.html')
-
 @application.route('/category/<name>', methods=['GET'])
 def topic(name):
     para_dict = util.get_parameters_for_blog_from_db(name)
     isPaper = False
+    showReadMoreLink = name in topics
 
     if name == "yanjiulunwen":
         isPaper = True
@@ -76,7 +65,8 @@ def topic(name):
        blog_link = blog_dict['blog_link'],
        sliders=topic_dict['sliders'],
        main_content=topic_dict['main_content'],
-       isPaper=isPaper
+       isPaper=isPaper,
+       showReadMoreLink=showReadMoreLink
     )
 
 @application.route('/<category>/<author_name>/<poem_name>', methods=['GET'])
@@ -108,6 +98,24 @@ def paper_content_page(paper_title, author_name):
        pdf_location = para_dict['main_content']['link']
     )
 
+# unused
+@application.route('/shirenfangtan')
+def shirenfangtan():
+    return render_template('shirenfangtan.html')
+
+# unused
+@application.route('/shiji')
+def shiji():
+    return render_template('shiji.html')
+
+# unused
+@application.route('/shitanjinkuang')
+def shitanjinkuang():
+    return render_template('shitanjinkuang.html')
+
+# @application.route('/yanjiulunwen')
+# def paper():
+#     return render_template('yanjiulunwen.html')
 
 @application.route('/favicon.ico', methods=['GET'])
 def favicon():

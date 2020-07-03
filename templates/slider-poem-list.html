@@ -104,7 +104,7 @@
                                             {% endif %}
 
                                             <!--<div class="signature-image"><img src="images/signature-image.png" alt="Signature Image"></div>-->
-                                            {% if poet_info_dict['link'] %}
+                                            {% if poet_info_dict['link'] and showReadMoreLink %}
                                                 <div align="right">
                                                     <a class="read-more-link" target="_blank"
                                                        href="{{ poet_info_dict['link'] }}">
