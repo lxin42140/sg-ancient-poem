@@ -74,10 +74,10 @@
 					<ul class="drop-down-menu">
 						<!--<li><a href="{{ url_for('shitanjinkuang') }}">詩壇近況</a></li>-->
 						<!--<li><a href="{{ url_for('shirenfangtan') }}">詩人訪談</a></li>-->
-						<!--<li><a href="11-shirenyinchang.html">詩人吟唱</a></li>-->
 						<!--<li><a href="{{ url_for('shiji') }}">詩集</a></li>-->
 						<!--<li><a href="11-shirenshengping.html">詩人生平</a></li>-->
 						<li><a href="{{ url_for('topic', name='yanjiulunwen') }}">研究論文</a></li>
+						<li><a href="{{ url_for('topic', name='shirenyinchang') }}">詩人吟唱</a></li>
 						<li><a href="{{ url_for('about_us') }}">關於我們</a></li>
 					</ul>
 				</li>
@@ -173,7 +173,36 @@
 	<script src="/static/common-js/embed.videos.min.js"></script>
 	<script src="/static/common-js/scripts.js?version=20191219"></script>
 
+    <script>
+    // Auto scroll to last position after page refresh when user clicks on new youtube link
+    $(function () {
+            var pathName = document.location.pathname;
+            window.onbeforeunload = function () {
+                var scrollPosition = $(document).scrollTop();
+                sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
+            }
+            if (sessionStorage["scrollPosition_" + pathName]) {
+                $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
+            }
+        });
+    </script>
 
+    <script>
+        // Dynamically swap embedded video using iframe with URL Parameter
+
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+        }    
+        
+        var src = getURLParameter('src'); // retrieve source string
+        var name = getURLParameter('name') // retrieve name of poet, used as the #id for different iframe div
+
+        if (src) {
+            var innerIframe = ('<iframe id="video" width="100%" height="315" src='+src+' frameborder="0"; allow="accelerometer"; autoplay = "false"; encrypted-media; gyroscope; picture-in-picture; allowfullscreen></iframe>');
+            document.getElementById(name).innerHTML = innerIframe;
+        };
+   </script>
+   
 	<script>
 		<!--主页隐藏折叠的功能-->
 		var coll = document.getElementsByClassName("btn read-more-btn");

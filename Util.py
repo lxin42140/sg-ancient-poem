@@ -1,5 +1,7 @@
-from db.DBHelper import DBHelper
 import re
+
+from db.DBHelper import DBHelper
+
 
 class Util:
     def __init__(self, img_path, pdf_path, title_prefix):
@@ -11,14 +13,17 @@ class Util:
     def get_parameters_for_topic_from_db(self, category, type):
         db = DBHelper()
         para_dict = {}
-
+        
+        # retrieve logo_url for page from topic db
         logo_path = db.get_logo_for_category(category)
         para_dict['logo_path'] = self.img_path + logo_path
-
+        
+        # retrieve chn_name for page from topic db
         chn_category = db.get_chn_name_for_category(category)
         title = self.title_prefix + chn_category
         para_dict['title'] = title
-
+        
+        # retrieve slider for page from topic db
         slider_info = db.get_slider_info_for_category(chn_category) # slider_list
         if slider_info:
             para_dict['sliders'] = slider_info
@@ -37,12 +42,15 @@ class Util:
             # get author_paper_list
             author_info_dict = db.get_author_info_list_for_paper()
             para_dict['main_content'] = author_info_dict
+        elif type == "video":
+            # get author_video_list
+            video_info_dict = db.get_author_info_list_for_video()
+            para_dict['main_content'] = video_info_dict
         else:
             print("Wrong Type!")
         return para_dict
 
-        # poet_poem_list
-
+    # poet_poem_list
     def get_parameters_for_blog_from_db(self, category):
         db = DBHelper()
         para_dict = {}

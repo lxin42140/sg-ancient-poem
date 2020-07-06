@@ -1,7 +1,9 @@
-import pymysql
-import pandas as pd
 import json
 import re
+
+import pandas as pd
+import pymysql
+
 
 class DBHelper:
 
@@ -20,7 +22,7 @@ class DBHelper:
                                        DictCursor, autocommit=True)
             self.cur = self.con.cursor()
         except Exception as e:
-            print("Exeception occured:{}".format(e))
+            print("Exception occurred:{}".format(e))
 
     def __disconnect__(self):
         self.con.close()
@@ -37,6 +39,7 @@ class DBHelper:
         self.cur.execute(sql)
         self.__disconnect__()
 
+    # encoding json
     def get_db_prep_value(self, value):
         try:
             string = json.dumps(value)
@@ -47,6 +50,7 @@ class DBHelper:
             )
             return ""
 
+    # decoding json
     def get_data_from_db_json_value(self, value):
         if value == "":
             return None
@@ -87,6 +91,7 @@ class DBHelper:
                 ans_dict[author_name] = [title]
 
         for author_name, titles in ans_dict.items():
+            # retrieve poet info from poet db
             new_author_dict = self.get_author_info_dict_from_db(author_name)
             new_author_dict["titles"] = titles
             ans_dict[author_name] = new_author_dict
@@ -95,7 +100,7 @@ class DBHelper:
 
     # category in chinese
     # ans_dict: key - author_name; value - a dict of poet contains yearOfBirth, yearOfDeath,
-    # description, link, photo_link, photo_desc and titles
+    # description, link, photo_link, photo_desc, titles
     def get_author_info_list_for_paper(self):
         sql_query = "SELECT title, author FROM Paper"
         answer_list = self.fetch(sql_query)
@@ -110,12 +115,38 @@ class DBHelper:
                 ans_dict[author_name] = [title]
 
         for author_name, titles in ans_dict.items():
+            # retrieve poet info from poet db
             new_author_dict = self.get_author_info_dict_from_db(author_name)
             new_author_dict["titles"] = titles
             ans_dict[author_name] = new_author_dict
 
         return ans_dict
 
+    # category in chinese
+    # ans_dict: key - author_name; value - a dict of poet contains yearOfBirth, yearOfDeath,
+    # description, link, photo_link, photo_desc, titles (list of tuples in the format: (video_name, video_link) ) for embed
+    def get_author_info_list_for_video(self):
+        sql_query = "SELECT title, author, link FROM Video"
+        answer_list = self.fetch(sql_query)
+        ans_dict = {}
+        
+        for answer in answer_list:
+            title = (
+                answer['title'], answer['link']
+            )
+            author_name = answer['author']
+            if author_name in ans_dict:
+                ans_dict[author_name].append(title)
+            else:
+                ans_dict[author_name] = [title]
+                
+        for author_name, titles in ans_dict.items():
+            # retrieve poet info from poet db
+            new_author_dict = self.get_author_info_dict_from_db(author_name)
+            new_author_dict["titles"] = titles
+            ans_dict[author_name] = new_author_dict
+
+        return ans_dict
 
     # not using
     def get_all_poet_names_for_a_category(self, category):
@@ -155,7 +186,7 @@ class DBHelper:
             return logo_url
         except Exception as e:
             print("Getting logo for category....")
-            print("Exeception occured:{}".format(e))
+            print("Exception occurred:{}".format(e))
             print("Category name:{}".format(category))
 
 
@@ -212,7 +243,7 @@ class DBHelper:
 
         return blog_dict
 
-
+    # update slider column in topic db
     def save_slider_to_db(self, slider_string, topic_id):
         try:
             this_item = self.get_db_prep_value(slider_string)
@@ -222,4 +253,3 @@ class DBHelper:
         except Exception as e:
             print("Exeception occured:{}".format(e))
             return False
-
