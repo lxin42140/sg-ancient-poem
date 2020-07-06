@@ -109,9 +109,14 @@ Secure practice: Make it https: Use AWS Cloudfront to make all the traffic https
  
 
 ## Useful Website
+
+## 1) Tools
  - [Online Photo Editor](https://pixlr.com/x/)
  - [Online Video Editor](https://www.kapwing.com/)
+ - [Online convert text in picture to text](https://ocr.wdku.net/)
  - [毛笔字在线生成](http://www.diyiziti.com/maobizi)
+
+## 2) References 
  - [AWS Route 53](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html)
  - [AWS Domain Registeration](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html#getting-started-find-domain-name)
  - [Flask DB guide](https://www.cnblogs.com/ssjz12/p/10181615.html)
