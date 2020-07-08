@@ -64,7 +64,7 @@
                                                 {% endif %} -
                                                 {% if poet_info_dict['yearOfDeath'] %}
                                                     {{ poet_info_dict['yearOfDeath'] }}
-                                                {% else %}
+                                                {% elif poet_info_dict['yearOfDeath'] != 0 %}
                                                     ?
                                                 {% endif %}
                                             )
