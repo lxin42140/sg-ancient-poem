@@ -224,4 +224,4 @@ def any_to_404(any):
 
 
 if __name__ == '__main__':
-    application.run(host="0.0.0.0", port=5000, debug=True)
+    application.run(host="0.0.0.0", port=5000, debug=False)
