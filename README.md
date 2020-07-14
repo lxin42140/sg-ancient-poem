@@ -83,6 +83,7 @@ eb deploy
 ```
 
 Noted: need to commit first, and then run the command, the command will sync the latest commit to the AWS remote host.
+If changes are not updated, try viewing the page under incognito mode.
 
 ### C. AWS RDS Credentials
 
@@ -118,7 +119,7 @@ Secure practice: Make it https: Use AWS Cloudfront to make all the traffic https
  - [Online Photo Editor](https://pixlr.com/x/)
  - [Online Video Editor](https://www.kapwing.com/)
  - [Online convert text in picture to text](https://ocr.wdku.net/)
- - [毛笔字在线生成](http://www.diyiziti.com/maobizi)
+ - [毛笔字在线生成, 黄庭坚书法字体](http://www.diyiziti.com/maobizi)
 
 ## 2) References 
  - [AWS Route 53](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html)
@@ -126,10 +127,3 @@ Secure practice: Make it https: Use AWS Cloudfront to make all the traffic https
  - [Flask DB guide](https://www.cnblogs.com/ssjz12/p/10181615.html)
  - [Flask Tutorial](http://www.pythondoc.com/flask-mega-tutorial/)
  - [AWS RDS NOTES](https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80)
-
- 
-
-
-
-
-
