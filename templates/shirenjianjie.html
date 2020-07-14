@@ -1,0 +1,111 @@
+{% extends "base_slider.html" %}
+{% block content %}
+
+
+<section class="section blog-area">
+    {% if blog_content %}
+        <section class="blog-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-12"></div>
+                    <div class="col-lg-8 col-md-12">
+                        <div class="blog-posts">
+                            <div class="single-post">
+                                <!--<div class="image-wrapper"><img src="images/blog-1-1000x600.jpg" alt="Blog Image"></div>-->
+                                {% if blog_img %}
+                                    <div class="image-wrapper"><img src={{ blog_img }} alt="Blog Image"></div>
+                                {% endif %}
+
+                                <br />
+
+                                <h3 class="title">
+                                    <a href="#">
+                                        <b class="light-color">
+                                            {% if blog_title %}
+                                                {{ blog_title }}
+                                            {% endif %}
+                                        </b>
+                                    </a>
+                                </h3>
+                                <p>
+                                    {% if blog_content %}
+                                        {{ blog_content }}
+                                    {% endif %}
+                                </p>
+
+                                <br />
+
+                                {% if blog_link %}
+                                    <a class="btn read-more-btn" target="_blank" href="{{ blog_link }}"><b>瀏覽更多</b></a>
+                                {% endif %}
+                            </div><!-- single-post -->
+
+                        </div><!-- blog-posts -->
+                    </div><!-- col-lg-8 col-md-12 -->
+
+                    <br />
+                    <br />
+                    <br />
+                    
+                </div><!-- row -->
+            </div><!-- container -->
+        </section><!--blog-area -->
+    {% endif %}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-0 col-md-1 col-lg-2"></div>
+            <div class="col-sm-12 col-md-10 col-lg-8">
+                {% if main_content %}
+                    {% for poet_name, poet_info_dict in main_content.items() %}
+                        <div class="single-post">
+                            <h4 class="title">
+                                <b class="light-color">
+                                    {{ poet_name }}
+                                </b>
+                            </h4><!--title-->
+
+                            <!--poet description-->
+                            {% if poet_info_dict['description'] %}
+                                    <p class="short-intro">
+                                        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; {{ poet_info_dict['description'].split("。")[0] + "......（點擊瀏覽更多）"}}
+                                    <p/>
+
+                                    <div class="content">
+                                        {% if poet_info_dict['photo_link'] %}
+                                            <div class="description-image">
+                                                <img src={{poet_info_dict['photo_link']}} alt="Poet Image">
+                                            </div>
+                                            <p class="description-image-text">{{ poet_name }}先生的照片</p>
+                                            <br />
+                                        {% endif %}
+
+                                        <p>
+                                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; {{ poet_info_dict['description'] }}
+                                        </p>
+
+                                        <br />
+
+                                        {% if poet_info_dict['source'] %}
+                                            <p align="right"> ——《{{ poet_info_dict['source'] }}》</p>
+                                        {% endif %}
+                                    </div><!--content-->
+                                <a class="btn read-more-btn"><b>瀏覽更多</b></a>
+                            {% endif %}
+
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+
+                        </div><!--single post-->
+                    {% endfor %} <!--main content items-->
+                {% endif %} <!--main content-->
+            </div><!-- col-sm-12 col-md-10 col-lg-8 -->
+
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- section blog-area -->
+
+{% endblock %}

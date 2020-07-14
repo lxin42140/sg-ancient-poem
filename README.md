@@ -99,7 +99,11 @@ mysql -h sg-jiutishi-db.ciuqsne5nixf.ap-southeast-1.rds.amazonaws.com -u admin -
 ## Recommended Database Management tool
 MySQL Workbench, Navicat Premium
 
+To sort chinese characters in utf8mb4 without collators, convert characters to gb18030(official character set for PRC supporting traditional and simplified chinese) during sorting. 
 
+```
+ORDER BY CONVERT(fullName USING gb18030) asc;
+```
 
 ## AWS TO-DO
 

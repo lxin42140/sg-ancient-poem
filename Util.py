@@ -46,6 +46,9 @@ class Util:
             # get author_video_list
             video_info_dict = db.get_author_info_list_for_video()
             para_dict['main_content'] = video_info_dict
+        elif type == "poet":
+            all_poets_info_dict = db.get_all_poet_info_list()
+            para_dict['main_content'] = all_poets_info_dict
         else:
             print("Wrong Type!")
         return para_dict
@@ -55,7 +58,7 @@ class Util:
         db = DBHelper()
         para_dict = {}
         logo_path = db.get_logo_for_category(category)
-
+        
         para_dict['logo_path'] = self.img_path + logo_path
 
         chn_category = db.get_chn_name_for_category(category)

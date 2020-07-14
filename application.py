@@ -44,7 +44,6 @@ def home():
 def about_us():
     return render_template('about-us.html')
 
-
 # para_dict format:
     # {'logo_path': '/path/to/image',
     #  'title': '',
@@ -99,8 +98,10 @@ def about_us():
     #     'blog_link': None
     #     }
 
+
 @ application.route('/category/<name>', methods=['GET'])
 def topic(name):
+
     para_dict = util.get_parameters_for_blog_from_db(name)
     isPaper = False
     isVideo = False
@@ -112,29 +113,47 @@ def topic(name):
     elif name == "shirenyinchang":
         isVideo = True
         topic_dict = util.get_parameters_for_topic_from_db(name, "video")
+    elif name == "shirenjianjie":
+        topic_dict = util.get_parameters_for_topic_from_db(name, "poet")
     else:
         topic_dict = util.get_parameters_for_topic_from_db(name, "poem")
 
     blog_dict = para_dict['blog_dict']
 
-    return render_template('slider-poem-list.html',
-                           category=name,
+    if (name == "shirenjianjie"):
+        return render_template('shirenjianjie.html',
+                               category=name,
 
-                           logo_path=para_dict['logo_path'],
-                           title=para_dict['title'],
+                               logo_path=para_dict['logo_path'],
+                               title=para_dict['title'],
 
-                           blog_title=blog_dict['blog_title'],
-                           blog_content=blog_dict['blog_content'],
-                           blog_img=blog_dict['blog_img'],
-                           blog_link=blog_dict['blog_link'],
+                               blog_title=blog_dict['blog_title'],
+                               blog_content=blog_dict['blog_content'],
+                               blog_img=blog_dict['blog_img'],
+                               blog_link=blog_dict['blog_link'],
 
-                           sliders=topic_dict['sliders'],
-                           main_content=topic_dict['main_content'],
+                               sliders=topic_dict['sliders'],
+                               main_content=topic_dict['main_content'],
+                               )
+    else:
+        return render_template('slider-poem-list.html',
+                               category=name,
 
-                           isPaper=isPaper,
-                           isVideo=isVideo,
-                           showReadMoreLink=showReadMoreLink
-                           )
+                               logo_path=para_dict['logo_path'],
+                               title=para_dict['title'],
+
+                               blog_title=blog_dict['blog_title'],
+                               blog_content=blog_dict['blog_content'],
+                               blog_img=blog_dict['blog_img'],
+                               blog_link=blog_dict['blog_link'],
+
+                               sliders=topic_dict['sliders'],
+                               main_content=topic_dict['main_content'],
+
+                               isPaper=isPaper,
+                               isVideo=isVideo,
+                               showReadMoreLink=showReadMoreLink
+                               )
 
 
 @ application.route('/<category>/<author_name>/<poem_name>', methods=['GET'])
@@ -188,10 +207,6 @@ def shitanjinkuang():
     # unused
     return render_template('shitanjinkuang.html')
 
-# @application.route('/yanjiulunwen')
-# def paper():
-#     return render_template('yanjiulunwen.html')
-
 
 @ application.route('/favicon.ico', methods=['GET'])
 def favicon():
@@ -209,4 +224,4 @@ def any_to_404(any):
 
 
 if __name__ == '__main__':
-    application.run(host="0.0.0.0", port=5000, debug=False)
+    application.run(host="0.0.0.0", port=5000, debug=True)

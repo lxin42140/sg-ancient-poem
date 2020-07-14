@@ -31,7 +31,7 @@
 
 </head>
 <body>
-
+	<button onclick="topFunction()" id="scroll-top-button" title="Go to top">置頂</button>
 	<header>
 		<div class="middle-menu center-text"><a href="#" class="logo"><img src={{ logo_path }} alt="Logo Image"></a></div>
 
@@ -59,6 +59,7 @@
 				<li><a href="{{ url_for('topic', name='lunxianshiqi') }}">淪陷時期</a></li>
 				<li><a href="{{ url_for('topic', name='lishishijian') }}">歷史事件</a></li>
 				<li><a href="{{ url_for('topic', name='wenyihuodong') }}">文藝活動</a></li>
+				<li><a href="{{ url_for('topic', name='shirenjianjie') }}">詩人簡介</a></li>
 				<li class="drop-down"><a href="#!">詩社<i class="ion-ios-arrow-down"></i></a>
 					<ul class="drop-down-menu">
 						<li><a href="{{ url_for('topic', name='tanshe') }}">檀社</a></li>
@@ -174,21 +175,25 @@
 	<script src="/static/common-js/scripts.js?version=20191219"></script>
 
     <script>
-    // Auto scroll to last position after page refresh when user clicks on new youtube link
-    $(function () {
-            var pathName = document.location.pathname;
-            window.onbeforeunload = function () {
-                var scrollPosition = $(document).scrollTop();
-                sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
-            }
-            if (sessionStorage["scrollPosition_" + pathName]) {
-                $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
-            }
-        });
+		/* 
+		* Auto scroll to previous position after page refresh
+		*/
+		$(function () {
+			var pathName = document.location.pathname;
+			window.onbeforeunload = function () {
+				var scrollPosition = $(document).scrollTop();
+				sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
+			}
+			if (sessionStorage["scrollPosition_" + pathName]) {
+				$(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
+			}
+		});
     </script>
 
     <script>
-        // Dynamically swap embedded video using iframe with URL Parameter
+        /*
+		* Dynamically swap embedded video using iframe with URL Parameter
+		*/
 
         function getURLParameter(name) {
             return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
@@ -204,23 +209,63 @@
    </script>
    
 	<script>
-		<!--主页隐藏折叠的功能-->
-		var coll = document.getElementsByClassName("btn read-more-btn");
-		var i;
+		/*
+		* This script serves 3 functions
+		* 1) hiding and showing of blog post in home page
+		* 2) hiding and showing of short intro <p> and content div accordinly in shirenjianjie
+		* 3) Auto scroll to the rigt poet when the reader clicks 折疊內容 in shirenjianjie
+		*/
 
-		for (i = 0; i < coll.length; i++) {
+		// 1)
+		var coll = document.getElementsByClassName("btn read-more-btn");
+		// 2)
+		var shortIntro = document.getElementsByClassName("short-intro");
+		// 3)
+		var scrollPosition = 0;
+
+		for (let i = 0; i < coll.length; i++) {
 		  coll[i].addEventListener("click", function() {
 			this.classList.toggle("active");
 			var content = this.previousElementSibling;
 			if (content.style.display === "block") {
-			  content.style.display = "none";
-			  this.innerHTML = "瀏覽更多";
+				content.style.display = "none";
+				// only trigger 2 & 3 in shirenjianjie
+				if (shortIntro.length > 0) {
+					shortIntro[i].style.display = "block"
+					document.body.scrollTop = scrollPosition;
+					document.documentElement.scrollTop = scrollPosition;
+				}
+				this.innerHTML = "瀏覽更多";
 			} else {
-			  content.style.display = "block";
-			  this.innerHTML = "折疊內容";
+				content.style.display = "block";
+				// only trigger 2 & 3 in shirenjianjie
+				if (shortIntro.length > 0) {
+					shortIntro[i].style.display = "none"
+					scrollPosition = document.body.scrollTop || document.documentElement.scrollTop
+				}
+				this.innerHTML = "折疊內容";
 			}
 		  });
 		}
+
+	</script>
+
+	<script>
+    // button to scroll to top of page
+    var mybutton = document.getElementById("scroll-top-button");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    };
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 	</script>
 
 </body>

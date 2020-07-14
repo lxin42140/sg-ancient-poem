@@ -15,6 +15,7 @@ class DBHelper:
         self.charSet = "utf8"
         self.db = "poemDB"
         self.img_path = "/static/images/"
+
     def __connect__(self):
         try:
             self.con = pymysql.connect(host=self.host, user=self.user, port=self.port, charset=self.charSet,
@@ -68,10 +69,31 @@ class DBHelper:
         if len(answer_list) > 0:
             answer_dict = answer_list[0]
             if answer_dict["photo_link"]:
-                answer_dict["photo_link"] = self.img_path + answer_dict["photo_link"]
+                answer_dict["photo_link"] = self.img_path + \
+                    answer_dict["photo_link"]
             return answer_dict
         else:
             return {}
+
+    # ans_dict: key - author_name; value - a dict of poet contains yearOfBirth, yearOfDeath,
+    # description, link, photo_link, photo_desc
+    def get_all_poet_info_list(self):
+        sql_query = ("SELECT fullName, yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc"
+                     " FROM poemDB.Poet ORDER BY CONVERT(fullName USING gb18030) asc")
+        answer_list = self.fetch(sql_query)
+        ans_dict = {}
+
+        for answer in answer_list:
+            poet_info = {}
+            if answer["photo_link"]:
+                answer["photo_link"] = self.img_path + answer["photo_link"]
+            for key, value in answer.items():
+                if key == "fullName":
+                    continue
+                poet_info[key] = value
+            ans_dict[answer['fullName']] = poet_info
+
+        return ans_dict
 
     # category in chinese
     # ans_dict: key - author_name; value - a dict of poet contains yearOfBirth, yearOfDeath,
@@ -129,7 +151,7 @@ class DBHelper:
         sql_query = "SELECT title, author, link FROM Video"
         answer_list = self.fetch(sql_query)
         ans_dict = {}
-        
+
         for answer in answer_list:
             title = (
                 answer['title'], answer['link']
@@ -139,7 +161,7 @@ class DBHelper:
                 ans_dict[author_name].append(title)
             else:
                 ans_dict[author_name] = [title]
-                
+
         for author_name, titles in ans_dict.items():
             # retrieve poet info from poet db
             new_author_dict = self.get_author_info_dict_from_db(author_name)
@@ -160,7 +182,8 @@ class DBHelper:
     # not using
     # category in chinese
     def get_all_poems_by_poet_in_category(self, poet_name, category):
-        sql_query = "SELECT DISTINCT title FROM Poem WHERE category = '" + category + "' AND author_name = '" + poet_name + "'"
+        sql_query = "SELECT DISTINCT title FROM Poem WHERE category = '" + \
+            category + "' AND author_name = '" + poet_name + "'"
         answer_list = self.fetch(sql_query)
         ans_list = []
         for answer in answer_list:
@@ -174,7 +197,8 @@ class DBHelper:
         return content_dict
 
     def get_paper_content(self, paper_title, author_name):
-        sql_query = "SELECT title, author, link FROM Paper WHERE title = '" + paper_title + "' AND author = '" + author_name + "'"
+        sql_query = "SELECT title, author, link FROM Paper WHERE title = '" + \
+            paper_title + "' AND author = '" + author_name + "'"
         content_dict = self.fetch(sql_query)[0]
         return content_dict
 
@@ -188,7 +212,6 @@ class DBHelper:
             print("Getting logo for category....")
             print("Exception occurred:{}".format(e))
             print("Category name:{}".format(category))
-
 
     def get_chn_name_for_category(self, category):
         sql_query = "SELECT chn_name FROM Topic WHERE name = '" + category + "'"
@@ -240,14 +263,14 @@ class DBHelper:
         blog_dict = self.fetch(sql_query)[0]
         return blog_dict
 
-
         return blog_dict
 
     # update slider column in topic db
     def save_slider_to_db(self, slider_string, topic_id):
         try:
             this_item = self.get_db_prep_value(slider_string)
-            sqlQuery = "UPDATE Topic SET slider = '{}' WHERE id = {}".format(this_item, topic_id)
+            sqlQuery = "UPDATE Topic SET slider = '{}' WHERE id = {}".format(
+                this_item, topic_id)
             self.execute(sqlQuery)
             return True
         except Exception as e:

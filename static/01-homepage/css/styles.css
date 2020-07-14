@@ -295,6 +295,23 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 
 .single-post .read-more-btn:hover{ box-shadow: 1px 3px 15px rgba(0,0,0, .15); background: #29333C; color: #fff; }
 
+.single-post .link-to-external-btn{ clear: both; margin-top: 30px; box-shadow: 1px 10px 15px rgba(0,0,0, .15); 
+	border: 1px solid #29333C; background: #fff; color: #29333C; }
+
+.single-post .link-to-external-btn{ box-shadow: 1px 3px 15px rgba(0,0,0, .15); background: #29333C; color: #fff; }
+
+/* IMAGE STYLING */
+
+.single-post .description-image{
+	max-width: 200px; 
+	margin: 0px auto 20px;
+	border-radius: 3px; 
+	overflow: hidden; 
+	box-shadow: 0px 0px 30px rgba(0,0,0,.1); 
+}
+
+.single-post .description-image-text{text-align: center; font-size: "small";}
+
 /* VIDEO STYLING */
 
 .single-post .embed-video{ background-image: url(../../images/blog-0.jpg)!important; }
@@ -446,6 +463,29 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 .footer-instagram-area ul.instagram > li{ float: left; width: 14.285%; }
 
 
+/*SCROLL TO THE TOP BUTTON*/
+
+#scroll-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background-color: #05054b;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+	border-radius: 4px;
+	opacity: 0.3;
+}
+
+#scroll-top-button:hover {
+	opacity: 1;
+}
+	
 /* ---------------------------------
 8. FOOTER
 --------------------------------- */
