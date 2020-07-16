@@ -451,7 +451,6 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 
 .tags-area .tags > li > a{ padding: 10px 15px; }
 
-
 /* ---------------------------------
 7. FOOTER INSTAGRAM STYLING 
 --------------------------------- */
@@ -499,3 +498,33 @@ footer .copyright{ color: #ddd;  }
 footer .social-icons{ text-align: right; }
 
 footer .social-icons > li > a{ padding-left: 15px; }
+
+/*9. 
+-----PAGINATION------
+*/
+
+.pagination {
+	padding-top: 5%;
+	display: flex;
+	justify-content: center;
+  }
+
+  .pagination a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+  }
+
+  .pagination a:active {
+	background-color: #ddd;
+  }
+
+  .pagination a:hover {
+	background-color: #ddd;
+  }
+
+  .current-atag {
+	background-color: #ddd;
+  }

@@ -99,6 +99,29 @@ def about_us():
     #     }
 
 
+@ application.route('/category/shirenjianjie/<pinyin>', methods=['GET'])
+def shirenjianjie(pinyin):
+    para_dict = util.get_parameters_for_blog_from_db("shirenjianjie")
+    topic_dict = util.get_parameters_for_shirenjianjie_from_db(
+        "shirenjianjie", pinyin)
+    blog_dict = para_dict['blog_dict']
+
+    return render_template('shirenjianjie.html',
+                           category=shirenjianjie,
+
+                           logo_path=para_dict['logo_path'],
+                           title=para_dict['title'],
+
+                           blog_title=blog_dict['blog_title'],
+                           blog_content=blog_dict['blog_content'],
+                           blog_img=blog_dict['blog_img'],
+                           blog_link=blog_dict['blog_link'],
+
+                           sliders=topic_dict['sliders'],
+                           main_content=topic_dict['main_content'],
+                           )
+
+
 @ application.route('/category/<name>', methods=['GET'])
 def topic(name):
 
@@ -113,47 +136,29 @@ def topic(name):
     elif name == "shirenyinchang":
         isVideo = True
         topic_dict = util.get_parameters_for_topic_from_db(name, "video")
-    elif name == "shirenjianjie":
-        topic_dict = util.get_parameters_for_topic_from_db(name, "poet")
     else:
         topic_dict = util.get_parameters_for_topic_from_db(name, "poem")
 
     blog_dict = para_dict['blog_dict']
 
-    if (name == "shirenjianjie"):
-        return render_template('shirenjianjie.html',
-                               category=name,
+    return render_template('slider-poem-list.html',
+                           category=name,
 
-                               logo_path=para_dict['logo_path'],
-                               title=para_dict['title'],
+                           logo_path=para_dict['logo_path'],
+                           title=para_dict['title'],
 
-                               blog_title=blog_dict['blog_title'],
-                               blog_content=blog_dict['blog_content'],
-                               blog_img=blog_dict['blog_img'],
-                               blog_link=blog_dict['blog_link'],
+                           blog_title=blog_dict['blog_title'],
+                           blog_content=blog_dict['blog_content'],
+                           blog_img=blog_dict['blog_img'],
+                           blog_link=blog_dict['blog_link'],
 
-                               sliders=topic_dict['sliders'],
-                               main_content=topic_dict['main_content'],
-                               )
-    else:
-        return render_template('slider-poem-list.html',
-                               category=name,
+                           sliders=topic_dict['sliders'],
+                           main_content=topic_dict['main_content'],
 
-                               logo_path=para_dict['logo_path'],
-                               title=para_dict['title'],
-
-                               blog_title=blog_dict['blog_title'],
-                               blog_content=blog_dict['blog_content'],
-                               blog_img=blog_dict['blog_img'],
-                               blog_link=blog_dict['blog_link'],
-
-                               sliders=topic_dict['sliders'],
-                               main_content=topic_dict['main_content'],
-
-                               isPaper=isPaper,
-                               isVideo=isVideo,
-                               showReadMoreLink=showReadMoreLink
-                               )
+                           isPaper=isPaper,
+                           isVideo=isVideo,
+                           showReadMoreLink=showReadMoreLink
+                           )
 
 
 @ application.route('/<category>/<author_name>/<poem_name>', methods=['GET'])

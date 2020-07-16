@@ -9,22 +9,54 @@ class Util:
         self.pdf_path = pdf_path
         self.title_prefix = title_prefix
 
-    # poet_poem_list
-    def get_parameters_for_topic_from_db(self, category, type):
+    # poet info
+    def get_parameters_for_shirenjianjie_from_db(self, category, pinyin):
         db = DBHelper()
         para_dict = {}
-        
+
         # retrieve logo_url for page from topic db
         logo_path = db.get_logo_for_category(category)
         para_dict['logo_path'] = self.img_path + logo_path
-        
+
         # retrieve chn_name for page from topic db
         chn_category = db.get_chn_name_for_category(category)
         title = self.title_prefix + chn_category
         para_dict['title'] = title
-        
+
         # retrieve slider for page from topic db
-        slider_info = db.get_slider_info_for_category(chn_category) # slider_list
+        slider_info = db.get_slider_info_for_category(
+            chn_category)  # slider_list
+        if slider_info:
+            para_dict['sliders'] = slider_info
+        else:
+            para_dict['sliders'] = ""
+
+        # update slider path
+        for slider_dict in para_dict['sliders']:
+            slider_dict['path'] = self.img_path + slider_dict['path']
+
+        # retrieve all poet info for the specific pinyin
+        para_dict['main_content'] = db.get_all_poet_info_list(pinyin)
+
+        return para_dict
+
+    # poet_poem_list
+    def get_parameters_for_topic_from_db(self, category, type):
+        db = DBHelper()
+        para_dict = {}
+
+        # retrieve logo_url for page from topic db
+        logo_path = db.get_logo_for_category(category)
+        para_dict['logo_path'] = self.img_path + logo_path
+
+        # retrieve chn_name for page from topic db
+        chn_category = db.get_chn_name_for_category(category)
+        title = self.title_prefix + chn_category
+        para_dict['title'] = title
+
+        # retrieve slider for page from topic db
+        slider_info = db.get_slider_info_for_category(
+            chn_category)  # slider_list
         if slider_info:
             para_dict['sliders'] = slider_info
         else:
@@ -46,9 +78,6 @@ class Util:
             # get author_video_list
             video_info_dict = db.get_author_info_list_for_video()
             para_dict['main_content'] = video_info_dict
-        elif type == "poet":
-            all_poets_info_dict = db.get_all_poet_info_list()
-            para_dict['main_content'] = all_poets_info_dict
         else:
             print("Wrong Type!")
         return para_dict
@@ -58,7 +87,7 @@ class Util:
         db = DBHelper()
         para_dict = {}
         logo_path = db.get_logo_for_category(category)
-        
+
         para_dict['logo_path'] = self.img_path + logo_path
 
         chn_category = db.get_chn_name_for_category(category)
@@ -97,7 +126,8 @@ class Util:
         title = self.title_prefix + paper_title
         para_dict['title'] = title
 
-        para_dict['main_content'] = db.get_paper_content(paper_title, author_name)
+        para_dict['main_content'] = db.get_paper_content(
+            paper_title, author_name)
         pdf_link = para_dict['main_content']['link']
         para_dict['main_content']['link'] = self.pdf_path + pdf_link
         return para_dict

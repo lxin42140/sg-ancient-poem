@@ -1,6 +1,25 @@
 {% extends "base_slider.html" %}
 {% block content %}
 
+<div class="pagination">
+    <nav aria-label="Page navigation example">
+        <ul>
+            <li><a id="all" href="{{ url_for('shirenjianjie', pinyin='all') }}">全部</a><li>
+            <li><a id="b" href="{{ url_for('shirenjianjie', pinyin='b') }}">B</a></li>
+            <li><a id="c" href="{{ url_for('shirenjianjie', pinyin='c') }}">C</a></li>
+            <li><a id="f" href="{{ url_for('shirenjianjie', pinyin='f') }}">F</a></li>
+            <li><a id="h" href="{{ url_for('shirenjianjie', pinyin='h') }}">H</a></li>
+            <li><a id="l" href="{{ url_for('shirenjianjie', pinyin='l') }}">L</a></li>
+            <li><a id="p" href="{{ url_for('shirenjianjie', pinyin='p') }}">P</a></li>
+            <li><a id="q" href="{{ url_for('shirenjianjie', pinyin='q') }}">Q</a></li>
+            <li><a id="s" href="{{ url_for('shirenjianjie', pinyin='s') }}">S</a></li>
+            <li><a id="w" href="{{ url_for('shirenjianjie', pinyin='w') }}">W</a></li>
+            <li><a id="x" href="{{ url_for('shirenjianjie', pinyin='x') }}">X</a></li>
+            <li><a id="y" href="{{ url_for('shirenjianjie', pinyin='y') }}">Y</a></li>
+            <li><a id="z" href="{{ url_for('shirenjianjie', pinyin='z') }}">Z</a></li>
+        </ul>
+    </nav>
+</div>
 
 <section class="section blog-area">
     {% if blog_content %}
@@ -106,6 +125,17 @@
 
         </div><!-- row -->
     </div><!-- container -->
+
 </section><!-- section blog-area -->
+
+<script>
+    /*
+    * Toggle the button background color to show which pinyin is currently in use
+    */
+    let path = window.location.href
+    let pinyin = path.split("/")[5]
+    var atag = document.getElementById(pinyin);
+    atag.classList.add("current-atag")
+</script>
 
 {% endblock %}

@@ -4,6 +4,11 @@
 -------------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
 	
+	/*9. 
+	-----PAGINATION------
+	*/
+
+	.pagination { padding-top: 10% }
 	
 }
 
@@ -28,6 +33,12 @@
 	header .top-menu ul.welcome-area > li{ border: 0; }
 	
 	header .top-menu .hello-blog{ display: none; }
+
+	/*9. 
+	-----PAGINATION------
+	*/
+
+	.pagination { padding-top: 10% }
 	
 }
 
@@ -187,6 +198,11 @@
 	.recomend .post-image{ float: none; margin-bottom: 20px; }
 
 	.recomend .post-info{ margin-left: 0px; }
+
+	/*9. 
+	-----PAGINATION------
+	*/
+	.pagination { padding-top: 0%; font-size: smaller; }
 	
 }
 

@@ -75,11 +75,17 @@ class DBHelper:
         else:
             return {}
 
+    # Fetch all poets or poets under a pinyin category
     # ans_dict: key - author_name; value - a dict of poet contains yearOfBirth, yearOfDeath,
     # description, link, photo_link, photo_desc
-    def get_all_poet_info_list(self):
-        sql_query = ("SELECT fullName, yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc"
-                     " FROM poemDB.Poet ORDER BY CONVERT(fullName USING gb18030) asc")
+    def get_all_poet_info_list(self, pinyin):
+        if (pinyin == "all"):
+            sql_query = ("SELECT fullName, yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc"
+                        " FROM poemDB.Poet ORDER BY CONVERT(fullName USING gb18030) asc")
+        else:
+            sql_query = ('SELECT fullName, yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc'
+                        ' FROM poemDB.Poet WHERE pinyin = "{}" ORDER BY CONVERT(fullName USING gb18030) asc'.format(pinyin))
+        
         answer_list = self.fetch(sql_query)
         ans_dict = {}
 
