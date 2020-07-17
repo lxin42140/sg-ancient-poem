@@ -81,7 +81,7 @@ class DBHelper:
     def get_all_poet_info_list(self, pinyin):
         if (pinyin == "all"):
             sql_query = ("SELECT fullName, yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc"
-                        " FROM poemDB.Poet ORDER BY CONVERT(fullName USING gb18030) asc")
+                        " FROM poemDB.Poet ORDER BY pinyin, CONVERT(fullName USING gb18030) asc")
         else:
             sql_query = ('SELECT fullName, yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc'
                         ' FROM poemDB.Poet WHERE pinyin = "{}" ORDER BY CONVERT(fullName USING gb18030) asc'.format(pinyin))

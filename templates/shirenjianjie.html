@@ -5,14 +5,28 @@
     <nav aria-label="Page navigation example">
         <ul>
             <li><a id="all" href="{{ url_for('shirenjianjie', pinyin='all') }}">全部</a><li>
+            <li><a id="a" href="{{ url_for('shirenjianjie', pinyin='a') }}">A</a></li>
             <li><a id="b" href="{{ url_for('shirenjianjie', pinyin='b') }}">B</a></li>
             <li><a id="c" href="{{ url_for('shirenjianjie', pinyin='c') }}">C</a></li>
+            <li><a id="d" href="{{ url_for('shirenjianjie', pinyin='d') }}">D</a></li>
+            <li><a id="e" href="{{ url_for('shirenjianjie', pinyin='e') }}">E</a></li>
             <li><a id="f" href="{{ url_for('shirenjianjie', pinyin='f') }}">F</a></li>
+            <li><a id="g" href="{{ url_for('shirenjianjie', pinyin='g') }}">G</a></li>
             <li><a id="h" href="{{ url_for('shirenjianjie', pinyin='h') }}">H</a></li>
+            <li><a id="i" href="{{ url_for('shirenjianjie', pinyin='i') }}">I</a></li>
+            <li><a id="j" href="{{ url_for('shirenjianjie', pinyin='j') }}">J</a></li>
+            <li><a id="k" href="{{ url_for('shirenjianjie', pinyin='k') }}">K</a></li>
             <li><a id="l" href="{{ url_for('shirenjianjie', pinyin='l') }}">L</a></li>
+            <li><a id="m" href="{{ url_for('shirenjianjie', pinyin='m') }}">M</a></li>
+            <li><a id="n" href="{{ url_for('shirenjianjie', pinyin='n') }}">N</a></li>
+            <li><a id="o" href="{{ url_for('shirenjianjie', pinyin='o') }}">O</a></li>
             <li><a id="p" href="{{ url_for('shirenjianjie', pinyin='p') }}">P</a></li>
             <li><a id="q" href="{{ url_for('shirenjianjie', pinyin='q') }}">Q</a></li>
+            <li><a id="r" href="{{ url_for('shirenjianjie', pinyin='r') }}">R</a></li>
             <li><a id="s" href="{{ url_for('shirenjianjie', pinyin='s') }}">S</a></li>
+            <li><a id="t" href="{{ url_for('shirenjianjie', pinyin='t') }}">T</a></li>
+            <li><a id="u" href="{{ url_for('shirenjianjie', pinyin='u') }}">U</a></li>
+            <li><a id="v" href="{{ url_for('shirenjianjie', pinyin='v') }}">V</a></li>
             <li><a id="w" href="{{ url_for('shirenjianjie', pinyin='w') }}">W</a></li>
             <li><a id="x" href="{{ url_for('shirenjianjie', pinyin='x') }}">X</a></li>
             <li><a id="y" href="{{ url_for('shirenjianjie', pinyin='y') }}">Y</a></li>
@@ -120,6 +134,14 @@
 
                         </div><!--single post-->
                     {% endfor %} <!--main content items-->
+                {% else %}
+                    <br/>
+                    <br/>
+					<p class="text-center"><b>暫無詩人</b></p>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                 {% endif %} <!--main content-->
             </div><!-- col-sm-12 col-md-10 col-lg-8 -->
 
