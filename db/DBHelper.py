@@ -61,16 +61,15 @@ class DBHelper:
             BAD_DATA.error("cannot load dictionary field -- type error")
             return None
 
+    # Fetch author year pf birth and year of death from poet db
     def get_author_info_dict_from_db(self, author_name):
-        # add poet info
-        sql_query = "SELECT yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc" \
+        # sql_query = "SELECT yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc" \
+        #             " FROM Poet WHERE fullName = '" + author_name + "'"
+        sql_query = "SELECT yearOfBirth, yearOfDeath" \
                     " FROM Poet WHERE fullName = '" + author_name + "'"
         answer_list = self.fetch(sql_query)
         if len(answer_list) > 0:
             answer_dict = answer_list[0]
-            if answer_dict["photo_link"]:
-                answer_dict["photo_link"] = self.img_path + \
-                    answer_dict["photo_link"]
             return answer_dict
         else:
             return {}
@@ -81,11 +80,11 @@ class DBHelper:
     def get_all_poet_info_list(self, pinyin):
         if (pinyin == "all"):
             sql_query = ("SELECT fullName, yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc"
-                        " FROM poemDB.Poet ORDER BY pinyin, CONVERT(fullName USING gb18030) asc")
+                         " FROM poemDB.Poet ORDER BY pinyin, CONVERT(fullName USING gb18030) asc")
         else:
             sql_query = ('SELECT fullName, yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc'
-                        ' FROM poemDB.Poet WHERE pinyin = "{}" ORDER BY CONVERT(fullName USING gb18030) asc'.format(pinyin))
-        
+                         ' FROM poemDB.Poet WHERE pinyin = "{}" ORDER BY CONVERT(fullName USING gb18030) asc'.format(pinyin))
+
         answer_list = self.fetch(sql_query)
         ans_dict = {}
 
