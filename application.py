@@ -8,10 +8,10 @@ IMG_PATH = '/static/images/'
 PDF_PATH = '/static/pdf/'
 title_prefix = '新加坡舊體詩庫-'
 util = Util(IMG_PATH, PDF_PATH, title_prefix)
-topics = (''' zhuanti-shuanglin zhuanti-xinzhouyayuan zhuanti-dazhuan zhuanti-nus zhuanti-nanyangdaxue zhuanti-chunlian zhuanti-sgyinglian
-          mingshengguji nanyangfengtu xingzhoufengyue foyuchanxin lunxianshiqi lishishijian wenyihuodong
-          tanshe xinshengshishe shichengyinshe nanjinshishe quanqiuhanshizonghui shishe
-          yanjiulunwen ''')
+# topics = (''' zhuanti-shuanglin zhuanti-xinzhouyayuan zhuanti-dazhuan zhuanti-nus zhuanti-nanyangdaxue zhuanti-chunlian zhuanti-sgyinglian
+#           mingshengguji nanyangfengtu xingzhoufengyue foyuchanxin lunxianshiqi lishishijian wenyihuodong
+#           tanshe xinshengshishe shichengyinshe nanjinshishe quanqiuhanshizonghui shishe
+#           yanjiulunwen ''')
 
 
 @application.route('/')
@@ -128,7 +128,7 @@ def topic(name):
     para_dict = util.get_parameters_for_blog_from_db(name)
     isPaper = False
     isVideo = False
-    showReadMoreLink = name in topics
+    # showReadMoreLink = name in topics
 
     if name == "yanjiulunwen":
         isPaper = True
@@ -157,7 +157,7 @@ def topic(name):
 
                            isPaper=isPaper,
                            isVideo=isVideo,
-                           showReadMoreLink=showReadMoreLink
+                        #    showReadMoreLink=showReadMoreLink
                            )
 
 
