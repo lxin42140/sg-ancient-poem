@@ -61,12 +61,12 @@ class DBHelper:
             BAD_DATA.error("cannot load dictionary field -- type error")
             return None
 
-    # Fetch author year pf birth and year of death from poet db
+    # Fetch author description from poet db
     def get_author_info_dict_from_db(self, author_name):
-        # sql_query = "SELECT yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc" \
-        #             " FROM Poet WHERE fullName = '" + author_name + "'"
-        sql_query = "SELECT yearOfBirth, yearOfDeath" \
+        sql_query = "SELECT yearOfBirth, yearOfDeath, description, source, link, photo_link, photo_desc" \
                     " FROM Poet WHERE fullName = '" + author_name + "'"
+        # sql_query = "SELECT yearOfBirth, yearOfDeath" \
+        #             " FROM Poet WHERE fullName = '" + author_name + "'"
         answer_list = self.fetch(sql_query)
         if len(answer_list) > 0:
             answer_dict = answer_list[0]

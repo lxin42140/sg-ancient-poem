@@ -73,14 +73,13 @@
                                         {% endif %}
                                     </b></h4>
 
-                                    <!--poet introduction, removed from website-->
-                                    <!--{% if poet_info_dict['description'] %}
+                                    <!--poet description-->
+                                    {% if showPoetDescription and poet_info_dict['description'] %}
                                         {% if poet_info_dict['photo_link'] %}
                                             <br/>
-                                        {% endif %}-->
+                                        {% endif %}
 
-                                        <!--<div class="sidebar-section about-author">
-                                            <br/>
+                                        <div class="sidebar-section about-author">
                                             <br/>
                                             <br/>
 
@@ -88,6 +87,7 @@
                                                 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; {{ poet_info_dict['description'] }}
                                             </p>
                                             <br />
+
                                             {% if poet_info_dict['source'] %}
                                                 <p align="right"> ——《{{ poet_info_dict['source'] }}》</p>
                                             {% endif %}
@@ -102,7 +102,7 @@
                                             {% endif %}
 
                                         </div>
-                                    {% endif %}--End poet introduction>
+                                    {% endif %}
 
                                     <!--Video embed-->
                                     {% if isVideo %}

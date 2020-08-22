@@ -12,7 +12,7 @@ util = Util(IMG_PATH, PDF_PATH, title_prefix)
 #           mingshengguji nanyangfengtu xingzhoufengyue foyuchanxin lunxianshiqi lishishijian wenyihuodong
 #           tanshe xinshengshishe shichengyinshe nanjinshishe quanqiuhanshizonghui shishe
 #           yanjiulunwen ''')
-
+topics_to_show_description = ("qiushuyuan panshou zuobinglong huangzunxian zhuanti-xinzhouyayuan")
 
 @application.route('/')
 @application.route('/home')
@@ -128,6 +128,7 @@ def topic(name):
     para_dict = util.get_parameters_for_blog_from_db(name)
     isPaper = False
     isVideo = False
+    showPoetDescription = False
     # showReadMoreLink = name in topics
 
     if name == "yanjiulunwen":
@@ -137,6 +138,8 @@ def topic(name):
         isVideo = True
         topic_dict = util.get_parameters_for_topic_from_db(name, "video")
     else:
+        if name in topics_to_show_description:
+            showPoetDescription = True
         topic_dict = util.get_parameters_for_topic_from_db(name, "poem")
 
     blog_dict = para_dict['blog_dict']
@@ -154,7 +157,8 @@ def topic(name):
 
                            sliders=topic_dict['sliders'],
                            main_content=topic_dict['main_content'],
-
+                           
+                           showPoetDescription = showPoetDescription,
                            isPaper=isPaper,
                            isVideo=isVideo,
                         #    showReadMoreLink=showReadMoreLink
