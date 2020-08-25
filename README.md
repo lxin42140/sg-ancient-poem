@@ -157,7 +157,18 @@ Secure practice: Make it https: Use AWS Cloudfront to make all the traffic https
 
  - [AWS Cloudfront](https://aws.amazon.com/cloudfront/)
  
+## Project structure
 
+static folder contains CSS files, images, pdf etc
+
+template folder contains HTML templates used. The unused folder can be disregarded
+ 1. Base-slider html contains the template for the navigation bar. This is reused for all pages. 
+ 2. slider-poem-list is reused to display the list of poems, videos and files.
+ 3. shirenjianjie html is used for shirenjianjie topic only
+ 4. poem-content html is used to display one poem
+ 5. paper-content html is used to display the pdf file
+ 6. homepage html contains data for home page. No database operations here.
+ 
 ## Useful Website
 
 ## 1) Tools
