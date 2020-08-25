@@ -1,6 +1,52 @@
 # sg-ancient-poem
 Faculty of Arts and Social Science - Chinese Studies - website
 
+# IDE Recommended to use Visual Studio Code
+
+To open terminal
+1. click Terminal 
+2. New Terminal 
+
+navigate to the folder containing the source code
+
+use `ls` to list directories (folders and files)
+use `cd` (change directory) to navigate to the folder containing the source code 
+
+```
+PS C:\Users\Li Xin\Desktop> cd .\sg-ancient-poem\
+PS C:\Users\Li Xin\Desktop\sg-ancient-poem>
+```
+You can press tab which autocompletes the directory
+
+use `cd ..` to go back up one level to the previous directory. Note the space between `cd` and `..`
+
+```
+PS C:\Users\Li Xin\Desktop\sg-ancient-poem> cd ..
+```
+power shell commands: https://devblogs.microsoft.com/scripting/table-of-basic-powershell-commands/
+
+# Instructions to git 
+
+1. install git
+2. use the terminal to navigate to the folder containing the source code
+3. run `git init` to initialize the folder as a git project
+```
+PS C:\Users\Li Xin\Desktop\test> git init
+Initialized empty Git repository in C:/Users/Li Xin/Desktop/test/.git/
+```
+
+To retrieve the latest changes, run `git pull https://github.com/lxin42140/sg-ancient-poem-copy`
+This will merge the changes on git with your local folder
+
+To commit your changes
+1. use `git status` to view the current status of changes, files removed or added
+2. use `git add` to add the changes. You can use `git add -a` to add all the changes at once
+3. use `git commit your\changes\made -m "Changes made"` to commit your change along with a message. The message is required. Run `git commit -a -m "New changes"` to commit all changes together instead of one by one
+4. use `git push https://github.com/lxin42140/sg-ancient-poem-copy` to push your changes to the online repo
+
+Commit before you push.
+
+Link to common commands: https://dzone.com/articles/top-20-git-commands-with-examples
 
 ## Instructions to run - localhost
 
@@ -44,7 +90,6 @@ python3 application.py
 ```
 
 D. Go to http://localhost:5000
-
 
 ## Technology Used
 
