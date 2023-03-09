@@ -93,7 +93,7 @@ D. Go to http://localhost:5000
 
 ## Technology Used
 
-Frontend: HTML 5, CSS, Javascript
+Frontend: Jinja Template, HTML 5, CSS, Javascript
 
 Frontend Template: [Colorlib Theme - Juli](https://colorlib.com/wp/template/juli/) < License Purchased >
 
@@ -147,12 +147,6 @@ To sort chinese characters in utf8mb4 without collators, convert characters to g
 ```
 ORDER BY CONVERT(fullName USING gb18030) asc;
 ```
-
-## AWS TO-DO
-
-Secure practice: Make it https: Use AWS Cloudfront to make all the traffic https
-
- - [AWS Cloudfront](https://aws.amazon.com/cloudfront/)
  
 ## Project structure
 
