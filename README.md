@@ -108,8 +108,7 @@ Database: AWS RDS (for database), AWS Route53 (for hostname)
 
 ### A. AWS Credentials
 
-Account: chsll@nus.edu.sg
-Password:  <ask prof>
+- 
 
 
 ### B. AWS Elastic Beanstalk
@@ -132,9 +131,7 @@ If changes are not updated, try viewing the page under incognito mode.
 
 ### C. AWS RDS Credentials
 
-database name: poemDB
-database password: <ask prof>
-
+- 
 
 ## D. MySQL Client
 
