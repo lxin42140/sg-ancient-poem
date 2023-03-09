@@ -38,10 +38,10 @@ def get_dict_from_cursor(cursorObject):
 
 
 # ~ Connect to Database ~ #
-host = 'sg-jiutishi-db.ciuqsne5nixf.ap-southeast-1.rds.amazonaws.com'
-dbname = 'poemDB'
-user = 'admin'
-password='?Jiutishi.2019'
+host = ''
+dbname = ''
+user = ''
+password=''
 port=3306
 charSet = "utf8"
 connectionObject = pymysql.connect(host, user=user, port=port, charset=charSet, 
