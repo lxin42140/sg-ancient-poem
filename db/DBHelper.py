@@ -8,12 +8,12 @@ import pymysql
 class DBHelper:
 
     def __init__(self):
-        self.host = "sg-jiutishi-db.ciuqsne5nixf.ap-southeast-1.rds.amazonaws.com"
-        self.user = "admin"
-        self.password = "?Jiutishi.2019"
+        self.host = "<uri>"
+        self.user = "<role>"
+        self.password = "password"
         self.port = 3306
         self.charSet = "utf8"
-        self.db = "poemDB"
+        self.db = "<db>"
         self.img_path = "/static/images/"
 
     def __connect__(self):
